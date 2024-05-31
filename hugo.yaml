@@ -1,0 +1,101 @@
+baseURL: ""
+languageCode: en-us
+title: Matthieu Guyot
+theme: PaperMod
+
+params:
+  defaultTheme: dark # defaultTheme: light or dark
+  homeInfoParams:
+    Title: "Hello Stranger"
+    Content: "Welcome to my blog. Here you'll find all the interesting things I've learned through school and other experiences."
+  socialIcons:
+    - name: instagram
+      url: "https://www.instagram.com/matthieu_cmoi?igsh=aGF3M3JmbmdkZ3Zm&utm_source=qr"
+    - name: github
+      url: "https://github.com/Nearuppp/"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/3-100matthieuguyot/"
+    - name: email
+      url: "https://www.linkedin.com/in/3-100matthieuguyot/"
+
+cover:
+  linkFullImages: true
+  
+ShowBreadCrumbs: true
+ShowReadingTime: true
+ShowShareButtons: true
+ShowRelatedPosts: true
+ShowPostNavLinks: true
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  en:
+    languageName: "English"
+    contentDir: content/English
+    weight: 1
+    profileMode:
+      enabled: true
+      title: My Portfolio
+      subtitle: "Welcome to my site!"
+      
+      imageUrl: "/img/Selfie.jpg"
+      imageTitle: Selfie
+      imageWidth: 300
+      imageHeight: 300
+      buttons:
+        - name: About
+          url: aboutme
+        - name: Project
+          url: projects
+        - name: Resume
+          url: resume.pdf
+    menu:
+      main:
+        - identifier: AboutMe
+          name: About Me
+          url: aboutme
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 30
+  fr:
+    languageName: "Français"
+    contentDir: content/French
+    weight: 1
+    profileMode:
+      enabled: true
+      title: Mon Portfolio
+      subtitle: "Bienvenu sur mon site!"
+      
+      imageUrl: "/img/Selfie.jpg"
+      imageTitle: Selfie
+      imageWidth: 300
+      imageHeight: 300
+      buttons:
+        - name: A Propos de moi
+          url: about
+        - name: Projets
+          url: projects
+        - name: CV
+          url: resume.pdf
+    menu:
+      main:
+        - identifier: APropos
+          name: A Propos
+          url: "/aboutme/"
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 30
