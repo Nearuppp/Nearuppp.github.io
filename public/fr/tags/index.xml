@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Matthieu Guyot</title>
-    <link>/fr/tags/</link>
+    <link>https://nearuppp.github.io/fr/tags/</link>
     <description>Recent content in Tags on Matthieu Guyot</description>
     <generator>Hugo -- 0.120.4</generator>
     <language>fr</language>
     <lastBuildDate>Sun, 26 May 2024 12:00:00 +0000</lastBuildDate>
-    <atom:link href="/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nearuppp.github.io/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Electronic</title>
-      <link>/fr/tags/electronic/</link>
+      <link>https://nearuppp.github.io/fr/tags/electronic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/fr/tags/electronic/</guid>
+      <guid>https://nearuppp.github.io/fr/tags/electronic/</guid>
       <description></description>
     </item>
     <item>
       <title>Microcontroller</title>
-      <link>/fr/tags/microcontroller/</link>
+      <link>https://nearuppp.github.io/fr/tags/microcontroller/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/fr/tags/microcontroller/</guid>
+      <guid>https://nearuppp.github.io/fr/tags/microcontroller/</guid>
       <description></description>
     </item>
   </channel>

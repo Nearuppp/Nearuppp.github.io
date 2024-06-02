@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "https://nearuppp.github.io/"
 languageCode: en-us
 title: Matthieu Guyot
 theme: PaperMod
@@ -50,7 +50,7 @@ languages:
         - name: Project
           url: projects
         - name: Resume
-          url: resume.pdf
+          url: "/img/resume.pdf"
     menu:
       main:
         - identifier: AboutMe
@@ -80,16 +80,16 @@ languages:
       imageHeight: 300
       buttons:
         - name: A Propos de moi
-          url: about
+          url: aboutme
         - name: Projets
           url: projects
         - name: CV
-          url: resume.pdf
+          url: "/img/CV.pdf"
     menu:
       main:
-        - identifier: APropos
+        - identifier: A Propos
           name: A Propos
-          url: "/aboutme/"
+          url: aboutme
           weight: 10
         - identifier: tags
           name: Tags
