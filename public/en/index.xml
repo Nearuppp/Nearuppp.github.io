@@ -6,8 +6,29 @@
     <description>Recent content on Matthieu Guyot</description>
     <generator>Hugo -- 0.120.4</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 May 2024 19:42:18 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alpha Hypervision</title>
+      <link>https://nearuppp.github.io/en/projects/iot_project/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/projects/iot_project/</guid>
+      <description>Here you&amp;#39;ll find the project I&amp;#39;ve created with my friends at UniLaSalle</description>
+    </item>
+    <item>
+      <title>LoRaWAN Integration in Alpha Hypervision</title>
+      <link>https://nearuppp.github.io/en/project_folder/iot_project/lorawan/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/iot_project/lorawan/</guid>
+      <description>Detailed description of the LoRaWAN integration in the Alpha Hypervision project.</description>
+    </item>
+    <item>
+      <title>Proteus Alpha</title>
+      <link>https://nearuppp.github.io/en/project_folder/iot_project/proteus_alpha/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/iot_project/proteus_alpha/</guid>
+      <description>Detailed description of the process for designing the PCB card for Alpha Hypervision using Proteus 8.</description>
+    </item>
     <item>
       <title>Math</title>
       <link>https://nearuppp.github.io/en/posts/math/</link>
@@ -28,6 +49,14 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nearuppp.github.io/en/aboutme/</guid>
       <description>aboutme</description>
+    </item>
+    <item>
+      <title>Introduction to Rust</title>
+      <link>https://nearuppp.github.io/en/posts/rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/posts/rust/</guid>
+      <description>Rust Programming language Rust is a memory safe compiled programming language that delivers high level simplicity with low-level performances.
+Rust does not have a garbage collector but achieves memory safety with a concept known as ownership and borrowing.</description>
     </item>
   </channel>
 </rss>

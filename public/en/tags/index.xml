@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Matthieu Guyot</description>
     <generator>Hugo -- 0.120.4</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 May 2024 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arduino</title>
+      <link>https://nearuppp.github.io/en/tags/arduino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/arduino/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://nearuppp.github.io/en/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/docker/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Electronic</title>
       <link>https://nearuppp.github.io/en/tags/electronic/</link>
@@ -16,10 +30,115 @@
       <description></description>
     </item>
     <item>
+      <title>IoT</title>
+      <link>https://nearuppp.github.io/en/tags/iot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LoRa</title>
+      <link>https://nearuppp.github.io/en/tags/lora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/lora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LoRaWAN</title>
+      <link>https://nearuppp.github.io/en/tags/lorawan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/lorawan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MQTT</title>
+      <link>https://nearuppp.github.io/en/tags/mqtt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/mqtt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multimeter</title>
+      <link>https://nearuppp.github.io/en/tags/multimeter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/multimeter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PCB Design</title>
+      <link>https://nearuppp.github.io/en/tags/pcb-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/pcb-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project</title>
+      <link>https://nearuppp.github.io/en/tags/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proteus</title>
+      <link>https://nearuppp.github.io/en/tags/proteus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/proteus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proteus 8</title>
+      <link>https://nearuppp.github.io/en/tags/proteus-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/proteus-8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SODAQ</title>
+      <link>https://nearuppp.github.io/en/tags/sodaq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/sodaq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>StormShield</title>
+      <link>https://nearuppp.github.io/en/tags/stormshield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/stormshield/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The Things Network</title>
+      <link>https://nearuppp.github.io/en/tags/the-things-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/the-things-network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless Communication</title>
+      <link>https://nearuppp.github.io/en/tags/wireless-communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/wireless-communication/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Microcontroller</title>
       <link>https://nearuppp.github.io/en/tags/microcontroller/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nearuppp.github.io/en/tags/microcontroller/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://nearuppp.github.io/en/tags/programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nearuppp.github.io/en/tags/rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/tags/rust/</guid>
       <description></description>
     </item>
   </channel>

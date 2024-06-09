@@ -6,8 +6,22 @@
     <description>Recent content on Matthieu Guyot</description>
     <generator>Hugo -- 0.120.4</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 30 May 2024 19:42:18 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alpha Hypervision</title>
+      <link>https://nearuppp.github.io/fr/projects/iot_project/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/fr/projects/iot_project/</guid>
+      <description>Vous trouverez ici le projet que j&amp;#39;ai créé avec mes amis à UniLaSalle</description>
+    </item>
+    <item>
+      <title>Proteus Alpha</title>
+      <link>https://nearuppp.github.io/fr/project_folder/iot_project/proteus_alpha/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/fr/project_folder/iot_project/proteus_alpha/</guid>
+      <description>Description détaillée du processus de conception de la carte PCB pour Alpha Hypervision en utilisant Proteus 8.</description>
+    </item>
     <item>
       <title>Math</title>
       <link>https://nearuppp.github.io/fr/posts/math/</link>

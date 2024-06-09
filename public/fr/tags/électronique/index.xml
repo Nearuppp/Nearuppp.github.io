@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Électronique on Matthieu Guyot</title>
+    <link>https://nearuppp.github.io/fr/tags/%C3%A9lectronique/</link>
+    <description>Recent content in Électronique on Matthieu Guyot</description>
+    <generator>Hugo -- 0.120.4</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nearuppp.github.io/fr/tags/%C3%A9lectronique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alpha Hypervision</title>
+      <link>https://nearuppp.github.io/fr/projects/iot_project/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/fr/projects/iot_project/</guid>
+      <description>Vous trouverez ici le projet que j&amp;#39;ai créé avec mes amis à UniLaSalle</description>
+    </item>
+  </channel>
+</rss>
