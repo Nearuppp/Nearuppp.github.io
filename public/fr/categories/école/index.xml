@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>École on Matthieu Guyot</title>
+    <link>https://nearuppp.github.io/fr/categories/%C3%A9cole/</link>
+    <description>Recent content in École on Matthieu Guyot</description>
+    <generator>Hugo -- 0.120.4</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 26 May 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nearuppp.github.io/fr/categories/%C3%A9cole/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Électronique</title>
+      <link>https://nearuppp.github.io/fr/posts/electronic/</link>
+      <pubDate>Sun, 26 May 2024 12:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/fr/posts/electronic/</guid>
+      <description>1. Conversion (Binaire, Hexadécimal, etc.) Comprendre les systèmes de numérotation est crucial dans le domaine de l&amp;rsquo;ingénierie, en particulier en informatique et en génie électrique. Voici un aperçu des différents systèmes de numérotation et comment les convertir entre eux.
+Binaire en Décimal Les nombres binaires (base-2) utilisent uniquement 0 et 1. Pour convertir un nombre binaire en décimal (base-10), nous additionnons les produits de chaque bit et de sa puissance correspondante de 2.</description>
+    </item>
+  </channel>
+</rss>

@@ -16,11 +16,12 @@
       <description>This is a math post Mathlab This is a paragraph. about math</description>
     </item>
     <item>
-      <title>Electronic</title>
+      <title>Électronique</title>
       <link>https://nearuppp.github.io/fr/posts/electronic/</link>
       <pubDate>Sun, 26 May 2024 12:00:00 +0000</pubDate>
       <guid>https://nearuppp.github.io/fr/posts/electronic/</guid>
-      <description>This is a heading one This is a heading two This is a paragraph. Content of the post goes here.</description>
+      <description>1. Conversion (Binaire, Hexadécimal, etc.) Comprendre les systèmes de numérotation est crucial dans le domaine de l&amp;rsquo;ingénierie, en particulier en informatique et en génie électrique. Voici un aperçu des différents systèmes de numérotation et comment les convertir entre eux.
+Binaire en Décimal Les nombres binaires (base-2) utilisent uniquement 0 et 1. Pour convertir un nombre binaire en décimal (base-10), nous additionnons les produits de chaque bit et de sa puissance correspondante de 2.</description>
     </item>
   </channel>
 </rss>

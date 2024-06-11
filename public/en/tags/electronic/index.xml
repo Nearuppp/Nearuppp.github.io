@@ -20,7 +20,8 @@
       <link>https://nearuppp.github.io/en/posts/electronic/</link>
       <pubDate>Sun, 26 May 2024 12:00:00 +0000</pubDate>
       <guid>https://nearuppp.github.io/en/posts/electronic/</guid>
-      <description>This is a heading one This is a heading two This is a paragraph. Content of the post goes here.</description>
+      <description>1. Conversion (Binary, Hexadecimal, etc.) Understanding number systems is crucial in the field of engineering, especially in computer science and electrical engineering. Here&amp;rsquo;s a brief overview of the different number systems and how to convert between them.
+Binary to Decimal Binary numbers (base-2) use only 0 and 1. To convert binary to decimal (base-10), we sum the products of each bit and its corresponding power of 2. Those are the numbers to remember : 1 2 4 8 16 32 64 128 256</description>
     </item>
   </channel>
 </rss>
