@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nearuppp.github.io/fr/projects/iot_project/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nearuppp.github.io/fr/tags/arduino/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,6 +13,114 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://nearuppp.github.io/fr/tags/arduino/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/c%C3%A2blage/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/capteurs/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/%C3%A9lectronique/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/project_folder/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/project_folder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/project_folder/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/projet/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/robotique/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/tags/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/erp/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/pgi/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/posts/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/posts/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/posts/systemeinformation/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/tags/syst%C3%A8me-dinformation/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/posts/systemeinformationexam/</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/fr/projects/iot_project/</loc>
+    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/projects/iot_project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/projects/iot_project/"
                 />
   </url><url>
     <loc>https://nearuppp.github.io/fr/tags/conception-de-pcb/</loc>
@@ -33,9 +138,6 @@
                 hreflang="fr"
                 href="https://nearuppp.github.io/fr/tags/docker/"
                 />
-  </url><url>
-    <loc>https://nearuppp.github.io/fr/tags/%C3%A9lectronique/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nearuppp.github.io/fr/tags/lora/</loc>
     <lastmod>2024-06-09T00:00:00+00:00</lastmod>
@@ -63,34 +165,8 @@
                 href="https://nearuppp.github.io/fr/tags/lorawan/"
                 />
   </url><url>
-    <loc>https://nearuppp.github.io/fr/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/"
-                />
-  </url><url>
     <loc>https://nearuppp.github.io/fr/tags/multim%C3%A8tre/</loc>
     <lastmod>2024-06-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nearuppp.github.io/fr/project_folder/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/project_folder/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/project_folder/"
-                />
   </url><url>
     <loc>https://nearuppp.github.io/fr/projects/</loc>
     <lastmod>2024-06-09T00:00:00+00:00</lastmod>
@@ -104,9 +180,6 @@
                 hreflang="fr"
                 href="https://nearuppp.github.io/fr/projects/"
                 />
-  </url><url>
-    <loc>https://nearuppp.github.io/fr/tags/projet/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nearuppp.github.io/fr/tags/proteus/</loc>
     <lastmod>2024-06-09T00:00:00+00:00</lastmod>
@@ -160,19 +233,6 @@
                 href="https://nearuppp.github.io/fr/tags/stormshield/"
                 />
   </url><url>
-    <loc>https://nearuppp.github.io/fr/tags/</loc>
-    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/tags/"
-                />
-  </url><url>
     <loc>https://nearuppp.github.io/fr/tags/the-things-network/</loc>
     <lastmod>2024-06-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -197,19 +257,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://nearuppp.github.io/fr/posts/math/"
-                />
-  </url><url>
-    <loc>https://nearuppp.github.io/fr/posts/</loc>
-    <lastmod>2024-05-30T19:42:18+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/posts/"
                 />
   </url><url>
     <loc>https://nearuppp.github.io/fr/categories/</loc>

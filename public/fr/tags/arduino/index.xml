@@ -4,10 +4,17 @@
     <title>Arduino on Matthieu Guyot</title>
     <link>https://nearuppp.github.io/fr/tags/arduino/</link>
     <description>Recent content in Arduino on Matthieu Guyot</description>
-    <generator>Hugo -- 0.120.4</generator>
+    <generator>Hugo -- 0.129.0</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/fr/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Électronique et câblage du robot labyrinthe</title>
+      <link>https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/</guid>
+      <description>Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle.</description>
+    </item>
     <item>
       <title>Proteus Alpha</title>
       <link>https://nearuppp.github.io/fr/project_folder/iot_project/proteus_alpha/</link>

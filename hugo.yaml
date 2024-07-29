@@ -4,7 +4,7 @@ title: Matthieu Guyot
 theme: PaperMod
 
 params:
-  defaultTheme: dark # defaultTheme: light or dark
+  defaultTheme: dark
   homeInfoParams:
     Title: "Hello Stranger"
     Content: "Welcome to my blog. Here you'll find all the interesting things I've learned through school and other experiences."
@@ -16,11 +16,11 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/3-100matthieuguyot/"
     - name: email
-      url: "https://www.linkedin.com/in/3-100matthieuguyot/"
+      url: "mailto:your-email@example.com"
 
 cover:
   linkFullImages: true
-  
+
 ShowBreadCrumbs: true
 ShowReadingTime: true
 ShowShareButtons: true
@@ -35,22 +35,22 @@ languages:
     languageName: "English"
     contentDir: content/English
     weight: 1
-    profileMode:
-      enabled: true
-      title: My Portfolio
-      subtitle: "Welcome to my site!"
-      
-      imageUrl: "/img/Selfie.jpg"
-      imageTitle: Selfie
-      imageWidth: 300
-      imageHeight: 300
-      buttons:
-        - name: About
-          url: aboutme
-        - name: Project
-          url: projects
-        - name: Resume
-          url: "/img/resume.pdf"
+    params:
+      profileMode:
+        enabled: true
+        title: My Portfolio
+        subtitle: "Welcome to my site!"
+        imageUrl: "/img/Selfie.jpg"
+        imageTitle: Selfie
+        imageWidth: 300
+        imageHeight: 300
+        buttons:
+          - name: About
+            url: aboutme
+          - name: Project
+            url: projects
+          - name: Resume
+            url: "/img/resume.pdf"
     menu:
       main:
         - identifier: AboutMe
@@ -68,23 +68,23 @@ languages:
   fr:
     languageName: "Français"
     contentDir: content/French
-    weight: 1
-    profileMode:
-      enabled: true
-      title: Mon Portfolio
-      subtitle: "Bienvenu sur mon site!"
-      
-      imageUrl: "/img/Selfie.jpg"
-      imageTitle: Selfie
-      imageWidth: 300
-      imageHeight: 300
-      buttons:
-        - name: A Propos de moi
-          url: aboutme
-        - name: Projets
-          url: projects
-        - name: CV
-          url: "/img/CV.pdf"
+    weight: 2
+    params:
+      profileMode:
+        enabled: true
+        title: Mon Portfolio
+        subtitle: "Bienvenu sur mon site!"
+        imageUrl: "/img/Selfie.jpg"
+        imageTitle: Selfie
+        imageWidth: 300
+        imageHeight: 300
+        buttons:
+          - name: A Propos de moi
+            url: aboutme
+          - name: Projets
+            url: projects
+          - name: CV
+            url: "/img/CV.pdf"
     menu:
       main:
         - identifier: A Propos

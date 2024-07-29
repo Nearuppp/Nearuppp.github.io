@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Électronique et câblage du robot labyrinthe | Matthieu Guyot</title>
+<meta name="keywords" content="Projet, Électronique, Robotique, Arduino, Capteurs, Câblage">
+<meta name="description" content="Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle.">
+<meta name="author" content="">
+<link rel="canonical" href="https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nearuppp.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nearuppp.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nearuppp.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nearuppp.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nearuppp.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/">
+<link rel="alternate" hreflang="fr" href="https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Électronique et câblage du robot labyrinthe" />
+<meta property="og:description" content="Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/" /><meta property="article:section" content="project_folder" />
+<meta property="article:published_time" content="2024-07-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-28T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Électronique et câblage du robot labyrinthe"/>
+<meta name="twitter:description" content="Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Project_folders",
+      "item": "https://nearuppp.github.io/fr/project_folder/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Électronique et câblage du robot labyrinthe",
+      "item": "https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Électronique et câblage du robot labyrinthe",
+  "name": "Électronique et câblage du robot labyrinthe",
+  "description": "Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle.",
+  "keywords": [
+    "Projet", "Électronique", "Robotique", "Arduino", "Capteurs", "Câblage"
+  ],
+  "articleBody": "2.2.1 Structure Générale Le système électronique constitue le noyau du mécanisme de contrôle de notre robot. Il comprend un microcontrôleur, des servomoteurs à rotation continue, des capteurs de distance et une batterie, tous essentiels pour le fonctionnement autonome du robot.\nComposants Clés : Microcontrôleur (Maker Nano) : Exécute le code et contrôle divers périphériques, y compris les servomoteurs et les capteurs. Servomoteurs : Conduisent les roues du robot, offrant un équilibre entre faible consommation d’énergie et vitesse adéquate (environ 100 RPM à 4,8V). Capteurs de distance (VL6180X) : Fournissent des mesures de précision millimétrique jusqu’à 20 cm, cruciales pour naviguer dans le labyrinthe. Batterie (PB-Lipstick) : Fournit 2500 mAh, garantissant un temps de fonctionnement prolongé sans avoir besoin de recharger fréquemment. 2.2.2 Principe de câblage et de fonctionnement Comprendre le fonctionnement de chaque composant était essentiel avant l’installation, pour assurer un câblage optimal et non intrusif. Détails de câblage : Servomoteurs : Connexions simples avec alimentation (5V), masse (GND), et signaux de contrôle reliés aux ports numériques du Nano. Capteurs : Connectés via le protocole I2C, utilisant les lignes SDA et SCL pour les signaux de données et d’horloge, respectivement. Des broches GPIO0/CE uniques permettent l’adressage individuel des capteurs. Fonctionnement des servomoteurs : Les servomoteurs ajustent leur position en fonction des signaux d’entrée, contrôlés via le code. Le mécanisme interne comprend une boucle de rétroaction avec un potentiomètre et des engrenages, assurant un contrôle précis des mouvements. Fonctionnement des capteurs : Les capteurs VL6180X utilisent le protocole I2C pour communiquer avec le microcontrôleur, mesurant les distances pour guider la navigation du robot dans le labyrinthe.\n",
+  "wordCount" : "265",
+  "inLanguage": "fr",
+  "datePublished": "2024-07-28T00:00:00Z",
+  "dateModified": "2024-07-28T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Matthieu Guyot",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nearuppp.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nearuppp.github.io/fr/" accesskey="h" title="Matthieu Guyot (Alt + H)">Matthieu Guyot</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://nearuppp.github.io/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nearuppp.github.io/fr/aboutme" title="A Propos">
+                    <span>A Propos</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/fr/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/fr/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Électronique et câblage du robot labyrinthe
+    </h1>
+    <div class="post-description">
+      Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle.
+    </div>
+    <div class="post-meta"><span title='2024-07-28 00:00:00 +0000 UTC'>juillet 28, 2024</span>&nbsp;|&nbsp;Traductions:
+<ul class="i18n_list">
+    <li>
+        <a href="https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="221-structure-générale">2.2.1 Structure Générale<a hidden class="anchor" aria-hidden="true" href="#221-structure-générale">#</a></h2>
+<p>Le système électronique constitue le noyau du mécanisme de contrôle de notre robot. Il comprend un microcontrôleur, des servomoteurs à rotation continue, des capteurs de distance et une batterie, tous essentiels pour le fonctionnement autonome du robot.</p>
+<h3 id="composants-clés-">Composants Clés :<a hidden class="anchor" aria-hidden="true" href="#composants-clés-">#</a></h3>
+<ul>
+<li><strong>Microcontrôleur (Maker Nano)</strong> : Exécute le code et contrôle divers périphériques, y compris les servomoteurs et les capteurs.
+<img loading="lazy" src="/img/makernano.jpg" alt="Électronique du robot labyrinthe"  />
+</li>
+<li><strong>Servomoteurs</strong> : Conduisent les roues du robot, offrant un équilibre entre faible consommation d&rsquo;énergie et vitesse adéquate (environ 100 RPM à 4,8V).
+<img loading="lazy" src="/img/servomoto.jpg" alt="Servomoteur"  />
+</li>
+<li><strong>Capteurs de distance (VL6180X)</strong> : Fournissent des mesures de précision millimétrique jusqu&rsquo;à 20 cm, cruciales pour naviguer dans le labyrinthe.
+<img loading="lazy" src="/img/VL6180X.jpg" alt="VL6180X"  />
+</li>
+<li><strong>Batterie (PB-Lipstick)</strong> : Fournit 2500 mAh, garantissant un temps de fonctionnement prolongé sans avoir besoin de recharger fréquemment.
+<img loading="lazy" src="/img/%28PB-Lipstick%29.jpg" alt="(PB-Lipstick)"  />
+</li>
+</ul>
+<h2 id="222-principe-de-câblage-et-de-fonctionnement">2.2.2 Principe de câblage et de fonctionnement<a hidden class="anchor" aria-hidden="true" href="#222-principe-de-câblage-et-de-fonctionnement">#</a></h2>
+<p>Comprendre le fonctionnement de chaque composant était essentiel avant l&rsquo;installation, pour assurer un câblage optimal et non intrusif.
+<img loading="lazy" src="/img/Assembly.png" alt="Schéma de câblage"  />
+</p>
+<h3 id="détails-de-câblage-">Détails de câblage :<a hidden class="anchor" aria-hidden="true" href="#détails-de-câblage-">#</a></h3>
+<ul>
+<li><strong>Servomoteurs</strong> : Connexions simples avec alimentation (5V), masse (GND), et signaux de contrôle reliés aux ports numériques du Nano.
+<img loading="lazy" src="/img/servoschema.png" alt="Schéma de servomoteur"  />
+</li>
+<li><strong>Capteurs</strong> : Connectés via le protocole I2C, utilisant les lignes SDA et SCL pour les signaux de données et d&rsquo;horloge, respectivement. Des broches GPIO0/CE uniques permettent l&rsquo;adressage individuel des capteurs.
+<img loading="lazy" src="/img/VL6180XS.png" alt="Schéma du VL6180X"  />
+</li>
+</ul>
+<h3 id="fonctionnement-des-servomoteurs-">Fonctionnement des servomoteurs :<a hidden class="anchor" aria-hidden="true" href="#fonctionnement-des-servomoteurs-">#</a></h3>
+<p>Les servomoteurs ajustent leur position en fonction des signaux d&rsquo;entrée, contrôlés via le code. Le mécanisme interne comprend une boucle de rétroaction avec un potentiomètre et des engrenages, assurant un contrôle précis des mouvements.
+<img loading="lazy" src="/img/tension.png" alt="Tension"  />
+</p>
+<h3 id="fonctionnement-des-capteurs-">Fonctionnement des capteurs :<a hidden class="anchor" aria-hidden="true" href="#fonctionnement-des-capteurs-">#</a></h3>
+<p>Les capteurs VL6180X utilisent le protocole I2C pour communiquer avec le microcontrôleur, mesurant les distances pour guider la navigation du robot dans le labyrinthe.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nearuppp.github.io/fr/tags/projet/">Projet</a></li>
+      <li><a href="https://nearuppp.github.io/fr/tags/%C3%A9lectronique/">Électronique</a></li>
+      <li><a href="https://nearuppp.github.io/fr/tags/robotique/">Robotique</a></li>
+      <li><a href="https://nearuppp.github.io/fr/tags/arduino/">Arduino</a></li>
+      <li><a href="https://nearuppp.github.io/fr/tags/capteurs/">Capteurs</a></li>
+      <li><a href="https://nearuppp.github.io/fr/tags/c%C3%A2blage/">Câblage</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://nearuppp.github.io/fr/">Matthieu Guyot</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

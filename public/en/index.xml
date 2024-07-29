@@ -4,10 +4,38 @@
     <title>Matthieu Guyot</title>
     <link>https://nearuppp.github.io/en/</link>
     <description>Recent content on Matthieu Guyot</description>
-    <generator>Hugo -- 0.120.4</generator>
+    <generator>Hugo -- 0.129.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maze Robot</title>
+      <link>https://nearuppp.github.io/en/projects/maze_robot/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/projects/maze_robot/</guid>
+      <description>Project developed at UniLaSalle, focused on creating a maze-solving autonomous robot.</description>
+    </item>
+    <item>
+      <title>Maze Robot Electronics and Wiring</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/</guid>
+      <description>Detailed overview of the electronic components and wiring for the Maze Robot project at UniLaSalle.</description>
+    </item>
+    <item>
+      <title>Maze Robot Programming and Control</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/program_control/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/program_control/</guid>
+      <description>Detailed overview of the programming structure and logic for the Maze Robot project at UniLaSalle.</description>
+    </item>
+    <item>
+      <title>Navigation Strategy</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/function/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/function/</guid>
+      <description>Detailed overview of the electronic components and wiring for the Maze Robot project at UniLaSalle.</description>
+    </item>
     <item>
       <title>Alpha Hypervision</title>
       <link>https://nearuppp.github.io/en/projects/iot_project/</link>
@@ -58,6 +86,13 @@ Binary to Decimal Binary numbers (base-2) use only 0 and 1. To convert binary to
       <guid>https://nearuppp.github.io/en/posts/rust/</guid>
       <description>Rust Programming language Rust is a memory safe compiled programming language that delivers high level simplicity with low-level performances.
 Rust does not have a garbage collector but achieves memory safety with a concept known as ownership and borrowing.</description>
+    </item>
+    <item>
+      <title>Mechanical and Electronic Integration in Robotics</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/mechanical_electronic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/mechanical_electronic/</guid>
+      <description>Detailed overview of the integration process for a robot, including mechanical and electronic components.</description>
     </item>
   </channel>
 </rss>

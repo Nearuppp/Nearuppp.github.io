@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Robotique on Matthieu Guyot</title>
+    <link>https://nearuppp.github.io/fr/tags/robotique/</link>
+    <description>Recent content in Robotique on Matthieu Guyot</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nearuppp.github.io/fr/tags/robotique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Électronique et câblage du robot labyrinthe</title>
+      <link>https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/fr/project_folder/maze_robot/electronic_part/</guid>
+      <description>Aperçu détaillé des composants électroniques et du câblage pour le projet de robot labyrinthe à UniLaSalle.</description>
+    </item>
+  </channel>
+</rss>

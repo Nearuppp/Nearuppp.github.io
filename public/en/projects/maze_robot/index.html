@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Maze Robot | Matthieu Guyot</title>
+<meta name="keywords" content="Project, Robotics, Arduino, Sensors, Autonomous Systems, Programming, Engineering">
+<meta name="description" content="Project developed at UniLaSalle, focused on creating a maze-solving autonomous robot.">
+<meta name="author" content="">
+<link rel="canonical" href="https://nearuppp.github.io/en/projects/maze_robot/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nearuppp.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nearuppp.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nearuppp.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nearuppp.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nearuppp.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nearuppp.github.io/en/projects/maze_robot/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Maze Robot" />
+<meta property="og:description" content="Project developed at UniLaSalle, focused on creating a maze-solving autonomous robot." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nearuppp.github.io/en/projects/maze_robot/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2024-07-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-28T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Maze Robot"/>
+<meta name="twitter:description" content="Project developed at UniLaSalle, focused on creating a maze-solving autonomous robot."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://nearuppp.github.io/en/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Maze Robot",
+      "item": "https://nearuppp.github.io/en/projects/maze_robot/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Maze Robot",
+  "name": "Maze Robot",
+  "description": "Project developed at UniLaSalle, focused on creating a maze-solving autonomous robot.",
+  "keywords": [
+    "Project", "Robotics", "Arduino", "Sensors", "Autonomous Systems", "Programming", "Engineering"
+  ],
+  "articleBody": "Project Overview The “Maze Robot” is a collaborative project undertaken by myself and Benjamin Bonhomme at UniLaSalle. The primary objective was to design and build a robot capable of navigating and exiting a maze without external assistance.\nImplementation 1. Introduction In this project, we developed a robot to autonomously navigate a maze, utilizing various electronic and mechanical components, including an Arduino board and distance sensors.\n2. Hardware Presentation 2.1 Mechanical Part Chassis: Constructed using PLA, the chassis supported all components. Wheels and Ball: The robot featured wheels driven by servomotors and a multidirectional ball for stability. Sensor Mount: A custom mount was designed for optimal sensor placement, enhancing obstacle detection. 2.2 Electronic Part Servomotors: Controlled the wheels for precise movement. Distance Sensors (VL6180X): Detected obstacles up to 20 cm away. Maker Nano Board: Served as the main control unit. Battery: Provided power for the entire system. 2.3 Microcontroller (Arduino, IDE…) Programming: The robot’s software, developed in the Arduino IDE, processed sensor data to navigate the maze autonomously. 3. Strategy and Program Presentation The strategy involved using sensor data to make navigation decisions, controlling motors, and guiding the robot through the maze.\nTechnologies Used Arduino: Central microcontroller for processing inputs and controlling outputs. PLA: Material used for 3D printing the chassis. Servomotors: For wheel control. Distance Sensors: For obstacle detection. Arduino IDE: For software development. Outcome The “Maze Robot” successfully demonstrated the ability to navigate and exit a predefined maze autonomously. The project met its objectives by effectively integrating hardware and software, showcasing practical applications of robotics and sensor technology in problem-solving scenarios.\n",
+  "wordCount" : "262",
+  "inLanguage": "en",
+  "datePublished": "2024-07-28T00:00:00Z",
+  "dateModified": "2024-07-28T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nearuppp.github.io/en/projects/maze_robot/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Matthieu Guyot",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nearuppp.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nearuppp.github.io/en/" accesskey="h" title="Matthieu Guyot (Alt + H)">Matthieu Guyot</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://nearuppp.github.io/fr/" title="Français"
+                            aria-label="Français">Fr</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nearuppp.github.io/en/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Maze Robot
+    </h1>
+    <div class="post-description">
+      Project developed at UniLaSalle, focused on creating a maze-solving autonomous robot.
+    </div>
+    <div class="post-meta"><span title='2024-07-28 00:00:00 +0000 UTC'>July 28, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="project-overview">Project Overview<a hidden class="anchor" aria-hidden="true" href="#project-overview">#</a></h2>
+<p>The &ldquo;Maze Robot&rdquo; is a collaborative project undertaken by myself and Benjamin Bonhomme at <strong>UniLaSalle</strong>. The primary objective was to design and build a robot capable of navigating and exiting a maze without external assistance.</p>
+<h2 id="implementation">Implementation<a hidden class="anchor" aria-hidden="true" href="#implementation">#</a></h2>
+<h3 id="1-introduction">1. Introduction<a hidden class="anchor" aria-hidden="true" href="#1-introduction">#</a></h3>
+<p>In this project, we developed a robot to autonomously navigate a maze, utilizing various electronic and mechanical components, including an Arduino board and distance sensors.</p>
+<h3 id="2-hardware-presentation">2. Hardware Presentation<a hidden class="anchor" aria-hidden="true" href="#2-hardware-presentation">#</a></h3>
+<h4 id="21-mechanical-partproject_foldermaze_robotmechanical_electronic">2.1 <a href="/en/project_folder/maze_robot/mechanical_electronic/">Mechanical Part</a><a hidden class="anchor" aria-hidden="true" href="#21-mechanical-partproject_foldermaze_robotmechanical_electronic">#</a></h4>
+<ul>
+<li><strong>Chassis</strong>: Constructed using PLA, the chassis supported all components.</li>
+<li><strong>Wheels and Ball</strong>: The robot featured wheels driven by servomotors and a multidirectional ball for stability.</li>
+<li><strong>Sensor Mount</strong>: A custom mount was designed for optimal sensor placement, enhancing obstacle detection.</li>
+</ul>
+<h4 id="22-electronic-partproject_foldermaze_robotelectronic_part">2.2 <a href="/en/project_folder/maze_robot/electronic_part/">Electronic Part</a><a hidden class="anchor" aria-hidden="true" href="#22-electronic-partproject_foldermaze_robotelectronic_part">#</a></h4>
+<ul>
+<li><strong>Servomotors</strong>: Controlled the wheels for precise movement.</li>
+<li><strong>Distance Sensors (VL6180X)</strong>: Detected obstacles up to 20 cm away.</li>
+<li><strong>Maker Nano Board</strong>: Served as the main control unit.</li>
+<li><strong>Battery</strong>: Provided power for the entire system.</li>
+</ul>
+<h4 id="23-microcontroller-arduino-ideproject_foldermaze_robotprogram_control">2.3 <a href="/en/project_folder/maze_robot/program_control/">Microcontroller (Arduino, IDE&hellip;)</a><a hidden class="anchor" aria-hidden="true" href="#23-microcontroller-arduino-ideproject_foldermaze_robotprogram_control">#</a></h4>
+<ul>
+<li><strong>Programming</strong>: The robot&rsquo;s software, developed in the Arduino IDE, processed sensor data to navigate the maze autonomously.</li>
+</ul>
+<h3 id="3-strategy-and-program-presentationproject_foldermaze_robotfunctionmd">3. <a href="/en/project_folder/maze_robot/function/">Strategy and Program Presentation</a><a hidden class="anchor" aria-hidden="true" href="#3-strategy-and-program-presentationproject_foldermaze_robotfunctionmd">#</a></h3>
+<p>The strategy involved using sensor data to make navigation decisions, controlling motors, and guiding the robot through the maze.</p>
+<h2 id="technologies-used">Technologies Used<a hidden class="anchor" aria-hidden="true" href="#technologies-used">#</a></h2>
+<ul>
+<li><strong>Arduino</strong>: Central microcontroller for processing inputs and controlling outputs.</li>
+<li><strong>PLA</strong>: Material used for 3D printing the chassis.</li>
+<li><strong>Servomotors</strong>: For wheel control.</li>
+<li><strong>Distance Sensors</strong>: For obstacle detection.</li>
+<li><strong>Arduino IDE</strong>: For software development.</li>
+</ul>
+<h2 id="outcome">Outcome<a hidden class="anchor" aria-hidden="true" href="#outcome">#</a></h2>
+<p>The &ldquo;Maze Robot&rdquo; successfully demonstrated the ability to navigate and exit a predefined maze autonomously. The project met its objectives by effectively integrating hardware and software, showcasing practical applications of robotics and sensor technology in problem-solving scenarios.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nearuppp.github.io/en/tags/project/">Project</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/robotics/">Robotics</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/arduino/">Arduino</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/sensors/">Sensors</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/autonomous-systems/">Autonomous Systems</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/programming/">Programming</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/engineering/">Engineering</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://nearuppp.github.io/en/">Matthieu Guyot</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

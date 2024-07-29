@@ -4,10 +4,31 @@
     <title>Project_folders on Matthieu Guyot</title>
     <link>https://nearuppp.github.io/en/project_folder/</link>
     <description>Recent content in Project_folders on Matthieu Guyot</description>
-    <generator>Hugo -- 0.120.4</generator>
+    <generator>Hugo -- 0.129.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/en/project_folder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maze Robot Electronics and Wiring</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/</guid>
+      <description>Detailed overview of the electronic components and wiring for the Maze Robot project at UniLaSalle.</description>
+    </item>
+    <item>
+      <title>Maze Robot Programming and Control</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/program_control/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/program_control/</guid>
+      <description>Detailed overview of the programming structure and logic for the Maze Robot project at UniLaSalle.</description>
+    </item>
+    <item>
+      <title>Navigation Strategy</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/function/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/function/</guid>
+      <description>Detailed overview of the electronic components and wiring for the Maze Robot project at UniLaSalle.</description>
+    </item>
     <item>
       <title>LoRaWAN Integration in Alpha Hypervision</title>
       <link>https://nearuppp.github.io/en/project_folder/iot_project/lorawan/</link>
@@ -21,6 +42,13 @@
       <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://nearuppp.github.io/en/project_folder/iot_project/proteus_alpha/</guid>
       <description>Detailed description of the process for designing the PCB card for Alpha Hypervision using Proteus 8.</description>
+    </item>
+    <item>
+      <title>Mechanical and Electronic Integration in Robotics</title>
+      <link>https://nearuppp.github.io/en/project_folder/maze_robot/mechanical_electronic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/maze_robot/mechanical_electronic/</guid>
+      <description>Detailed overview of the integration process for a robot, including mechanical and electronic components.</description>
     </item>
   </channel>
 </rss>
