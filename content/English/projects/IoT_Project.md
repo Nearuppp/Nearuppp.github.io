@@ -4,7 +4,7 @@ date: 2024-06-09
 description: "Here you'll find the project I've created with my friends at UniLaSalle"
 tags: ["Project", "Electronic","Docker","StormShield","LoraWan","Proteus","The Things Network"]
 ---
-
+Click on each title to get more details.
 
 ## Project Overview
 Alpha Hypervision is a collaborative project developed by myself and my friends, Charles-Clement Andrade and Thomas Wimart, during our IoT class at **UniLaSalle Amiens**. The primary objective of this project was to create a device utilizing **LoRaWAN technology** to enhance the supervision and monitoring of server rooms.

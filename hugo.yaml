@@ -65,6 +65,10 @@ languages:
           name: Archives
           url: /archives/
           weight: 30
+        - identifier: projects
+          name: Project
+          url: /projects/
+          weight: 40
   fr:
     languageName: "Français"
     contentDir: content/French
@@ -99,3 +103,7 @@ languages:
           name: Archives
           url: /archives/
           weight: 30
+        - identifier: projects
+          name: Project
+          url: /projects/
+          weight: 40
