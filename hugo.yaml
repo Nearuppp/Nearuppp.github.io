@@ -57,18 +57,19 @@ languages:
           name: About Me
           url: aboutme
           weight: 10
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 20
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 30
         - identifier: projects
           name: Project
           url: /projects/
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 30
+        - identifier: archives
+          name: Archives
+          url: /archives/
           weight: 40
+        
   fr:
     languageName: "Français"
     contentDir: content/French
@@ -95,15 +96,16 @@ languages:
           name: A Propos
           url: aboutme
           weight: 10
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 20
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 30
         - identifier: projects
           name: Project
           url: /projects/
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 30
+        - identifier: archives
+          name: Archives
+          url: /archives/
           weight: 40
+        

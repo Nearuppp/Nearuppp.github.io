@@ -23,4 +23,6 @@ To achieve this, we designed a data pipeline using **Node-RED**. This pipeline c
 * **InfluxDB**: For time-series data storage.
 * **Node-RED**: For building the data pipeline.
 ## Outcome
-Alpha Hypervision successfully provided a reliable and efficient way to supervise server room conditions, helping to maintain server performance and prevent potential issues. This project not only met its technical goals but also offered practical benefits for server room management.
+Alpha Hypervision successfully provided a reliable and efficient way to supervise server room conditions, helping to maintain server performance and prevent potential issues. This project not only met its technical goals but also offered practical benefits for server room management.  
+If you are interested in getting the files you can find them to this address: 
+[GitHub Project](https://github.com/Nearuppp/IoT_Alpha_Supervision)

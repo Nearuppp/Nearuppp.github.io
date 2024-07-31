@@ -6,8 +6,29 @@
     <description>Recent content in Project_folders on Matthieu Guyot</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nearuppp.github.io/en/project_folder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Chat Application - Client.java</title>
+      <link>https://nearuppp.github.io/en/project_folder/java_project/client.java/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/java_project/client.java/</guid>
+      <description>Detailed explanation of the Client.java file in the Java Chat Application project.</description>
+    </item>
+    <item>
+      <title>Java Chat Application - ClientApp.java</title>
+      <link>https://nearuppp.github.io/en/project_folder/java_project/clientapp.java/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/java_project/clientapp.java/</guid>
+      <description>In-depth explanation of the ClientApp.java file in the Java Chat Application project, covering features, events, and functionality.</description>
+    </item>
+    <item>
+      <title>Java Chat Application - Server.java</title>
+      <link>https://nearuppp.github.io/en/project_folder/java_project/server.java/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/java_project/server.java/</guid>
+      <description>In-depth explanation of the Server.java file in the Java Chat Application project, covering features, events, and functionality.</description>
+    </item>
     <item>
       <title>Maze Robot Electronics and Wiring</title>
       <link>https://nearuppp.github.io/en/project_folder/maze_robot/electronic_part/</link>

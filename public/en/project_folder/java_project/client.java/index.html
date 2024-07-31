@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Java Chat Application - Client.java | Matthieu Guyot</title>
+<meta name="keywords" content="Java, Sockets, Threading, Client-Server, Chat Application">
+<meta name="description" content="Detailed explanation of the Client.java file in the Java Chat Application project.">
+<meta name="author" content="">
+<link rel="canonical" href="https://nearuppp.github.io/en/project_folder/java_project/client.java/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nearuppp.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nearuppp.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nearuppp.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nearuppp.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nearuppp.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nearuppp.github.io/en/project_folder/java_project/client.java/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Java Chat Application - Client.java" />
+<meta property="og:description" content="Detailed explanation of the Client.java file in the Java Chat Application project." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nearuppp.github.io/en/project_folder/java_project/client.java/" /><meta property="article:section" content="project_folder" />
+<meta property="article:published_time" content="2024-07-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-31T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Chat Application - Client.java"/>
+<meta name="twitter:description" content="Detailed explanation of the Client.java file in the Java Chat Application project."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Project_folders",
+      "item": "https://nearuppp.github.io/en/project_folder/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Java Chat Application - Client.java",
+      "item": "https://nearuppp.github.io/en/project_folder/java_project/client.java/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Java Chat Application - Client.java",
+  "name": "Java Chat Application - Client.java",
+  "description": "Detailed explanation of the Client.java file in the Java Chat Application project.",
+  "keywords": [
+    "Java", "Sockets", "Threading", "Client-Server", "Chat Application"
+  ],
+  "articleBody": "Client.java Overview The Client.java file is a crucial component of the Java Chat Application, responsible for establishing and managing the connection between an individual client and the server. Its primary goal is to facilitate communication between the client and the server, allowing the user to send and receive messages in real-time.\nGoal of Client.java The main goal of Client.java is to:\nEstablish a connection to the chat server. Handle data exchange between the client and server. Use threading to ensure smooth and responsive communication. How Client.java Works Establishing Connection: A Socket object is created to connect to the server using the server’s IP address and port number. Socket socket = new Socket(\"serverAddress\", portNumber); Input/Output Streams: Input and output streams are set up to facilitate communication. The InputStream reads data from the server, and the OutputStream sends data to the server. BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream())); PrintWriter out = new PrintWriter(socket.getOutputStream(), true); Threading: Two threads are typically used: one for reading messages from the server and another for sending messages. This ensures that the client can send and receive messages concurrently without blocking the user interface. Copy code Thread readThread = new Thread(new Runnable() { public void run() { // Code to read messages from the server } }); Thread writeThread = new Thread(new Runnable() { public void run() { // Code to send messages to the server } }); readThread.start(); writeThread.start(); Detailed Workflow Connection Setup: When the client application starts, Client.java establishes a connection to the server using the provided IP address and port number. Message Handling: The reading thread continuously listens for incoming messages from the server and processes them (e.g., displaying them to the user). The writing thread waits for user input and sends the typed messages to the server. Concurrency: By using threads, the client ensures that receiving messages from the server does not block the ability to send messages, creating a seamless chat experience. Illustrative Diagram In summary, Client.java is designed to manage the client’s end of the chat communication, ensuring a stable and responsive connection to the server. By leveraging Java sockets and threading, it handles real-time message exchange efficiently.\n",
+  "wordCount" : "356",
+  "inLanguage": "en",
+  "datePublished": "2024-07-31T00:00:00Z",
+  "dateModified": "2024-07-31T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nearuppp.github.io/en/project_folder/java_project/client.java/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Matthieu Guyot",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nearuppp.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nearuppp.github.io/en/" accesskey="h" title="Matthieu Guyot (Alt + H)">Matthieu Guyot</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://nearuppp.github.io/fr/" title="Français"
+                            aria-label="Français">Fr</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nearuppp.github.io/en/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/projects/" title="Project">
+                    <span>Project</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Java Chat Application - Client.java
+    </h1>
+    <div class="post-description">
+      Detailed explanation of the Client.java file in the Java Chat Application project.
+    </div>
+    <div class="post-meta"><span title='2024-07-31 00:00:00 +0000 UTC'>July 31, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="clientjava-overview">Client.java Overview<a hidden class="anchor" aria-hidden="true" href="#clientjava-overview">#</a></h2>
+<p>The Client.java file is a crucial component of the Java Chat Application, responsible for establishing and managing the connection between an individual client and the server. Its primary goal is to facilitate communication between the client and the server, allowing the user to send and receive messages in real-time.</p>
+<h3 id="goal-of-clientjava">Goal of Client.java<a hidden class="anchor" aria-hidden="true" href="#goal-of-clientjava">#</a></h3>
+<p>The main goal of Client.java is to:</p>
+<ul>
+<li>Establish a connection to the chat server.</li>
+<li>Handle data exchange between the client and server.</li>
+<li>Use threading to ensure smooth and responsive communication.</li>
+</ul>
+<h2 id="how-clientjava-works">How Client.java Works<a hidden class="anchor" aria-hidden="true" href="#how-clientjava-works">#</a></h2>
+<h3 id="establishing-connection">Establishing Connection:<a hidden class="anchor" aria-hidden="true" href="#establishing-connection">#</a></h3>
+<ol>
+<li>A Socket object is created to connect to the server using the server&rsquo;s IP address and port number.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(<span style="color:#e6db74">&#34;serverAddress&#34;</span>, portNumber);
+</span></span></code></pre></div><ol start="2">
+<li>Input/Output Streams:</li>
+</ol>
+<ul>
+<li>Input and output streams are set up to facilitate communication. The InputStream reads data from the server, and the OutputStream sends data to the server.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>BufferedReader in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(socket.<span style="color:#a6e22e">getInputStream</span>()));
+</span></span><span style="display:flex;"><span>PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(socket.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>);
+</span></span></code></pre></div><ol start="3">
+<li>Threading:</li>
+</ol>
+<ul>
+<li>Two threads are typically used: one for reading messages from the server and another for sending messages. This ensures that the client can send and receive messages concurrently without blocking the user interface.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Copy code
+</span></span><span style="display:flex;"><span>Thread readThread <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread(<span style="color:#66d9ef">new</span> Runnable() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code to read messages from the server</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Thread writeThread <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread(<span style="color:#66d9ef">new</span> Runnable() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code to send messages to the server</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>readThread.<span style="color:#a6e22e">start</span>();
+</span></span><span style="display:flex;"><span>writeThread.<span style="color:#a6e22e">start</span>();
+</span></span></code></pre></div><h2 id="detailed-workflow">Detailed Workflow<a hidden class="anchor" aria-hidden="true" href="#detailed-workflow">#</a></h2>
+<ol>
+<li>Connection Setup:</li>
+</ol>
+<ul>
+<li>When the client application starts, Client.java establishes a connection to the server using the provided IP address and port number.</li>
+</ul>
+<ol start="2">
+<li>Message Handling:</li>
+</ol>
+<ul>
+<li>The reading thread continuously listens for incoming messages from the server and processes them (e.g., displaying them to the user).</li>
+<li>The writing thread waits for user input and sends the typed messages to the server.</li>
+</ul>
+<ol start="3">
+<li>Concurrency:</li>
+</ol>
+<ul>
+<li>By using threads, the client ensures that receiving messages from the server does not block the ability to send messages, creating a seamless chat experience.</li>
+</ul>
+<h3 id="illustrative-diagram">Illustrative Diagram<a hidden class="anchor" aria-hidden="true" href="#illustrative-diagram">#</a></h3>
+<p>In summary, <strong>Client.java</strong> is designed to manage the client&rsquo;s end of the chat communication, ensuring a stable and responsive connection to the server. By leveraging Java sockets and threading, it handles real-time message exchange efficiently.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nearuppp.github.io/en/tags/java/">Java</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/sockets/">Sockets</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/threading/">Threading</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/client-server/">Client-Server</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/chat-application/">Chat Application</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://nearuppp.github.io/en/">Matthieu Guyot</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

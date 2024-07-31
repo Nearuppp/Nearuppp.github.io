@@ -2,6 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nearuppp.github.io/en/tags/chat-application/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/client-server/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/java/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/projects/server_client/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/project_folder/java_project/client.java/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/project_folder/java_project/clientapp.java/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/project_folder/java_project/server.java/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/en/project_folder/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/project_folder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/project_folder/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/en/projects/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/projects/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/server/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/sockets/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://nearuppp.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nearuppp.github.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/threading/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nearuppp.github.io/en/tags/user-interface/</loc>
+    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nearuppp.github.io/en/tags/arduino/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -26,19 +111,6 @@
   </url><url>
     <loc>https://nearuppp.github.io/en/tags/engineering/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nearuppp.github.io/en/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/"
-                />
   </url><url>
     <loc>https://nearuppp.github.io/en/projects/maze_robot/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
@@ -68,50 +140,11 @@
     <loc>https://nearuppp.github.io/en/tags/project/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nearuppp.github.io/en/project_folder/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/project_folder/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/project_folder/"
-                />
-  </url><url>
-    <loc>https://nearuppp.github.io/en/projects/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/projects/"
-                />
-  </url><url>
     <loc>https://nearuppp.github.io/en/tags/robotics/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nearuppp.github.io/en/tags/sensors/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nearuppp.github.io/en/tags/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://nearuppp.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nearuppp.github.io/en/tags/"
-                />
   </url><url>
     <loc>https://nearuppp.github.io/en/tags/wiring/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>

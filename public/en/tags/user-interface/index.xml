@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>User Interface on Matthieu Guyot</title>
+    <link>https://nearuppp.github.io/en/tags/user-interface/</link>
+    <description>Recent content in User Interface on Matthieu Guyot</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nearuppp.github.io/en/tags/user-interface/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Chat Application - ClientApp.java</title>
+      <link>https://nearuppp.github.io/en/project_folder/java_project/clientapp.java/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://nearuppp.github.io/en/project_folder/java_project/clientapp.java/</guid>
+      <description>In-depth explanation of the ClientApp.java file in the Java Chat Application project, covering features, events, and functionality.</description>
+    </item>
+  </channel>
+</rss>

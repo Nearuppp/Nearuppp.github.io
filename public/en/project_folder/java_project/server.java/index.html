@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Java Chat Application - Server.java | Matthieu Guyot</title>
+<meta name="keywords" content="Java, Sockets, Server, Threading, Chat Application">
+<meta name="description" content="In-depth explanation of the Server.java file in the Java Chat Application project, covering features, events, and functionality.">
+<meta name="author" content="">
+<link rel="canonical" href="https://nearuppp.github.io/en/project_folder/java_project/server.java/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nearuppp.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nearuppp.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nearuppp.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nearuppp.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nearuppp.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nearuppp.github.io/en/project_folder/java_project/server.java/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Java Chat Application - Server.java" />
+<meta property="og:description" content="In-depth explanation of the Server.java file in the Java Chat Application project, covering features, events, and functionality." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nearuppp.github.io/en/project_folder/java_project/server.java/" /><meta property="article:section" content="project_folder" />
+<meta property="article:published_time" content="2024-07-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-31T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Chat Application - Server.java"/>
+<meta name="twitter:description" content="In-depth explanation of the Server.java file in the Java Chat Application project, covering features, events, and functionality."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Project_folders",
+      "item": "https://nearuppp.github.io/en/project_folder/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Java Chat Application - Server.java",
+      "item": "https://nearuppp.github.io/en/project_folder/java_project/server.java/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Java Chat Application - Server.java",
+  "name": "Java Chat Application - Server.java",
+  "description": "In-depth explanation of the Server.java file in the Java Chat Application project, covering features, events, and functionality.",
+  "keywords": [
+    "Java", "Sockets", "Server", "Threading", "Chat Application"
+  ],
+  "articleBody": "Server.java Overview Server.java is the backbone of the Java Chat Application, responsible for managing connections, facilitating communication between clients, and maintaining the overall functionality of the chat system. It operates as the central hub where all client requests are processed and responded to.\nGoal of Server.java The primary goals of Server.java are:\nConnection Management: Accept connections from multiple clients and manage them efficiently. Message Broadcasting: Relay messages between clients, ensuring they are delivered to the appropriate recipients. Thread Management: Handle multiple client connections concurrently using threading. How Server.java Works 1. Server Initialization Server.java initializes the server by setting up a ServerSocket to listen for incoming client connections on a specified port.\nServerSocket Creation: This socket listens for client connection requests. ServerSocket serverSocket = new ServerSocket(portNumber); Features: Port Configuration: The server can be configured to listen on a specific port, which is communicated to the clients for connection. IP Binding: It binds to a specific IP address, or all available IPs on the server, to accept client connections. 2. Handling Client Connections When a client connects, the server accepts the connection and creates a new thread to handle communication with that client. This approach allows the server to handle multiple clients simultaneously without blocking.\nThreading for Clients: Each client connection is managed in its own thread, allowing independent and concurrent communication. Socket clientSocket = serverSocket.accept(); ClientHandler clientHandler = new ClientHandler(clientSocket); new Thread(clientHandler).start(); Features: Scalability: The use of threads enables the server to scale and manage a large number of clients. Resource Management: Efficiently handles resources by closing sockets and streams when clients disconnect. 3. Message Broadcasting and Handling The server receives messages from connected clients and broadcasts them to all other clients or specific recipients, depending on the application’s design.\nMessage Distribution: Messages can be broadcasted to all clients or directed to specific ones (e.g., private messaging). public void broadcast(String message) { for (ClientHandler client : clients) { client.sendMessage(message); } } Features: Chat Rooms: Supports chat rooms or channels, allowing messages to be segregated by topics or groups. Private Messaging: Implements private messaging, ensuring messages are delivered only to intended recipients. Interesting Points and Features Concurrency: Server.java leverages threading to handle multiple clients concurrently, providing a responsive experience even with many users. Security Measures: May include basic security features like client authentication, message encryption, or IP banning to prevent unauthorized access. Logging and Monitoring: Tracks server activities and client interactions, which is crucial for debugging and auditing purposes. Scalability: Designed to scale horizontally, allowing multiple instances of the server to handle increased load, possibly with load balancing. In summary, Server.java is the central component that makes the Java Chat Application function effectively. It manages client connections, handles message broadcasting, and ensures smooth and concurrent communication across the system. This structure not only facilitates a seamless chat experience but also allows for future expansion and feature enhancement.\n",
+  "wordCount" : "475",
+  "inLanguage": "en",
+  "datePublished": "2024-07-31T00:00:00Z",
+  "dateModified": "2024-07-31T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nearuppp.github.io/en/project_folder/java_project/server.java/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Matthieu Guyot",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nearuppp.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nearuppp.github.io/en/" accesskey="h" title="Matthieu Guyot (Alt + H)">Matthieu Guyot</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://nearuppp.github.io/fr/" title="Français"
+                            aria-label="Français">Fr</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nearuppp.github.io/en/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/projects/" title="Project">
+                    <span>Project</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nearuppp.github.io/en/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Java Chat Application - Server.java
+    </h1>
+    <div class="post-description">
+      In-depth explanation of the Server.java file in the Java Chat Application project, covering features, events, and functionality.
+    </div>
+    <div class="post-meta"><span title='2024-07-31 00:00:00 +0000 UTC'>July 31, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="serverjava-overview">Server.java Overview<a hidden class="anchor" aria-hidden="true" href="#serverjava-overview">#</a></h2>
+<p><code>Server.java</code> is the backbone of the Java Chat Application, responsible for managing connections, facilitating communication between clients, and maintaining the overall functionality of the chat system. It operates as the central hub where all client requests are processed and responded to.</p>
+<h3 id="goal-of-serverjava">Goal of Server.java<a hidden class="anchor" aria-hidden="true" href="#goal-of-serverjava">#</a></h3>
+<p>The primary goals of <code>Server.java</code> are:</p>
+<ul>
+<li><strong>Connection Management</strong>: Accept connections from multiple clients and manage them efficiently.</li>
+<li><strong>Message Broadcasting</strong>: Relay messages between clients, ensuring they are delivered to the appropriate recipients.</li>
+<li><strong>Thread Management</strong>: Handle multiple client connections concurrently using threading.</li>
+</ul>
+<h3 id="how-serverjava-works">How Server.java Works<a hidden class="anchor" aria-hidden="true" href="#how-serverjava-works">#</a></h3>
+<h3 id="1-server-initialization">1. Server Initialization<a hidden class="anchor" aria-hidden="true" href="#1-server-initialization">#</a></h3>
+<p><code>Server.java</code> initializes the server by setting up a <code>ServerSocket</code> to listen for incoming client connections on a specified port.</p>
+<ul>
+<li><strong>ServerSocket Creation</strong>: This socket listens for client connection requests.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ServerSocket serverSocket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServerSocket(portNumber);
+</span></span></code></pre></div><h4 id="features">Features:<a hidden class="anchor" aria-hidden="true" href="#features">#</a></h4>
+<ul>
+<li>Port Configuration: The server can be configured to listen on a specific port, which is communicated to the clients for connection.</li>
+<li>IP Binding: It binds to a specific IP address, or all available IPs on the server, to accept client connections.</li>
+</ul>
+<h3 id="2-handling-client-connections">2. Handling Client Connections<a hidden class="anchor" aria-hidden="true" href="#2-handling-client-connections">#</a></h3>
+<p>When a client connects, the server accepts the connection and creates a new thread to handle communication with that client. This approach allows the server to handle multiple clients simultaneously without blocking.</p>
+<ul>
+<li>Threading for Clients: Each client connection is managed in its own thread, allowing independent and concurrent communication.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Socket clientSocket <span style="color:#f92672">=</span> serverSocket.<span style="color:#a6e22e">accept</span>();
+</span></span><span style="display:flex;"><span>ClientHandler clientHandler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ClientHandler(clientSocket);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">new</span> Thread(clientHandler).<span style="color:#a6e22e">start</span>();
+</span></span></code></pre></div><h3 id="features-1">Features:<a hidden class="anchor" aria-hidden="true" href="#features-1">#</a></h3>
+<ul>
+<li>Scalability: The use of threads enables the server to scale and manage a large number of clients.</li>
+<li>Resource Management: Efficiently handles resources by closing sockets and streams when clients disconnect.</li>
+</ul>
+<h3 id="3-message-broadcasting-and-handling">3. Message Broadcasting and Handling<a hidden class="anchor" aria-hidden="true" href="#3-message-broadcasting-and-handling">#</a></h3>
+<p>The server receives messages from connected clients and broadcasts them to all other clients or specific recipients, depending on the application&rsquo;s design.</p>
+<ul>
+<li>Message Distribution: Messages can be broadcasted to all clients or directed to specific ones (e.g., private messaging).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">broadcast</span>(String message) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (ClientHandler client : clients) {
+</span></span><span style="display:flex;"><span>        client.<span style="color:#a6e22e">sendMessage</span>(message);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="features-2">Features:<a hidden class="anchor" aria-hidden="true" href="#features-2">#</a></h3>
+<ul>
+<li>Chat Rooms: Supports chat rooms or channels, allowing messages to be segregated by topics or groups.</li>
+<li>Private Messaging: Implements private messaging, ensuring messages are delivered only to intended recipients.</li>
+</ul>
+<h2 id="interesting-points-and-features">Interesting Points and Features<a hidden class="anchor" aria-hidden="true" href="#interesting-points-and-features">#</a></h2>
+<ul>
+<li>Concurrency: Server.java leverages threading to handle multiple clients concurrently, providing a responsive experience even with many users.</li>
+<li>Security Measures: May include basic security features like client authentication, message encryption, or IP banning to prevent unauthorized access.</li>
+<li>Logging and Monitoring: Tracks server activities and client interactions, which is crucial for debugging and auditing purposes.</li>
+<li>Scalability: Designed to scale horizontally, allowing multiple instances of the server to handle increased load, possibly with load balancing.</li>
+</ul>
+<p>In summary, Server.java is the central component that makes the Java Chat Application function effectively. It manages client connections, handles message broadcasting, and ensures smooth and concurrent communication across the system. This structure not only facilitates a seamless chat experience but also allows for future expansion and feature enhancement.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nearuppp.github.io/en/tags/java/">Java</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/sockets/">Sockets</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/server/">Server</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/threading/">Threading</a></li>
+      <li><a href="https://nearuppp.github.io/en/tags/chat-application/">Chat Application</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://nearuppp.github.io/en/">Matthieu Guyot</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
