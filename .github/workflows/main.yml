@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -37,17 +37,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Create content directories
-        run: |
-          mkdir -p content/projects
-          mkdir -p content/knowledge-hub
-          mkdir -p public/images
-
-      - name: Create sample content
-        run: |
-          # (... your `cat >` commands unchanged ...)
-          echo "✅ Sample content created"
 
       - name: Build with Next.js
         run: |
