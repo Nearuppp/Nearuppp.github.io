@@ -17,29 +17,37 @@ jobs:
       name: github-pages
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
           cache: npm
 
-      - uses: actions/configure-pages@v4
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
         with:
           static_site_generator: next
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-      - run: |
+      - name: Build with Next.js
+        run: |
           npm run build
           npm run export
         env:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
 
-      - run: touch out/.nojekyll
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: ./out
 
-      - uses: actions/deploy-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v3
