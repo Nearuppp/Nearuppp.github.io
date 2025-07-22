@@ -4,27 +4,27 @@ on:
   push:
     branches: ["main"]
 
+# 🔥 CRITICAL: Add permissions to allow pushing to gh-pages
+permissions:
+  contents: write  # Allows pushing to branches
+  pages: write    # Required for GitHub Pages
+  id-token: write # Required for GitHub Pages
+
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          
-      - run: npm install
-      - run: npm run build  # This should create your build files
-      
-      # Add this step to verify what was built
-      - name: List files
-        run: ls -R
-      
-      - name: Deploy
+
+      - name: Build (replace with your actual build command)
+        run: |
+          npm install
+          npm run build  # This should generate files in `./dist` (or `./build`)
+
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out  # CHANGE THIS to match your actual build directory
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 🔥 Must use `secrets.GITHUB_TOKEN`
+          publish_dir: ./out  # ⚠️ Replace with your build folder (e.g., `./build`, `./out`)
+          publish_branch: gh-pages  # Explicitly set the target branch
+          force_orphan: true  # Ensures only the latest files are kept
