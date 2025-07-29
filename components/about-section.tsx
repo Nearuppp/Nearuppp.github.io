@@ -9,47 +9,43 @@ const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("bio")
 
   const timelineItems = [
-    {
-      type: "work",
-      title: "Senior Security Engineer",
-      organization: "Tech Company",
-      period: "2020 - Present",
-      description: "Leading security initiatives and implementing robust security measures across the organization.",
-      icon: <Briefcase className="h-5 w-5" />,
-    },
-    {
-      type: "education",
-      title: "Master's in Cybersecurity",
-      organization: "University",
-      period: "2018 - 2020",
-      description: "Specialized in advanced security protocols and penetration testing techniques.",
-      icon: <GraduationCap className="h-5 w-5" />,
-    },
-    {
-      type: "work",
-      title: "Software Developer",
-      organization: "Tech Startup",
-      period: "2016 - 2020",
-      description: "Developed secure applications and implemented best practices for code security.",
-      icon: <Briefcase className="h-5 w-5" />,
-    },
-    {
-      type: "education",
-      title: "Bachelor's in Computer Science",
-      organization: "University",
-      period: "2013 - 2016",
-      description: "Focused on software engineering and computer systems architecture.",
-      icon: <GraduationCap className="h-5 w-5" />,
-    },
-    {
-      type: "achievement",
-      title: "Certified Ethical Hacker",
-      organization: "EC-Council",
-      period: "2019",
-      description: "Obtained certification demonstrating expertise in ethical hacking methodologies.",
-      icon: <Award className="h-5 w-5" />,
-    },
-  ]
+  {
+    type: "education",
+    title: "Engineering Degree in Computer Network and Connected Object",
+    organization: "UniLaSalle Amiens",
+    period: "2021 - Present",
+    description:
+      "Pursuing an engineering degree specializing in Computer Network and Connected Object",
+    icon: <GraduationCap className="h-5 w-5" />,
+  },
+  {
+    type: "work",
+    title: "Cybersecurity Apprentice",
+    organization: "Procter & Gamble - Amiens",
+    period: "2024 - Present",
+    description:
+      "Working on system security, Active Directory management, compliance management and infrastructure migration.",
+    icon: <Briefcase className="h-5 w-5" />,
+  },
+  {
+    type: "work",
+    title: "Digitalization Apprentice",
+    organization: "Procter & Gamble - Amiens",
+    period: "2023 - 2024",
+    description:
+      "Worked on data automation, ETL, and process optimization through digital tools.",
+    icon: <Briefcase className="h-5 w-5" />,
+  },
+  {
+    type: "education",
+    title: "Scientific Baccalaureate with Honors",
+    organization: "Plano East Senior High School",
+    period: "2018 - 2021",
+    description:
+      "Focused on mathematics and physical sciences, including International Baccalaureate coursework.",
+    icon: <GraduationCap className="h-5 w-5" />,
+  },
+]
 
   const skills = [
     {
@@ -102,7 +98,7 @@ const AboutSection = () => {
                 <div className="prose dark:prose-invert max-w-none">
                   <p className="mb-4">
                     Hello! I'm Matthieu GUYOT, a passionate technologist with expertise in both software development and
-                    cybersecurity. With over 8 years of experience in the tech industry, I've dedicated my career to
+                    cybersecurity. With over 3 years of experience in the tech industry, I've dedicated my career to
                     building secure, efficient, and innovative solutions.
                   </p>
                   <p className="mb-4">
@@ -117,7 +113,7 @@ const AboutSection = () => {
                   <p>
                     When I'm not coding or analyzing security vulnerabilities, I enjoy documenting my knowledge in my
                     Obsidian vault, contributing to open-source projects, and staying updated with the latest
-                    technological advancements. I'm also passionate about sharing knowledge through mentoring and
+                    technological advancements. I'm also passionate about sharing knowledge and
                     writing technical articles.
                   </p>
                 </div>

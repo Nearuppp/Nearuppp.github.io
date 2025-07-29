@@ -103,37 +103,35 @@ export default function ResumePage() {
               {/* Projects Section */}
               <Card>
                 <CardContent className="pt-6">
-                  <div className="flex items-center gap-2 mb-6">
-                    <Code className="h-5 w-5 text-primary" />
-                    <h2 className="text-2xl font-semibold">Key Projects</h2>
-                  </div>
+  <div className="flex items-center gap-2 mb-6">
+    <Code className="h-5 w-5 text-primary" />
+    <h2 className="text-2xl font-semibold">Key Projects</h2>
+  </div>
 
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-lg font-medium">Secure Authentication System</h3>
-                      <p className="text-muted-foreground mt-1">
-                        A robust authentication system with multi-factor authentication, JWT, and advanced security
-                        features.
-                      </p>
-                    </div>
+  <div className="space-y-6">
+    <div>
+      <h3 className="text-lg font-medium">Server Room Hypervision</h3>
+      <p className="text-muted-foreground mt-1">
+        Designed and implemented a real-time monitoring solution for a server room using sensors and dashboards to ensure environmental and infrastructure oversight.
+      </p>
+    </div>
 
-                    <div>
-                      <h3 className="text-lg font-medium">Vulnerability Scanner</h3>
-                      <p className="text-muted-foreground mt-1">
-                        An automated tool for scanning web applications and identifying security vulnerabilities based
-                        on OWASP guidelines.
-                      </p>
-                    </div>
+    <div>
+      <h3 className="text-lg font-medium">Smart Parking System</h3>
+      <p className="text-muted-foreground mt-1">
+        Developed an IoT-based smart parking project to optimize vehicle detection, occupancy tracking, and user guidance using embedded systems.
+      </p>
+    </div>
 
-                    <div>
-                      <h3 className="text-lg font-medium">Knowledge Management System</h3>
-                      <p className="text-muted-foreground mt-1">
-                        A personal knowledge management system inspired by Obsidian with markdown support and graph
-                        visualization.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
+    <div>
+      <h3 className="text-lg font-medium">Dame Chinoise Game in C</h3>
+      <p className="text-muted-foreground mt-1">
+        Created a terminal-based version of the Dame Chinoise board game in C, handling movement logic, player interaction, and win conditions.
+      </p>
+    </div>
+  </div>
+</CardContent>
+
               </Card>
             </div>
 

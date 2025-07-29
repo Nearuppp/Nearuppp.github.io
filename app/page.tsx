@@ -33,14 +33,17 @@ export default function Home() {
 
   try {
     const knowledgeFiles = getMarkdownFiles("knowledge-hub")
-    notesData = knowledgeFiles.map((file) => ({
-      slug: file.slug,
-      title: file.frontMatter.title,
-      excerpt: file.frontMatter.excerpt || "",
-      date: file.frontMatter.date,
-      tags: file.frontMatter.tags || [],
-      category: file.frontMatter.category || "Uncategorized",
-    }))
+    notesData = knowledgeFiles
+      .map((file) => ({
+        slug: file.slug,
+        title: file.frontMatter.title,
+        excerpt: file.frontMatter.excerpt || "",
+        date: file.frontMatter.date,
+        tags: file.frontMatter.tags || [],
+        category: file.frontMatter.category || "Uncategorized",
+      }))
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // Sort by date (newest first)
+      .slice(0, 4) // Limit to 4 notes
   } catch (error) {
     console.error("Error loading knowledge hub data:", error)
   }

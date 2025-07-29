@@ -27,7 +27,7 @@ const Footer = () => {
                 className="rounded-full hover:bg-primary/10 hover:text-primary"
                 asChild
               >
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/Nearuppp" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -37,18 +37,8 @@ const Footer = () => {
                 className="rounded-full hover:bg-primary/10 hover:text-primary"
                 asChild
               >
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/3-100matthieuguyot/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full hover:bg-primary/10 hover:text-primary"
-                asChild
-              >
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
                 </a>
               </Button>
             </div>
