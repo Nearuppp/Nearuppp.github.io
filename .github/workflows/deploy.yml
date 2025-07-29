@@ -1,8 +1,15 @@
-name: Deploy Static Site to GitHub Pages
+
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: ["main"]
+
+# 🔥 CRITICAL: Add permissions to allow pushing to gh-pages
+permissions:
+  contents: write  # Allows pushing to branches
+  pages: write    # Required for GitHub Pages
+  id-token: write # Required for GitHub Pages
 
 jobs:
   deploy:
@@ -10,13 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # No build step needed (since files are pre-built)
-      
-      - name: Deploy to GitHub Pages
+      - name: Build (replace with your actual build command)
+        run: |
+          npm install
+          npm run build  # This should generate files in `./dist` (or `./build`)
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out  # ⚠️ Must match your folder
-          publish_branch: gh-pages
-          force_orphan: true  # Delete old files
-          keep_files: false   # Ensure ONLY `./out` files are deployed
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 🔥 Must use `secrets.GITHUB_TOKEN`
+          publish_dir: ./out  # ⚠️ Replace with your build folder (e.g., `./build`, `./out`)
+          publish_branch: gh-pages  # Explicitly set the target branch
+          force_orphan: true  # Ensures only the latest files are kept
