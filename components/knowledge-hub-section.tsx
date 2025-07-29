@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Search, Tag, Calendar, FileText, Network } from "lucide-react"
+import { CustomCategoryDropdown } from "./custom-category-dropdown"
 
 // Define the Note interface
 interface Note {
@@ -67,7 +67,7 @@ const KnowledgeHubSection = ({ initialNotes }: KnowledgeHubSectionProps) => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <div className="relative flex-grow">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
@@ -78,15 +78,32 @@ const KnowledgeHubSection = ({ initialNotes }: KnowledgeHubSectionProps) => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full md:w-auto">
-              <TabsList className="w-full">
-                {categories.map((category) => (
-                  <TabsTrigger key={category} value={category} className="capitalize">
-                    {category}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
+
+            {/* Custom Scrollable Category Dropdown */}
+            <CustomCategoryDropdown
+              categories={categories}
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+            />
+          </div>
+
+          {/* Results count */}
+          <div className="mb-6">
+            <p className="text-sm text-muted-foreground">
+              {filteredNotes.length} {filteredNotes.length === 1 ? "note" : "notes"} found
+              {activeCategory !== "all" && (
+                <span>
+                  {" "}
+                  in <span className="capitalize font-medium">{activeCategory}</span>
+                </span>
+              )}
+              {searchTerm && (
+                <span>
+                  {" "}
+                  matching "<span className="font-medium">{searchTerm}</span>"
+                </span>
+              )}
+            </p>
           </div>
 
           {filteredNotes.length > 0 ? (
@@ -98,6 +115,14 @@ const KnowledgeHubSection = ({ initialNotes }: KnowledgeHubSectionProps) => {
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                       <Calendar className="h-4 w-4" />
                       <span>{note.date}</span>
+                      {note.category && (
+                        <>
+                          <span>•</span>
+                          <Badge variant="outline" className="text-xs">
+                            {note.category}
+                          </Badge>
+                        </>
+                      )}
                     </div>
                     <p className="mb-4">{note.excerpt}</p>
                     <div className="flex flex-wrap gap-2">
@@ -126,7 +151,22 @@ const KnowledgeHubSection = ({ initialNotes }: KnowledgeHubSectionProps) => {
             <div className="text-center py-12">
               <FileText className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
               <h3 className="text-xl font-medium mb-2">No notes found</h3>
-              <p className="text-muted-foreground">Try adjusting your search or filter criteria</p>
+              <p className="text-muted-foreground mb-4">
+                {searchTerm || activeCategory !== "all"
+                  ? "Try adjusting your search or filter criteria"
+                  : "No notes available in the knowledge hub"}
+              </p>
+              {(searchTerm || activeCategory !== "all") && (
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setSearchTerm("")
+                    setActiveCategory("all")
+                  }}
+                >
+                  Clear Filters
+                </Button>
+              )}
             </div>
           )}
 

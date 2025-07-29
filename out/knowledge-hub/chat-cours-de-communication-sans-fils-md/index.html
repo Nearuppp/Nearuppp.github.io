@@ -1,0 +1,946 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/45f8aa93ae81327e.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-a3760f0212ccbb12.js"/><script src="/_next/static/chunks/fd9d1056-3750f1c68fb99acb.js" async=""></script><script src="/_next/static/chunks/117-eb26ec6fd88fb5e5.js" async=""></script><script src="/_next/static/chunks/main-app-4f795b60095832c8.js" async=""></script><script src="/_next/static/chunks/671-870bf4da9bc73117.js" async=""></script><script src="/_next/static/chunks/app/knowledge-hub/%5Bslug%5D/page-f17a1fa9deeef7f1.js" async=""></script><script src="/_next/static/chunks/app/layout-dcf2fed02f629d0b.js" async=""></script><title>Introduction to Wireless Communication | Matthieu GUYOT</title><meta name="description" content="Small Overview of technologies, features, and automation examples in home automation, combining electronics, computer science, and telecommunications for the connected home."/><meta name="generator" content="v0.dev"/><meta name="next-size-adjust"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__className_e8ce0c"><script>((e,t,r,n,a,o,l,i)=>{let u=document.documentElement,s=["light","dark"];function c(t){(Array.isArray(e)?e:[e]).forEach(e=>{let r="class"===e,n=r&&o?a.map(e=>o[e]||e):a;r?(u.classList.remove(...n),u.classList.add(o&&o[t]?o[t]:t)):u.setAttribute(e,t)}),i&&s.includes(t)&&(u.style.colorScheme=t)}if(n)c(n);else try{let e=localStorage.getItem(t)||r,n=l&&"system"===e?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":e;c(n)}catch(e){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="min-h-screen bg-background"><header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="text-xl font-bold tracking-tight text-primary" href="/">Matthieu GUYOT</a><nav class="hidden md:flex items-center gap-6"><a class="text-muted-foreground hover:text-primary transition-colors" href="/">Home</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/about/">About</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/projects/">Projects</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/knowledge-hub/">Knowledge Hub</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/tags/">Tags</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/resume/">Resume</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/contact/">Contact</a><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full" type="button" id="radix-:Rkmfnnkq:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg><span class="sr-only">Toggle theme</span></button></nav><div class="flex items-center gap-4 md:hidden"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full" type="button" id="radix-:Remfnnkq:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg><span class="sr-only">Toggle theme</span></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div></div></header><article class="py-20 pt-32"><div class="container mx-auto px-4 max-w-4xl"><div class="mb-8"><a href="/knowledge-hub/"><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left h-4 w-4"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Back to Knowledge Hub</button></a></div><div class="bg-card p-8 rounded-lg shadow-sm"><div class="mb-6"><h1 class="text-3xl font-bold mb-4">Introduction to Wireless Communication</h1><div class="flex items-center gap-2 text-muted-foreground mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span>2025-07-29</span></div><div class="flex flex-wrap gap-2 mb-6"><a href="/tags/Wireless/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Wireless</div></a><a href="/tags/communication/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>communication</div></a><a href="/tags/Technology/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Technology</div></a><a href="/tags/Smart/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Smart</div></a><a href="/tags/Home/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Home</div></a><a href="/tags/Automation/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Automation</div></a><a href="/tags/Electronics/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Electronics</div></a><a href="/tags/Computer/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Computer</div></a><a href="/tags/Science/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Science</div></a><a href="/tags/Telecommunications/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Telecommunications</div></a><a href="/tags/French/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>French</div></a></div><div class="bg-muted/30 p-4 rounded-lg mb-6"><p class="italic">Small Overview of technologies, features, and automation examples in home automation, combining electronics, computer science, and telecommunications for the connected home.</p></div></div><div class="markdown max-w-none"><h2>La domotique</h2>
+<p>La domotique regroupe l’ensemble des technologies utilisées dans l’habitat (Électronique, Informatique, Télécommunication).</p>
+<ul>
+<li><strong>Étymologie</strong> : <em>Domus</em> (maison) + <em>-tique</em> (technologies informatique et électronique)</li>
+</ul>
+<h3>Caractéristiques</h3>
+<ul>
+<li>Basée sur la mise en réseau des différents appareils électriques de la maison</li>
+<li>Contrôlée par une “intelligence” centralisée :
+<ul>
+<li>Une centrale programmable</li>
+<li>Une interface micro-informatique (serveur)</li>
+</ul>
+</li>
+<li>Outils de pilotage possibles :
+<ul>
+<li>Téléphone portable</li>
+<li>Télécommande (universelle ou non)</li>
+<li>Écran + souris</li>
+</ul>
+</li>
+</ul>
+<h4>Exemples d’automatisations</h4>
+<ul>
+<li>Enclencher l’arrosage du jardin à 20 h</li>
+<li>Maintenir une température donnée dans la maison</li>
+<li>Diminuer le chauffage lorsque l’on part</li>
+</ul>
+<hr/>
+<h2>Plan du cours</h2>
+<ol>
+<li><strong>Introduction aux technologies radio</strong></li>
+<li><strong>Transmission de signaux numériques</strong></li>
+<li><strong>Bluetooth</strong></li>
+<li><strong>Zigbee</strong></li>
+<li><strong>Wi-Fi</strong></li>
+<li><strong>Solutions domotiques industrielles (propriétaires/fermées)</strong>
+<ul>
+<li>Z-Wave</li>
+<li>EnOcean</li>
+<li>Oregon</li>
+<li>X10</li>
+<li>Chacon</li>
+<li>BLY</li>
+<li>Visonic</li>
+<li>RFY</li>
+<li>XDD</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h1>I. Introduction</h1>
+<h3>1. Principe</h3>
+<ul>
+<li>Remplacer les câbles par des ondes radioélectriques</li>
+<li><strong>Deux types de réseaux sans fil</strong> : WPAN (Wireless Personal Area Network) et WLAN (Wireless Local Area Network)</li>
+<li>Bandes de fréquences majoritaires : 2,4 GHz et 5 GHz</li>
+<li>Débits variables : de 1 Mb/s à 450 Mb/s</li>
+<li>Routage par bornes (le plus souvent)</li>
+<li>Adaptateurs requis (boîtiers externes, cartes PCI/PCMCIA)</li>
+<li>Deux modes de fonctionnement :
+<ul>
+<li>Mode cellule (infrastructure)</li>
+<li>Mode ad-hoc (peer-to-peer) :contentReference[oaicite:1]{index=1}</li>
+</ul>
+</li>
+</ul>
+<h3>2. Objectifs</h3>
+<ul>
+<li>Permettre une parfaite mobilité des utilisateurs</li>
+<li>Réduction des coûts dans les petits réseaux</li>
+<li>Synchronisation rapide d’appareils (ex. : smartphones, capteurs)</li>
+<li>Esthétique (suppression du câblage apparent)</li>
+</ul>
+<h4>Applications typiques</h4>
+<ul>
+<li>Réseaux temporaires (conférences, salons)</li>
+<li>Immeubles où le câblage fixe est difficile à mettre en place</li>
+<li>Liaison point à point (entre deux bâtiments)</li>
+</ul>
+<hr/>
+<h2>I.1 Technologies concurrentes</h2>
+<ol>
+<li>
+<p><strong>Bluetooth</strong> (1994, Ericsson)</p>
+<ul>
+<li>Objectif : échange de données entre appareils numériques à courte distance</li>
+<li>Avantages :
+<ul>
+<li>Implantation déjà répandue</li>
+<li>Bonne résistance aux interférences</li>
+<li>Faible consommation</li>
+</ul>
+</li>
+<li>Inconvénients :
+<ul>
+<li>Débit initial limité (~ 1 Mb/s)</li>
+<li>Portée réduite (10 à 30 m)</li>
+<li>Coûts matériels encore relativement élevés (au début)</li>
+</ul>
+</li>
+<li>Évolutions : versions 2.0 (2004, 3 Mb/s), 3.0 HS (2009, 24 Mb/s), 4.0 (2010, faible consommation, 3 Mb/s), 4.1, 4.2 (2013–2014, évolutions IoT), 5.0 (prévue 2016) :contentReference[oaicite:2]{index=2}</li>
+</ul>
+</li>
+<li>
+<p><strong>Zigbee</strong> (2004, Zigbee Alliance)</p>
+<ul>
+<li>Objectif : liaison courte distance, moins chère que Bluetooth, plus simple</li>
+<li>Avantages :
+<ul>
+<li>Coûts très faibles</li>
+<li>Très faible consommation</li>
+<li>Besoin mémoire réduit (1/10 de Bluetooth)</li>
+<li>Portée moyenne (~ 100 m)</li>
+</ul>
+</li>
+<li>Inconvénients :
+<ul>
+<li>Débit limité (250 kbit/s) :contentReference[oaicite:3]{index=3}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>HomeRF</strong> (1998, Compaq/HP/IBM/Intel/Microsoft)</p>
+<ul>
+<li>Support de DECT</li>
+<li>Débit acceptable (11 Mb/s)</li>
+<li>Bonne portée (50 à 100 m)</li>
+<li>Inconvénient : concurrencé par Wi-Fi, aujourd’hui disparu</li>
+</ul>
+</li>
+<li>
+<p><strong>HiperLAN</strong> (ETSI, normes européennes)</p>
+<ul>
+<li>HiperLAN 1 : 20 Mb/s</li>
+<li>HiperLAN 2 : 54 Mb/s</li>
+<li>Portée jusqu’à 100 m</li>
+<li>Bande 5 GHz</li>
+<li>Concurrence avec Wi-Fi, adoption limitée :contentReference[oaicite:4]{index=4}</li>
+</ul>
+</li>
+<li>
+<p><strong>Wi-Fi (IEEE 802.11)</strong></p>
+<ul>
+<li>Lancé en 1999 (802.11b à 11 Mb/s)</li>
+<li>Évolutions :
+<ul>
+<li>802.11g (2,4 GHz, 54 Mb/s)</li>
+<li>802.11a (5 GHz, 54 Mb/s)</li>
+<li>802.11n (2,4 + 5 GHz, 100 Mb/s)</li>
+<li>802.11ac (2,4 + 5 GHz, 450 Mb/s)</li>
+<li>Antennes amplifiées (portée 8 à 33 km)</li>
+</ul>
+</li>
+<li>Devenu standard mondial :contentReference[oaicite:5]{index=5}</li>
+</ul>
+</li>
+<li>
+<p><strong>Autres solutions domotiques industrielles</strong></p>
+<ul>
+<li>Bandes 433 MHz et 868 MHz (propriétaires, fermées)</li>
+<li>Exemples : Z-Wave, EnOcean, Oregon, X10, Chacon, BLY, Visonic, RFY, XDD :contentReference[oaicite:6]{index=6}</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h2>I.2 Cadre réglementaire</h2>
+<ul>
+<li>Utilisation du spectre radio très réglementée par l’ART (Autorité de Régulation des Télécoms)</li>
+<li>Libéralisation progressive de l’usage de la bande ISM (Industrial, Scientific, Medical)</li>
+<li>Depuis juillet 2001, Bluetooth et HiperLAN autorisés sous certaines conditions
+<ul>
+<li>Procédure simplifiée pour les communes &gt; 50 000 habitants</li>
+<li>Sinon, demande individuelle d’établissement nécessitant l’accord du Ministère de la Défense</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2>I.3 Sécurité et enjeux</h2>
+<h3>Problèmes de sécurité</h3>
+<ul>
+<li>Écoute clandestine (sniffing) des transmissions radio</li>
+<li>Longueur des clés de cryptage sur quelques premiers dispositifs mobiles</li>
+<li>Vulnérabilité aux attaques spécifiques :
+<ul>
+<li>Blocage radio (jamming)</li>
+<li>Épuisement de batterie (battery exhaustion)</li>
+</ul>
+</li>
+<li>Solutions propriétaires en développement : régénération de clés toutes les 60 s :contentReference[oaicite:7]{index=7}</li>
+</ul>
+<h3>Concurrence et complémentarité</h3>
+<ul>
+<li>Ambivalence entre technologies radio et réseaux cellulaires 3G/4G</li>
+<li>Enquête ART (février 2002) :
+<ul>
+<li>Arguments des opérateurs contre réseaux radioélectriques :
+<ul>
+<li>Portée jugée trop faible</li>
+<li>Multiplicité de standards (absence d’un standard unique)</li>
+<li>Coût supposé élevé</li>
+<li>Difficulté à se déplacer dans certains cas</li>
+</ul>
+</li>
+<li>Soutien de collectivités locales (municipalités, universités)</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h1>II. Transmission numérique</h1>
+<h3>1. Notions générales</h3>
+<ul>
+<li><strong>Signal analogique</strong> :
+<ul>
+<li>Correspond à une grandeur physique continue (pression sonore, tension, intensité lumineuse…)</li>
+<li>Infinité de valeurs, continu dans le temps</li>
+</ul>
+</li>
+<li><strong>Signal numérique</strong> :
+<ul>
+<li>Suite de chiffres (binaire : 0/1)</li>
+<li>Discret dans le temps (échantillonnage), valeurs discrètes (quantification) :contentReference[oaicite:8]{index=8}</li>
+</ul>
+</li>
+</ul>
+<h4>1.1 Échantillonnage</h4>
+<ul>
+<li>Transformation d’un signal continu en une suite d’échantillons selon une fréquence d’échantillonnage ( f_s )</li>
+<li>Sur- et sous-échantillonnage :</li>
+</ul>
+<pre><code>
+s(t) ──┬─► Échantillonneur ─► s[n] ──► Reconstitution ─► Ŝ(t)  
+│ (t = n·Te)
+
+</code></pre>
+<ul>
+<li>Conditions de Nyquist : échantillonnage à au moins deux fois la fréquence maximale du signal</li>
+</ul>
+<h4>1.2 Quantification</h4>
+<ul>
+<li>Convertisseur analogique/numérique (CAN)</li>
+<li>Nombre de bits = n → 2ⁿ niveaux de sortie</li>
+<li>Sortie en parallèle ou en série</li>
+<li>Exemple : TDA 8792 (8 bits, 25 MHz) :contentReference[oaicite:9]{index=9}</li>
+<li><strong>Erreur de quantification</strong> (bruit quantification) :</li>
+<li>Différence entre signal analogique et valeur quantifiée</li>
+<li>Rapport signal sur bruit (S/N) exprimé en dB</li>
+</ul>
+<h4>1.3 Spectre d’un signal binaire</h4>
+<ul>
+<li>Un signal binaire ( m(t) \in {+1, -1} ) a un spectre (\approx \frac{1}{T} ) où ( T ) est la durée d’un bit (bps = 1/T).</li>
+<li>Occupation spectrale approximative :<br/>
+[<br/>
+B_f \approx bps<br/>
+]</li>
+</ul>
+<hr/>
+<h2>II.1 Modulations numériques</h2>
+<h3>2.1 Modulation d’amplitude (ASK/OOK)</h3>
+<ul>
+<li><strong>Amplitude Shift Keying (ASK)</strong> :</li>
+<li>Deux niveaux d’amplitude (k &lt; 1)</li>
+<li><strong>On-Off Keying (OOK)</strong> :</li>
+<li>Cas particulier d’ASK (k = 1)</li>
+<li>Exemple de séquence binaire 11111110… corresponds à porte active/inactive :contentReference[oaicite:10]{index=10}</li>
+</ul>
+<h3>2.2 Modulation de fréquence (FSK/GFSK)</h3>
+<ul>
+<li><strong>Frequency Shift Keying (FSK)</strong> :</li>
+<li>Différents états de fréquence pour représenter 0 ou 1</li>
+<li><strong>Gaussian FSK (GFSK)</strong> :</li>
+<li>Filtre passe-bas gaussien pour limiter la bande</li>
+<li>Utilisé dans Bluetooth</li>
+</ul>
+<h3>2.3 Modulation de phase (BPSK/QPSK/O-QPSK)</h3>
+<ul>
+<li><strong>BPSK</strong> :</li>
+<li>Deux états de phase (0 ou π)</li>
+<li><strong>O-QPSK</strong> :</li>
+<li>Variante de QPSK avec déplacements de phase plus petits (utilisé dans Zigbee)</li>
+</ul>
+<h3>2.4 Exemples de signaux modulés</h3>
+<ul>
+<li>Signal modulé en fréquence (FSK) :</li>
+</ul>
+<pre><code>
+1 1 10111110 0 0 0 1 0 1 … → saut de fréquence entre +Δf et –Δf
+
+</code></pre>
+<ul>
+<li>Signal modulé en phase (BPSK) :</li>
+</ul>
+<pre><code>
+1 1 10111110 0 0 0 1 0 1 … → phase = 0 pour “1”, phase = π pour “0”
+
+</code></pre>
+<p>:contentReference[oaicite:11]{index=11}</p>
+<hr/>
+<h2>II.2 Multiplexage géographique (Cellulaire)</h2>
+<ul>
+<li>Limitation de la portée de chaque cellule → Cellules adjacentes utilisant des fréquences différentes (reuse factor).</li>
+<li>Exemple : technologies cellulaires 2G/3G/4G reposant sur un découpage en cellules (f₁, f₂, f₃, …). :contentReference[oaicite:12]{index=12}</li>
+</ul>
+<hr/>
+<h1>III. Bluetooth</h1>
+<h2>III.1 Origines et évolutions</h2>
+<ul>
+<li><strong>Né en 1994</strong> par Ericsson, standardisé par le groupe de travail IEEE 802.15 (WPAN)</li>
+<li>Objectif : remplacer les câbles de connexion (port série, IrDA, USB) pour interconnecter équipements personnels (PC, téléphone, PDA).</li>
+</ul>
+<h3>Versions majeures</h3>
+<ul>
+<li><strong>V1.0</strong> (1998) → V1.1 (2002) → V1.2 (2005) → débit ~ 1 Mb/s</li>
+<li><strong>V2.0</strong> (2004) → V2.1 (2007) → débit ~ 3 Mb/s</li>
+<li><strong>V3.0 HS</strong> (2009) → débit jusqu’à 24 Mb/s (liaison Bluetooth + Wi-Fi)</li>
+<li><strong>V4.0</strong> (2010) → Bluetooth Low Energy (BLE), 3 Mb/s, très faible consommation</li>
+<li><strong>V4.1</strong> (2013), <strong>V4.2</strong> (2014) → optimisations pour Internet des Objets (IoT)</li>
+<li><strong>V5.0</strong> (annoncée juin 2016) → portée multipliée par 4, débit x2 (mise sur le marché Q1 2017)</li>
+</ul>
+<h3>Bande de fréquences</h3>
+<ul>
+<li>2,400 MHz – 2,4835 MHz (bande ISM, sans licence)</li>
+<li>Puissance &lt; 100 mW en intérieur sur 2,4–2,454 MHz</li>
+<li>Vanne à 2,454–2,4835 MHz : &lt; 100 mW en intérieur, &lt; 10 mW en extérieur</li>
+<li>Bande divisée en 79 canaux de 1 MHz (en France, Japon, Espagne, seules 23 canaux accessibles)</li>
+</ul>
+<hr/>
+<h2>III.2 Concepts fondamentaux</h2>
+<h3>1. Couche physique et sauts de fréquence</h3>
+<ul>
+<li><strong>Modulation</strong> : GFSK (Gaussian Frequency Shift Keying)</li>
+<li><strong>Étagement de spectre (FHSS)</strong> : la porteuse saute pseudo-aléatoirement d’un canal à l’autre (hop scheduling)</li>
+<li><strong>Fréquence de saut</strong> : 1600 slots/s (1 slot = 625 μs)</li>
+<li>Les clients (maître et esclaves) partagent la même séquence de sauts générée à partir de l’adresse MAC du maître (48 bits) et de son horloge (phase).</li>
+</ul>
+<h3>2. Classes d’émission Bluetooth</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Classe</th><th>Puissance max (mW)</th><th>Puissance (dBm)</th><th>Portée approximative</th></tr></thead><tbody><tr><td>Classe 1</td><td>100</td><td>20 dBm</td><td>~ 100 m</td></tr><tr><td>Classe 2</td><td>2,5</td><td>4 dBm</td><td>~ 10 m</td></tr><tr><td>Classe 3</td><td>1</td><td>0 dBm</td><td>~ 1 m</td></tr></tbody></table>
+<ul>
+<li>Règle empirique d’atténuation :</li>
+<li>50 dB d’atténuation pour les 6 premiers mètres</li>
+<li>10 dB d’atténuation pour chaque 10 m supplémentaires</li>
+</ul>
+<hr/>
+<h2>III.3 Architecture du protocole Bluetooth</h2>
+<h3>1. Topologies</h3>
+<ul>
+<li><strong>Piconet</strong> :</li>
+<li>Topologie en étoile maître/esclave</li>
+<li>Jusqu’à 8 terminaux actifs (1 maître + 7 esclaves) et 255 esclaves “parked” (en attente)</li>
+<li>Maître impose sa cadence temporelle (horloge) aux esclaves (synchronisation)</li>
+<li>Communications entre esclaves passent obligatoirement via le maître</li>
+<li>Tous les participants partagent la même séquence de sauts</li>
+<li><strong>Scatternet</strong> :</li>
+<li>Interconnexion de plusieurs piconets</li>
+<li>Un maître d’un piconet peut devenir esclave d’un autre piconet</li>
+<li>Un esclave peut flotter entre plusieurs piconets, se “détacher” pour communiquer ailleurs, puis revenir</li>
+</ul>
+<h3>2. Adressage</h3>
+<ul>
+<li><strong>Device Address (BD_ADDR)</strong> : 48 bits, identifiant unique d’un module</li>
+<li><strong>Active Member Address (AMA)</strong> : 3 bits, identifiant d’un terminal actif dans le piconet</li>
+<li><strong>Parked Member Address (PMA)</strong> : 8 bits, identifiant d’un terminal parké</li>
+</ul>
+<hr/>
+<h2>III.4 Structure des trames</h2>
+<h3>1. Composition d’une trame Bluetooth</h3>
+<ol>
+<li><strong>Code d’accès (CAC, 72 bits)</strong> :</li>
+</ol>
+<ul>
+<li>Préambule (0101… ou 1010…)</li>
+<li>Séquence de synchronisation (24 premiers bits de l’adresse Bluetooth)</li>
+<li>Trailer (0101… ou 1010…)</li>
+</ul>
+<ol start="2">
+<li><strong>En-tête (54 bits, 3 × 18 bits)</strong> : chaque bit transmis 3 fois (redondance)</li>
+</ol>
+<ul>
+<li>Adresse de l’esclave (3 bits)</li>
+<li>Type de paquet (4 bits)</li>
+<li>Bits de contrôle (contrôle d’erreur, état des buffers, …)</li>
+</ul>
+<ol start="3">
+<li><strong>Données (0 à 240 bits)</strong></li>
+</ol>
+<ul>
+<li><strong>Types de paquets</strong> :</li>
+<li>Courts (1 timeslot, max 240 bits)</li>
+<li>Moyens (3 timeslots, max 1480 bits)</li>
+<li>Longs (5 timeslots, max 2745 bits)</li>
+<li>Saut de fréquence effectué après la transmission complète d’un paquet</li>
+</ul>
+<hr/>
+<h2>III.5 Débits et performances</h2>
+<ul>
+<li>Débit maximal interne à un piconet ≈ 1 Mb/s (au plus 8 terminaux)</li>
+<li>Débit effectif diminue rapidement avec le nombre de terminaux connectés</li>
+<li>Un maître peut communiquer simultanément avec 2 esclaves sur des fréquences différentes pour augmenter son débit effectif</li>
+</ul>
+<hr/>
+<h2>III.6 Protocoles supérieurs (Bluetooth Stack)</h2>
+<ul>
+<li><strong>L2CAP (Logical Link Control and Adaptation Protocol)</strong></li>
+<li>Acheminement des paquets vers le protocole supérieur approprié</li>
+<li><strong>RFCOMM</strong></li>
+<li>Émulation de ports série (RS-232) au-dessus de L2CAP</li>
+<li><strong>OBEX (Object Exchange Protocol)</strong></li>
+<li>Échanges de fichiers et d’objets similaires à HTTP/GET-POST ou FTP</li>
+<li><strong>SDP (Service Discovery Protocol)</strong></li>
+<li>Découverte des services disponibles sur un périphérique</li>
+<li><strong>TCS (Telephony Control Specification)</strong></li>
+<li>Spécification de contrôle d’appels téléphoniques :contentReference[oaicite:17]{index=17}</li>
+</ul>
+<hr/>
+<h2>III.7 Sécurité Bluetooth</h2>
+<ul>
+<li>Trois niveaux de sécurité :</li>
+</ul>
+<ol>
+<li><strong>Pas de gestion de sécurité</strong></li>
+<li><strong>Sécurité au niveau applicatif</strong> (authentification accessoire/service)</li>
+<li><strong>Sécurité complète</strong> (authentification + chiffrement via clés privées)</li>
+</ol>
+<ul>
+<li><strong>Chiffrement et authentification</strong> :</li>
+<li>Génération de clés par session (numéro d’identité + clé partagée + générateur aléatoire interne)</li>
+<li>Échanges de clés entre utilisateurs pour constituer un “pairing” sécurisé</li>
+<li><strong>FEC (Forward Error Correction)</strong> :</li>
+<li>Code 2/3 (2 bits utiles protégés par 3 bits → 160 bits utiles dans un paquet court)</li>
+<li>Code 1/3 (1 bit utile protégé par 3 bits → 80 bits utiles dans un paquet court) :contentReference[oaicite:18]{index=18}</li>
+</ul>
+<hr/>
+<h2>III.8 États d’une station Bluetooth</h2>
+<ol>
+<li><strong>Standby</strong></li>
+</ol>
+<ul>
+<li>Écoute allégée (toutes les 1,28 s) sur 32 porteuses d’éveil parmi les 79 canaux</li>
+</ul>
+<ol start="2">
+<li><strong>Inquiry / Page</strong></li>
+</ol>
+<ul>
+<li>Inquiry : chercher des appareils inconnus</li>
+<li>Page : “paging” lorsque l’appareil cible est connu</li>
+</ul>
+<ol start="3">
+<li><strong>Connected</strong></li>
+</ol>
+<ul>
+<li>Établissement de la liaison maître/esclave (définition des paramètres de connexion)</li>
+<li>Liaison active au bout de ~ 0,6 s</li>
+</ul>
+<ol start="4">
+<li><strong>Hold</strong></li>
+</ol>
+<ul>
+<li>Lien maintenu, appareil reste synchronisé mais n’échange pas de données</li>
+</ul>
+<ol start="5">
+<li><strong>Sniff</strong></li>
+</ol>
+<ul>
+<li>Appareil périodiquement “réveillé” pour écouter le piconet</li>
+<li>Économie d’énergie (intervalle configurable &lt; 15 s)</li>
+</ul>
+<ol start="6">
+<li><strong>Park</strong></li>
+</ol>
+<ul>
+<li>Appareil retiré du réseau actif, rend son AMA, synchronisation périodique pour revenir</li>
+</ul>
+<hr/>
+<h2>III.9 Gestion d’interférences</h2>
+<ul>
+<li>Chaque piconet utilise une séquence de sauts différente → probabilité de collision très faible</li>
+<li>En cas de collision → retransmission du paquet après procédure de back-off (genèse d’un nouveau slot) :contentReference[oaicite:19]{index=19}</li>
+</ul>
+<hr/>
+<h1>IV. Zigbee</h1>
+<h2>IV.1 Généralités</h2>
+<ul>
+<li>Norme de communication sans fil sécurisée, à bas coût et faible consommation (domotique, contrôle industriel)</li>
+<li>Fondée sur IEEE 802.15.4 (couches Physique et MAC)</li>
+<li>Modulations :</li>
+<li>2,4 GHz → O-QPSK (250 kbps)</li>
+<li>915 MHz (Amérique) → BPSK (40 kbps)</li>
+<li>868 MHz (Europe) → BPSK (20 kbps)</li>
+</ul>
+<h3>1. Avantages</h3>
+<ul>
+<li>Faible coût de déploiement</li>
+<li>Faible consommation (capteurs sur piles, sommeil prolongé)</li>
+<li>Topologies flexibles : étoile, point à point, maillée</li>
+<li>Sécurité optionnelle AES 128</li>
+<li>Profil applicatif extensible (ZigBee Device Objects, Application Support Layer) :contentReference[oaicite:21]{index=21}</li>
+</ul>
+<hr/>
+<h2>IV.2 Pile protocolaire Zigbee</h2>
+<ol>
+<li><strong>IEEE 802.15.4 (couche Physique &amp; MAC)</strong></li>
+</ol>
+<ul>
+<li>Physique : defines fréquences, modulation, débits (cf. section ci-dessus)</li>
+<li>MAC : CSMA-CA ou CSMA-CA slotté, confiabilité avec ACK, gestion des “superframes”</li>
+</ul>
+<ol start="2">
+<li><strong>Couche Zigbee (NWK, APS, ZDO)</strong></li>
+</ol>
+<ul>
+<li><strong>ZDO (Zigbee Device Object)</strong> : gestion de l’équipement, découverte, sécurité, formation du réseau</li>
+<li><strong>APS (Application Support Sublayer)</strong> : livraison des données, liaison avec les objets “Application”</li>
+<li><strong>NWK (Network Layer)</strong> : adressage, routage, formation, association, sécurité sur les trames</li>
+</ul>
+<hr/>
+<h2>IV.3 Types de nœuds Zigbee</h2>
+<ul>
+<li><strong>Full Function Device (FFD)</strong></li>
+<li>Peut jouer les trois rôles : Coordinateur (ZC), Routeur (ZR), Équipement terminal (ZED)</li>
+<li>Fonctionne dans toutes topologies</li>
+<li>Alimentation permanente (pour ZC et ZR)</li>
+<li><strong>Reduced Function Device (RFD)</strong></li>
+<li>Topologie en étoile uniquement (communiquant avec le Coordinateur)</li>
+<li>Fonctionne comme équipement terminal</li>
+<li>Composant simple, très peu consommateur (mode sommeil majoritaire)</li>
+</ul>
+<hr/>
+<h2>IV.4 Topologies et routage</h2>
+<h3>1. Topologie maillée (Mesh)</h3>
+<ul>
+<li>Composition : routeurs (ZR) et terminaux (ZED)</li>
+<li>Communication multi-hop :</li>
+<li>Chaque routeur a plusieurs voisins</li>
+<li>Choix du meilleur chemin selon coût (nombre de sauts)</li>
+<li>Tolérance aux pannes, redondance</li>
+<li>Avantages :</li>
+<li>Robuste (routes de secours en cas de panne/interférence)</li>
+<li>Extensible (couverture étendue, signaux faibles)</li>
+<li>Inconvénients :</li>
+<li>Complexité accrue (gestion des tables, contrôles, échanges de messages)</li>
+</ul>
+<h3>2. Routage “No Routing” (éd. Simple)</h3>
+<ul>
+<li>Utilisable pour un coordinateur unique et ses “end-devices” (topologie en étoile)</li>
+<li>Le coordinateur connaît tous ses end-devices</li>
+<li>Chaque end-device communique uniquement avec le coordinateur (pas de routage multi-hop)</li>
+<li>Équivalent à routage arborescent avec Rm = 0, Dm = ∞, Lm = 1</li>
+</ul>
+<h3>3. Routage arborescent (Tree Routing)</h3>
+<ul>
+<li>Topologie en arbre : chaque nœud a un et un seul parent (sauf le coordinateur)</li>
+<li>Les adresses courtes (16 bits) sont allouées selon la position dans l’arbre</li>
+<li>Paramètres fournis par le coordinateur :</li>
+<li>Rm = nombre maximal de routeurs enfants</li>
+<li>Dm = nombre maximal d’équipements terminaux enfants</li>
+<li>Lm = profondeur maximale de l’arbre</li>
+<li>Adressage :</li>
+<li>A(d) = nombre d’adresses allouées à un routeur de profondeur d
+<ul>
+<li>Si d = Lm – 1 : A(d) = 1 + Dm + Rm</li>
+<li>Si 0 ≤ d &lt; Lm – 1 : A(d) = 1 + Dm + Rm × A(d + 1)</li>
+</ul>
+</li>
+<li>Chaque routeur connaît son adresse, celle de son parent et de ses enfants</li>
+<li>Routage :</li>
+<li>Si destination dans sous-arbre → forward vers enfant approprié</li>
+<li>Sinon → forward vers le parent (eventuellement up à la racine)</li>
+</ul>
+<h3>4. Routage AODV (Ad hoc On-Demand Vector Routing)</h3>
+<ul>
+<li><strong>Route Request (RREQ)</strong> : inondation initiale (broadcast) par la source</li>
+<li>Chaque routeur intermédiaire propage le RREQ s’il offre une route meilleure (coût plus faible) que celle déjà connue</li>
+<li>Clé de recherche : (source address + RREQ ID + destination address)</li>
+<li>Valeur comparée : Forward cost (coût total du chemin)</li>
+<li><strong>Route Reply (RREP)</strong> : renvoyée par la destination (ou routeur intermédiaire disposant d’un chemin)</li>
+<li>Transmise en unicast sur le chemin de moindre coût vers la source</li>
+<li>Mise à jour des tables de routage et de découverte de route (NLDE/NWME)</li>
+<li>Avantages : découverte dynamique, réactif aux changements de topologie :contentReference[oaicite:26]{index=26}</li>
+</ul>
+<hr/>
+<h2>IV.5 Superframe (802.15.4)</h2>
+<ul>
+<li><strong>Superframe</strong> : intervalle entre deux balises successives émises par le Coordinateur</li>
+<li>Durée configurable entre 15 ms et 245 ms</li>
+<li>Divisée en 16 slots (Time-Slots) :
+<ul>
+<li><strong>CAP (Contention Access Period)</strong> : accès par CSMA-CA slotté (partage du canal)</li>
+<li><strong>CFP (Contention Free Period)</strong> : 7 GTS (Guaranteed Time Slots) réservés à des nœuds ayant des besoins temps réel (temps déterministe)</li>
+</ul>
+</li>
+<li><strong>Beacon Frame</strong> : trame envoyée périodiquement par le Coordinateur pour synchroniser les nœuds (PAN ID, adresse, format de superframe)</li>
+</ul>
+<hr/>
+<h2>IV.6 Scans et associations</h2>
+<h3>1. Scan d’énergie</h3>
+<ul>
+<li>Mesure de l’énergie détectée sur chaque canal</li>
+<li>Permet au futur Coordinateur de choisir le canal le moins occupé</li>
+</ul>
+<h3>2. Scan actif</h3>
+<ul>
+<li>Objectif : obtenir la liste des identifiants des PAN existants</li>
+<li>Envoi d’une requête de beacon, à laquelle répondent les coordinateurs</li>
+<li>Utilisé par :</li>
+<li>Coordinateur souhaitant créer un nouveau PAN</li>
+<li>Equipement cherchant à s’associer</li>
+</ul>
+<h3>3. Scan passif</h3>
+<ul>
+<li>Écoute passive des balises sur chaque canal</li>
+<li>Utilisé par un équipement voulant s’associer (sans générer de trafic)</li>
+</ul>
+<h3>4. Scan d’orphelin</h3>
+<ul>
+<li>Utilisé par un équipement ayant perdu la synchronisation avec son Coordinateur</li>
+<li>Permet de retrouver le Coordinateur (beacon id) après une panne temporaire</li>
+</ul>
+<hr/>
+<h2>IV.7 Opérations réseau Zigbee</h2>
+<h3>1. Création de réseau</h3>
+<ol>
+<li>Scan actif pour liste des PAN existants</li>
+<li>Choix d’un canal libre ou peu congestionné</li>
+<li>Initialisation du nouveau PAN (émission de beacon régulière)</li>
+</ol>
+<h3>2. Association / Désassociation</h3>
+<ul>
+<li><strong>Association</strong> :</li>
+</ul>
+<ol>
+<li>Scan actif ou passif pour identifier PAN et Coordinateur cible</li>
+<li>Envoi d’une demande d’association (transmission indirecte via beacon)</li>
+<li>Acceptation ou refus par le Coordinateur (en fonction des ressources disponibles)</li>
+</ol>
+<ul>
+<li><strong>Désassociation</strong> :</li>
+<li>Initiée par l’équipement → notification indirecte au Coordinateur</li>
+<li>Ou initiée par le Coordinateur → notification indirecte à l’équipement</li>
+</ul>
+<h3>3. Synchronisation</h3>
+<ul>
+<li>Les balises du Coordinateur contiennent :</li>
+<li>PAN ID</li>
+<li>Adresse du Coordinateur</li>
+<li>Intervalle de superframe</li>
+<li>Les équipements synchronisent leur horloge locale sur les balises reçues (mise à jour périodique)</li>
+</ul>
+<hr/>
+<h2>IV.8 Échanges de données</h2>
+<h3>1. Échanges directs (peer-to-peer)</h3>
+<ul>
+<li>Durant la période CAP (CSMA slotté)</li>
+<li>Un nœud transmet à un autre directement si dans la même portée (1 hop)</li>
+</ul>
+<h3>2. Échanges indirects</h3>
+<ul>
+<li>Si le destinataire est “end-device” en mode sommeil</li>
+<li>Le Coordinateur tamponne les messages en attente</li>
+<li>À la prochaine beacon, le destinataire apprend qu’il a des messages à récupérer (indirect polling)</li>
+</ul>
+<h3>3. Échanges en GTS</h3>
+<ul>
+<li>Un équipement peut demander un GTS (Guaranteed Time Slot) au Coordinateur</li>
+<li>Le Coordinateur peut réserver des slots (émission ou réception) pour cet équipement</li>
+<li>Maximum de 7 GTS par superframe</li>
+<li>Si le GTS n’est pas utilisé pendant un certain nombre de superframes, il peut être réattribué à un autre équipement</li>
+</ul>
+<hr/>
+<h2>IV.9 Problèmes et limitations</h2>
+<ul>
+<li><strong>Collision de balises</strong> (Beacon collision) :</li>
+<li>Lorsqu’un équipement reçoit deux balises sur le même slot → confusion</li>
+<li>Nécessite mécanismes d’évitement ou coordination des beacons entre réseaux voisins</li>
+<li><strong>Limites de portée et interférences</strong> (bande 2,4 GHz)</li>
+<li><strong>Contraintes de routage</strong> :</li>
+<li>Certaines topologies (star/tree) manquent de résilience par rapport au mesh</li>
+<li>Overhead de gestion de tables dans réseaux denses</li>
+</ul>
+<hr/>
+<h1>VI. Wi-Fi (IEEE 802.11)</h1>
+<h2>VI.1 Introduction et historique</h2>
+<ul>
+<li>IEEE a standardisé plusieurs réseaux locaux :</li>
+<li>Ethernet (802.3)</li>
+<li>Token Bus (802.4)</li>
+<li>Token Ring (802.5)</li>
+<li><strong>1990</strong> : lancement du projet WLAN (Wireless Local Area Network)</li>
+<li>Objectif : connectivité sans fil pour stations fixes/mobiles, déploiement rapide en environnement local</li>
+<li><strong>2001</strong> : publication d’IEEE 802.11 (Wi-Fi)</li>
+</ul>
+<hr/>
+<h2>VI.2 Caractéristiques générales</h2>
+<ul>
+<li><strong>Bandes de fréquences</strong> :</li>
+<li><strong>2,4 GHz ISM</strong> (2,400 – 2,4835 GHz) :
+<ul>
+<li>Sans licence, mais réglementé (puissance maximum 100 mW en intérieur sur 2,4465 – 2,4835 GHz ; 10 mW sur 2,400 – 2,4835 GHz)</li>
+<li>Extérieur domaine privé : demande d’autorisation ART</li>
+<li>Extérieur domaine public : bandes réglementées</li>
+</ul>
+</li>
+<li><strong>5 GHz UN-II</strong> (5,150 – 5,825 GHz) :
+<ul>
+<li>Divisée en sous-bandes UN-II A/B/C</li>
+<li>Sans licence dans la plupart des régions, puissance limitée (100 mW ou moins selon pays)</li>
+</ul>
+</li>
+<li><strong>Communication</strong> :</li>
+<li>Directe (ad-hoc) : terminal → terminal (pas de relais possible)</li>
+<li>Infrastruktur : terminal ↔ point d’accès (AP) → Distribution System (DS) (souvent Ethernet câblé)</li>
+<li><strong>Débits</strong> : varient selon codage et environnement</li>
+<li>802.11b : 1 – 11 Mb/s (réel 6 Mb/s)</li>
+<li>802.11a : 6 – 54 Mb/s (réel ~ 27 Mb/s)</li>
+<li>802.11g : 6 – 54 Mb/s (réel ~ 25 Mb/s)</li>
+<li>802.11n : jusqu’à 300 Mb/s réel (MIMO, 2,4 + 5 GHz)</li>
+<li>802.11ac : jusqu’à 1 Gb/s (configurations multi-antenne, bande UN-II) :contentReference[oaicite:27]{index=27}</li>
+</ul>
+<hr/>
+<h2>VI.3 Architectures Wi-Fi</h2>
+<h3>1. Mode infrastructure</h3>
+<ul>
+<li><strong>Basic Service Set (BSS)</strong> :</li>
+<li>Groupe de stations communicant via un point d’accès (AP)</li>
+<li>Couverture physique d’un BSS = Basic Service Area (BSA)</li>
+<li><strong>Extended Service Set (ESS)</strong> :</li>
+<li>Ensemble de plusieurs BSS interconnectés via un Distribution System (DS)</li>
+<li>DS = souvent réseau Ethernet filaire</li>
+<li>AP connectés au DS→ ESS ; une station peut roamer (se réassocier) d’un AP à un autre</li>
+</ul>
+<h3>2. Mode Ad-Hoc (IBSS)</h3>
+<ul>
+<li>Independent BSS (IBSS) : stations forment un réseau peer-to-peer, sans AP</li>
+<li>Chaque station communique directement avec les autres dans la même portée</li>
+<li>Utile pour réseaux temporaires ou absence d’infrastructure</li>
+</ul>
+<hr/>
+<h2>VI.4 Modèle en couches (IEEE 802.11)</h2>
+<h3>1. Couche physique (PHY)</h3>
+<ul>
+<li>
+<p><strong>802.11b/g (2,4 GHz, ISM)</strong> :</p>
+</li>
+<li>
+<p>Étalement de spectre DSSS (Direct Sequence Spread Spectrum) :</p>
+<ul>
+<li>14 canaux de 20 MHz (seuls 1–13 utilisés en Europe)</li>
+<li>Une seule fréquence (canal) utilisée par trame, co-localisation de 3 réseaux (non-recouvrement)</li>
+<li>Débits 1 / 2 / 5,5 / 11 Mb/s (802.11b)</li>
+<li>Mécanisme de modulation adaptative (puissance, codage, afin d’optimiser débit selon qualité du lien)</li>
+</ul>
+</li>
+<li>
+<p><strong>Portées</strong> :</p>
+<ul>
+<li>1 Mb/s → 150 m intérieur, 500 m extérieur</li>
+<li>2 Mb/s → 100 m intérieur, 400 m extérieur</li>
+<li>5,5 Mb/s → 75 m intérieur, 300 m extérieur</li>
+<li>11 Mb/s → 50 m intérieur, 200 m extérieur</li>
+</ul>
+</li>
+<li>
+<p><strong>802.11a (5 GHz, UN-II)</strong> :</p>
+</li>
+<li>
+<p>Modulation OFDM (Orthogonal Frequency Division Multiplexing) :</p>
+<ul>
+<li>52 porteuses dans un canal de 20 MHz</li>
+<li>8 débits possibles de 6 à 54 Mb/s</li>
+<li>Excellentes performances en présence de trajets multi-chemins (réflecteurs, obstacles)</li>
+</ul>
+</li>
+<li>
+<p>8 canaux co-localisés possibles dans 300 MHz (UN-II A/B/C)</p>
+</li>
+<li>
+<p>Couches supérieures identiques à Ethernet</p>
+</li>
+<li>
+<p><strong>802.11e (Qualité de Service)</strong> :</p>
+</li>
+<li>
+<p>Priorisation du trafic (voix, vidéo)</p>
+</li>
+<li>
+<p>Différentiation des temporisateurs d’accès (IFS) selon classes de trafic</p>
+</li>
+<li>
+<p>Sécurité renforcée (802.11i, authentification mutuelle, chiffrement)</p>
+</li>
+</ul>
+<h3>2. Couche MAC (Medium Access Control)</h3>
+<ul>
+<li>Basée sur CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) :</li>
+</ul>
+<ol>
+<li><strong>Écoute du canal</strong> (Carrier Sense) :
+<ul>
+<li>Si libre pendant DIFS (DCF Inter-Frame Space) → transmission immédiate</li>
+<li>Sinon attente jusqu’à ce qu’il soit libre, puis temporisateur de back-off</li>
+</ul>
+</li>
+<li><strong>Back-off</strong> :
+<ul>
+<li>Temporisateur initialisé aléatoirement dans [0, CW] (Contention Window)</li>
+<li>Quand le canal libre, décrémentation du temporisateur à chaque timeslot</li>
+<li>À 0 → transmission, sinon si canal occupé → blocage, puis reprise à prochain slot libre</li>
+<li>Collision → nouvelle tentative, CW doublé (max 1023)</li>
+</ul>
+</li>
+<li><strong>ACK</strong> :
+<ul>
+<li>Station destinataire envoie un acquittement (ACK) après un SIFS (Short Inter-Frame Space) si trame reçue correctement (CRC ok)</li>
+<li>En cas d’absence d’ACK → retransmission (jusqu’à un nombre maximal de tentatives)</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>Two coordination functions</strong> :</li>
+</ul>
+<ol>
+<li><strong>DCF (Distributed Coordination Function)</strong> : accès contention-based (CSMA/CA), Best Effort</li>
+<li><strong>PCF (Point Coordination Function)</strong> : accès sans contention (polling par le point d’accès), pour trafic temps réel (voix/vidéo)</li>
+</ol>
+<hr/>
+<h2>VI.5 Handovers et roaming</h2>
+<ul>
+<li>Lorsqu’un terminal se déplace d’un BSS à un autre (ESS), handover rapide pour conserver la session (802.11f – Inter-Access Point Protocol)</li>
+<li>Mécanismes de synchronisation :</li>
+<li><strong>Beacon Frames</strong> (balises) émises périodiquement par chaque AP (intervalle 100 ms par défaut)</li>
+<li>Contiennent : SSID, timestamp, intervalle, capacité du réseau (supported rates), authentification, chiffrement</li>
+<li>Station synchronise son horloge interne sur le timestamp du beacon (jour nulle)</li>
+<li>Lorsqu’un AP devient trop faible :</li>
+</ul>
+<ol>
+<li>Terminal détecte baisse de RSSI (Received Signal Strength Indicator)</li>
+<li>Scans de canaux voisins (actif ou passif) pour lister SSID disponibles</li>
+<li>Sélection d’un nouveau AP (critères : RSSI, taux d’erreur, charge)</li>
+<li>Réassociation (Reassociation Request) au nouvel AP → répartition des flux via DS</li>
+</ol>
+<hr/>
+<h2>VI.6 Fragmentation / Réassemblage</h2>
+<ul>
+<li><strong>Objectif</strong> : réduire le risque de perte de trame dans les transmissions radio à taux d’erreur élevé</li>
+<li><strong>Fragmentation</strong> :</li>
+<li>Si trame &gt; seuil <code>Fragmentation_Threshold</code>, découpée en fragments ≤ <code>Fragmentation_Threshold</code></li>
+<li>Chaque fragment transmis séquentiellement, support libéré uniquement après réception de tous les ACKs</li>
+<li>En cas d’erreur pour un fragment, seuls les fragments restants sont retransmis (améliore les performances globales)</li>
+<li><strong>Réassemblage</strong> : reconstruire la trame d’origine à la réception de tous les fragments (identifiants de séquence, drapeaux)</li>
+</ul>
+<hr/>
+<h2>VI.7 Sécurité 802.11 (WEP/WPA/WPA2)</h2>
+<ul>
+<li><strong>WEP (Wired Equivalent Privacy)</strong> :</li>
+<li>Chiffrement RC4, clés partagées (64 ou 128 bits)</li>
+<li>Problèmes : IV (Initialization Vector) court (24 bits), vulnérabilités cryptographiques</li>
+<li><strong>WPA (Wi-Fi Protected Access)</strong> :</li>
+<li>TKIP (Temporal Key Integrity Protocol) : rotation des clés, IV étendu (48 bits), MIC (Message Integrity Check)</li>
+<li>Authentification via 802.1X/EAP (Enterprise) ou PSK (Pre-Shared Key)</li>
+<li><strong>WPA2 (IEEE 802.11i)</strong> :</li>
+<li>Chiffrement AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)</li>
+<li>Authentification renforcée (802.1X)</li>
+<li>Obligation pour entreprises, conformité obligatoire pour nouveaux équipements</li>
+</ul>
+<hr/>
+<h2>VI.8 Exemples d’équipements Wi-Fi</h2>
+<ul>
+<li><strong>Point d’accès (AP)</strong> :</li>
+<li>Émetteur/récepteur sur bande 2,4 ou 5 GHz</li>
+<li>Interface Ethernet (100 Mb/s ou plus) vers DS</li>
+<li>Antennes internes/externes, balayage de canaux, gestion QoS (802.11e)</li>
+<li><strong>Station cliente (STA)</strong> :</li>
+<li>Carte Wi-Fi PCI/USB/PCMCIA/mini-PCIe dans PC portable, dongle USB, chipset intégré dans smartphone/tablette</li>
+<li>Logiciel de gestion (pilote, utilitaire réseau)</li>
+<li><strong>Bridges/Repeaters</strong> :</li>
+<li>Relais de signal (Point-to-Point ou Point-to-MultiPoint)</li>
+<li>Utilisent modes ad-hoc ou infrastructure</li>
+</ul>
+<hr/>
+<h1>VIII. Solutions à rupture technologique</h1>
+<h2>VIII.1 EnOcean</h2>
+<ul>
+<li><strong>Fréquence</strong> : 868 MHz (Europe), modulation ASK, débit 125 kbps</li>
+<li><strong>Trame</strong> :</li>
+<li>ID nœud (32 bits)</li>
+<li>Données (8 à 32 bits)</li>
+<li>CRC</li>
+<li><strong>Transmission</strong> : trois trames identiques envoyées à des instants aléatoires (~ 40 ms d’intervalle)</li>
+<li><strong>Avantages</strong> :</li>
+<li>Périphériques autonomes sans pile (Energy harvesting : mouvements, vibrations, solaire, thermique)</li>
+<li>Grande portée : 300 m en extérieur, 30 m en intérieur</li>
+<li>Topologie “peer-to-peer” (chaque périphérique peut communiquer directement avec un autre)</li>
+<li><strong>Inconvénients</strong> :</li>
+<li>Technologie émergente, recul limité</li>
+<li>Topologie en étoile → portée interne réduite</li>
+<li>Coûts encore élevés :contentReference[oaicite:30]{index=30}</li>
+</ul>
+<hr/>
+<h2>VIII.2 io-homecontrol</h2>
+<ul>
+<li><strong>Bande</strong> : 868 – 870 MHz (Europe)</li>
+<li>Technologie bidirectionnelle (retour d’information natif)</li>
+<li>Standard ouvert soutenu par de grands fabricants (VELUX, SOMFY, NIKO, Honeywell, CIAT, …)</li>
+<li>Nouveau standard pour équipements d’habitat connectés (p.ex. volets roulants, chaudières, capteurs)</li>
+<li><strong>Avantages</strong> :</li>
+<li>Interopérabilité entre différents acteurs de l’habitat</li>
+<li>Retour d’information garanti (confirmations de réception, état)</li>
+<li><strong>Inconvénients</strong> :</li>
+<li>Coûts de déploiement initiaux supérieurs à certaines alternatives</li>
+</ul>
+<hr/>
+<h2>VIII.3 Autres problèmes et limites des solutions domotiques</h2>
+<ul>
+<li><strong>Saturation de la bande 433 MHz</strong> (de nombreux dispositifs sans licence concurrents)</li>
+<li><strong>Sécurité</strong> souvent gérée par des solutions maison peu convaincantes (cryptage léger ou absent)</li>
+<li><strong>Manque de visibilité</strong> pour le consommateur dans le choix de la bonne solution (multiplicité des standards, interopérabilité limitée) :contentReference[oaicite:31]{index=31}</li>
+</ul></div></div></div></article><footer class="bg-muted/50 py-12"><div class="container mx-auto px-4"><div class="flex flex-col md:flex-row justify-between items-center"><div class="mb-6 md:mb-0"><a class="text-xl font-bold tracking-tight" href="/">Matthieu GUYOT</a><p class="text-muted-foreground mt-2 max-w-md">Building the future with code and security. Passionate about technology, cybersecurity, and knowledge sharing.</p></div><div class="flex flex-col items-center md:items-end"><div class="flex space-x-4 mb-4"><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github h-5 w-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div><p class="text-sm text-muted-foreground">© <!-- -->2025<!-- --> Matthieu GUYOT. All rights reserved.</p></div></div></div></footer></main><script src="/_next/static/chunks/webpack-a3760f0212ccbb12.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/45f8aa93ae81327e.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"3:I[2846,[],\"\"]\n5:I[168,[\"671\",\"static/chunks/671-870bf4da9bc73117.js\",\"242\",\"static/chunks/app/knowledge-hub/%5Bslug%5D/page-f17a1fa9deeef7f1.js\"],\"default\"]\n6:I[2972,[\"671\",\"static/chunks/671-870bf4da9bc73117.js\",\"242\",\"static/chunks/app/knowledge-hub/%5Bslug%5D/page-f17a1fa9deeef7f1.js\"],\"\"]\n7:I[4707,[],\"\"]\n9:I[6423,[],\"\"]\na:I[2798,[\"185\",\"static/chunks/app/layout-dcf2fed02f629d0b.js\"],\"ThemeProvider\"]\nc:I[1060,[],\"\"]\n8:[\"slug\",\"chat-cours-de-communication-sans-fils-md\",\"d\"]\nd:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L3\",null,{\"buildId\":\"iU9oURWGdCS2TpEAt4Xzl\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"knowledge-hub\",\"chat-cours-de-communication-sans-fils-md\",\"\"],\"initialTree\":[\"\",{\"children\":[\"knowledge-hub\",{\"children\":[[\"slug\",\"chat-cours-de-communication-sans-fils-md\",\"d\"],{\"children\":[\"__PAGE__?{\\\"slug\\\":\\\"chat-cours-de-communication-sans-fils-md\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"knowledge-hub\",{\"children\":[[\"slug\",\"chat-cours-de-communication-sans-fils-md\",\"d\"],{\"children\":[\"__PAGE__\",{},[[\"$L4\",[\"$\",\"main\",null,{\"className\":\"min-h-screen bg-background\",\"children\":[[\"$\",\"$L5\",null,{}],[\"$\",\"article\",null,{\"className\":\"py-20 pt-32\",\"children\":[\"$\",\"div\",null,{\"className\":\"container mx-auto px-4 max-w-4xl\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-8\",\"children\":[\"$\",\"$L6\",null,{\"href\":\"/knowledge-hub/\",\"children\":[\"$\",\"button\",null,{\"className\":\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-arrow-left h-4 w-4\",\"children\":[[\"$\",\"path\",\"1l729n\",{\"d\":\"m12 19-7-7 7-7\"}],[\"$\",\"path\",\"x3x0zl\",{\"d\":\"M19 12H5\"}],\"$undefined\"]}],\"Back to Knowledge Hub\"]}]}]}],[\"$\",\"div\",null,{\"className\":\"bg-card p-8 rounded-lg shadow-sm\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-6\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-3xl font-bold mb-4\",\"children\":\"Introduction to Wireless Communication\"}],[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2 text-muted-foreground mb-4\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-calendar h-4 w-4\",\"children\":[[\"$\",\"path\",\"1cmpym\",{\"d\":\"M8 2v4\"}],[\"$\",\"path\",\"4m81vk\",{\"d\":\"M16 2v4\"}],[\"$\",\"rect\",\"1hopcy\",{\"width\":\"18\",\"height\":\"18\",\"x\":\"3\",\"y\":\"4\",\"rx\":\"2\"}],[\"$\",\"path\",\"8toen8\",{\"d\":\"M3 10h18\"}],\"$undefined\"]}],[\"$\",\"span\",null,{\"children\":\"2025-07-29\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap gap-2 mb-6\",\"children\":[[\"$\",\"$L6\",\"Wireless\",{\"href\":\"/tags/Wireless/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Wireless\"]}]}],[\"$\",\"$L6\",\"communication\",{\"href\":\"/tags/communication/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"communication\"]}]}],[\"$\",\"$L6\",\"Technology\",{\"href\":\"/tags/Technology/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Technology\"]}]}],[\"$\",\"$L6\",\"Smart\",{\"href\":\"/tags/Smart/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Smart\"]}]}],[\"$\",\"$L6\",\"Home\",{\"href\":\"/tags/Home/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Home\"]}]}],[\"$\",\"$L6\",\"Automation\",{\"href\":\"/tags/Automation/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Automation\"]}]}],[\"$\",\"$L6\",\"Electronics\",{\"href\":\"/tags/Electronics/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Electronics\"]}]}],[\"$\",\"$L6\",\"Computer\",{\"href\":\"/tags/Computer/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Computer\"]}]}],[\"$\",\"$L6\",\"Science\",{\"href\":\"/tags/Science/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Science\"]}]}],[\"$\",\"$L6\",\"Telecommunications\",{\"href\":\"/tags/Telecommunications/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Telecommunications\"]}]}],[\"$\",\"$L6\",\"French\",{\"href\":\"/tags/French/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"French\"]}]}]]}],[\"$\",\"div\",null,{\"className\":\"bg-muted/30 p-4 rounded-lg mb-6\",\"children\":[\"$\",\"p\",null,{\"className\":\"italic\",\"children\":\"Small Overview of technologies, features, and automation examples in home automation, combining electronics, computer science, and telecommunications for the connected home.\"}]}]]}],[\"$\",\"div\",null,{\"className\":\"markdown max-w-none\",\"children\":[[\"$\",\"h2\",\"h2-0\",{\"children\":\"La domotique\"}],\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"La domotique regroupe l’ensemble des technologies utilisées dans l’habitat (Électronique, Informatique, Télécommunication).\"}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Étymologie\"}],\" : \",[\"$\",\"em\",\"em-0\",{\"children\":\"Domus\"}],\" (maison) + \",[\"$\",\"em\",\"em-1\",{\"children\":\"-tique\"}],\" (technologies informatique et électronique)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-0\",{\"children\":\"Caractéristiques\"}],\"\\n\",[\"$\",\"ul\",\"ul-1\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Basée sur la mise en réseau des différents appareils électriques de la maison\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"Contrôlée par une “intelligence” centralisée :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Une centrale programmable\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Une interface micro-informatique (serveur)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Outils de pilotage possibles :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Téléphone portable\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Télécommande (universelle ou non)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Écran + souris\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"h4\",\"h4-0\",{\"children\":\"Exemples d’automatisations\"}],\"\\n\",[\"$\",\"ul\",\"ul-2\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Enclencher l’arrosage du jardin à 20 h\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Maintenir une température donnée dans la maison\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Diminuer le chauffage lorsque l’on part\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-0\",{}],\"\\n\",[\"$\",\"h2\",\"h2-1\",{\"children\":\"Plan du cours\"}],\"\\n\",[\"$\",\"ol\",\"ol-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Introduction aux technologies radio\"}]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Transmission de signaux numériques\"}]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Bluetooth\"}]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Zigbee\"}]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Wi-Fi\"}]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Solutions domotiques industrielles (propriétaires/fermées)\"}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Z-Wave\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"EnOcean\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Oregon\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"X10\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Chacon\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"BLY\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Visonic\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"RFY\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"XDD\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-1\",{}],\"\\n\",[\"$\",\"h1\",\"h1-0\",{\"children\":\"I. Introduction\"}],\"\\n\",[\"$\",\"h3\",\"h3-1\",{\"children\":\"1. Principe\"}],\"\\n\",[\"$\",\"ul\",\"ul-3\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Remplacer les câbles par des ondes radioélectriques\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Deux types de réseaux sans fil\"}],\" : WPAN (Wireless Personal Area Network) et WLAN (Wireless Local Area Network)\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Bandes de fréquences majoritaires : 2,4 GHz et 5 GHz\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Débits variables : de 1 Mb/s à 450 Mb/s\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Routage par bornes (le plus souvent)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Adaptateurs requis (boîtiers externes, cartes PCI/PCMCIA)\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[\"Deux modes de fonctionnement :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Mode cellule (infrastructure)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Mode ad-hoc (peer-to-peer) :contentReference[oaicite:1]{index=1}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-2\",{\"children\":\"2. Objectifs\"}],\"\\n\",[\"$\",\"ul\",\"ul-4\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Permettre une parfaite mobilité des utilisateurs\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Réduction des coûts dans les petits réseaux\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Synchronisation rapide d’appareils (ex. : smartphones, capteurs)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Esthétique (suppression du câblage apparent)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h4\",\"h4-1\",{\"children\":\"Applications typiques\"}],\"\\n\",[\"$\",\"ul\",\"ul-5\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Réseaux temporaires (conférences, salons)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Immeubles où le câblage fixe est difficile à mettre en place\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Liaison point à point (entre deux bâtiments)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-2\",{}],\"\\n\",[\"$\",\"h2\",\"h2-2\",{\"children\":\"I.1 Technologies concurrentes\"}],\"\\n\",[\"$\",\"ol\",\"ol-1\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Bluetooth\"}],\" (1994, Ericsson)\"]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Objectif : échange de données entre appareils numériques à courte distance\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"Avantages :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Implantation déjà répandue\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Bonne résistance aux interférences\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Faible consommation\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Inconvénients :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Débit initial limité (~ 1 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Portée réduite (10 à 30 m)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Coûts matériels encore relativement élevés (au début)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Évolutions : versions 2.0 (2004, 3 Mb/s), 3.0 HS (2009, 24 Mb/s), 4.0 (2010, faible consommation, 3 Mb/s), 4.1, 4.2 (2013–2014, évolutions IoT), 5.0 (prévue 2016) :contentReference[oaicite:2]{index=2}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Zigbee\"}],\" (2004, Zigbee Alliance)\"]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Objectif : liaison courte distance, moins chère que Bluetooth, plus simple\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"Avantages :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Coûts très faibles\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Très faible consommation\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Besoin mémoire réduit (1/10 de Bluetooth)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Portée moyenne (~ 100 m)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Inconvénients :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Débit limité (250 kbit/s) :contentReference[oaicite:3]{index=3}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"HomeRF\"}],\" (1998, Compaq/HP/IBM/Intel/Microsoft)\"]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Support de DECT\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Débit acceptable (11 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Bonne portée (50 à 100 m)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Inconvénient : concurrencé par Wi-Fi, aujourd’hui disparu\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"HiperLAN\"}],\" (ETSI, normes européennes)\"]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"HiperLAN 1 : 20 Mb/s\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"HiperLAN 2 : 54 Mb/s\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Portée jusqu’à 100 m\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Bande 5 GHz\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Concurrence avec Wi-Fi, adoption limitée :contentReference[oaicite:4]{index=4}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Wi-Fi (IEEE 802.11)\"}]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Lancé en 1999 (802.11b à 11 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"Évolutions :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"802.11g (2,4 GHz, 54 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"802.11a (5 GHz, 54 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"802.11n (2,4 + 5 GHz, 100 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"802.11ac (2,4 + 5 GHz, 450 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Antennes amplifiées (portée 8 à 33 km)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Devenu standard mondial :contentReference[oaicite:5]{index=5}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Autres solutions domotiques industrielles\"}]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Bandes 433 MHz et 868 MHz (propriétaires, fermées)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Exemples : Z-Wave, EnOcean, Oregon, X10, Chacon, BLY, Visonic, RFY, XDD :contentReference[oaicite:6]{index=6}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-3\",{}],\"\\n\",[\"$\",\"h2\",\"h2-3\",{\"children\":\"I.2 Cadre réglementaire\"}],\"\\n\",[\"$\",\"ul\",\"ul-6\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Utilisation du spectre radio très réglementée par l’ART (Autorité de Régulation des Télécoms)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Libéralisation progressive de l’usage de la bande ISM (Industrial, Scientific, Medical)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Depuis juillet 2001, Bluetooth et HiperLAN autorisés sous certaines conditions\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Procédure simplifiée pour les communes \u003e 50 000 habitants\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Sinon, demande individuelle d’établissement nécessitant l’accord du Ministère de la Défense\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-4\",{}],\"\\n\",[\"$\",\"h2\",\"h2-4\",{\"children\":\"I.3 Sécurité et enjeux\"}],\"\\n\",[\"$\",\"h3\",\"h3-3\",{\"children\":\"Problèmes de sécurité\"}],\"\\n\",[\"$\",\"ul\",\"ul-7\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Écoute clandestine (sniffing) des transmissions radio\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Longueur des clés de cryptage sur quelques premiers dispositifs mobiles\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Vulnérabilité aux attaques spécifiques :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Blocage radio (jamming)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Épuisement de batterie (battery exhaustion)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Solutions propriétaires en développement : régénération de clés toutes les 60 s :contentReference[oaicite:7]{index=7}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-4\",{\"children\":\"Concurrence et complémentarité\"}],\"\\n\",[\"$\",\"ul\",\"ul-8\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Ambivalence entre technologies radio et réseaux cellulaires 3G/4G\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"Enquête ART (février 2002) :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"Arguments des opérateurs contre réseaux radioélectriques :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Portée jugée trop faible\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Multiplicité de standards (absence d’un standard unique)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Coût supposé élevé\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Difficulté à se déplacer dans certains cas\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Soutien de collectivités locales (municipalités, universités)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-5\",{}],\"\\n\",[\"$\",\"h1\",\"h1-1\",{\"children\":\"II. Transmission numérique\"}],\"\\n\",[\"$\",\"h3\",\"h3-5\",{\"children\":\"1. Notions générales\"}],\"\\n\",[\"$\",\"ul\",\"ul-9\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Signal analogique\"}],\" :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Correspond à une grandeur physique continue (pression sonore, tension, intensité lumineuse…)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Infinité de valeurs, continu dans le temps\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Signal numérique\"}],\" :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Suite de chiffres (binaire : 0/1)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Discret dans le temps (échantillonnage), valeurs discrètes (quantification) :contentReference[oaicite:8]{index=8}\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"h4\",\"h4-2\",{\"children\":\"1.1 Échantillonnage\"}],\"\\n\",[\"$\",\"ul\",\"ul-10\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Transformation d’un signal continu en une suite d’échantillons selon une fréquence d’échantillonnage ( f_s )\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Sur- et sous-échantillonnage :\"}],\"\\n\"]}],\"\\n\",[\"$\",\"pre\",\"pre-0\",{\"children\":[\"$\",\"code\",\"code-0\",{\"children\":\"\\ns(t) ──┬─► Échantillonneur ─► s[n] ──► Reconstitution ─► Ŝ(t)  \\n│ (t = n·Te)\\n\\n\"}]}],\"\\n\",[\"$\",\"ul\",\"ul-11\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Conditions de Nyquist : échantillonnage à au moins deux fois la fréquence maximale du signal\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h4\",\"h4-3\",{\"children\":\"1.2 Quantification\"}],\"\\n\",[\"$\",\"ul\",\"ul-12\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Convertisseur analogique/numérique (CAN)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Nombre de bits = n → 2ⁿ niveaux de sortie\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Sortie en parallèle ou en série\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Exemple : TDA 8792 (8 bits, 25 MHz) :contentReference[oaicite:9]{index=9}\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Erreur de quantification\"}],\" (bruit quantification) :\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Différence entre signal analogique et valeur quantifiée\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Rapport signal sur bruit (S/N) exprimé en dB\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h4\",\"h4-4\",{\"children\":\"1.3 Spectre d’un signal binaire\"}],\"\\n\",[\"$\",\"ul\",\"ul-13\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Un signal binaire ( m(t) \\\\in {+1, -1} ) a un spectre (\\\\approx \\\\frac{1}{T} ) où ( T ) est la durée d’un bit (bps = 1/T).\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"Occupation spectrale approximative :\",[\"$\",\"br\",\"br-0\",{}],\"\\n[\",[\"$\",\"br\",\"br-1\",{}],\"\\nB_f \\\\approx bps\",[\"$\",\"br\",\"br-2\",{}],\"\\n]\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-6\",{}],\"\\n\",[\"$\",\"h2\",\"h2-5\",{\"children\":\"II.1 Modulations numériques\"}],\"\\n\",[\"$\",\"h3\",\"h3-6\",{\"children\":\"2.1 Modulation d’amplitude (ASK/OOK)\"}],\"\\n\",[\"$\",\"ul\",\"ul-14\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Amplitude Shift Keying (ASK)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Deux niveaux d’amplitude (k \u003c 1)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"On-Off Keying (OOK)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Cas particulier d’ASK (k = 1)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Exemple de séquence binaire 11111110… corresponds à porte active/inactive :contentReference[oaicite:10]{index=10}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-7\",{\"children\":\"2.2 Modulation de fréquence (FSK/GFSK)\"}],\"\\n\",[\"$\",\"ul\",\"ul-15\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Frequency Shift Keying (FSK)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Différents états de fréquence pour représenter 0 ou 1\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Gaussian FSK (GFSK)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Filtre passe-bas gaussien pour limiter la bande\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Utilisé dans Bluetooth\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-8\",{\"children\":\"2.3 Modulation de phase (BPSK/QPSK/O-QPSK)\"}],\"\\n\",[\"$\",\"ul\",\"ul-16\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"BPSK\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Deux états de phase (0 ou π)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"O-QPSK\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Variante de QPSK avec déplacements de phase plus petits (utilisé dans Zigbee)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-9\",{\"children\":\"2.4 Exemples de signaux modulés\"}],\"\\n\",[\"$\",\"ul\",\"ul-17\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Signal modulé en fréquence (FSK) :\"}],\"\\n\"]}],\"\\n\",[\"$\",\"pre\",\"pre-1\",{\"children\":[\"$\",\"code\",\"code-0\",{\"children\":\"\\n1 1 10111110 0 0 0 1 0 1 … → saut de fréquence entre +Δf et –Δf\\n\\n\"}]}],\"\\n\",[\"$\",\"ul\",\"ul-18\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Signal modulé en phase (BPSK) :\"}],\"\\n\"]}],\"\\n\",[\"$\",\"pre\",\"pre-2\",{\"children\":[\"$\",\"code\",\"code-0\",{\"children\":\"\\n1 1 10111110 0 0 0 1 0 1 … → phase = 0 pour “1”, phase = π pour “0”\\n\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-1\",{\"children\":\":contentReference[oaicite:11]{index=11}\"}],\"\\n\",[\"$\",\"hr\",\"hr-7\",{}],\"\\n\",[\"$\",\"h2\",\"h2-6\",{\"children\":\"II.2 Multiplexage géographique (Cellulaire)\"}],\"\\n\",[\"$\",\"ul\",\"ul-19\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Limitation de la portée de chaque cellule → Cellules adjacentes utilisant des fréquences différentes (reuse factor).\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Exemple : technologies cellulaires 2G/3G/4G reposant sur un découpage en cellules (f₁, f₂, f₃, …). :contentReference[oaicite:12]{index=12}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-8\",{}],\"\\n\",[\"$\",\"h1\",\"h1-2\",{\"children\":\"III. Bluetooth\"}],\"\\n\",[\"$\",\"h2\",\"h2-7\",{\"children\":\"III.1 Origines et évolutions\"}],\"\\n\",[\"$\",\"ul\",\"ul-20\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Né en 1994\"}],\" par Ericsson, standardisé par le groupe de travail IEEE 802.15 (WPAN)\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Objectif : remplacer les câbles de connexion (port série, IrDA, USB) pour interconnecter équipements personnels (PC, téléphone, PDA).\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-10\",{\"children\":\"Versions majeures\"}],\"\\n\",[\"$\",\"ul\",\"ul-21\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"V1.0\"}],\" (1998) → V1.1 (2002) → V1.2 (2005) → débit ~ 1 Mb/s\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"V2.0\"}],\" (2004) → V2.1 (2007) → débit ~ 3 Mb/s\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"V3.0 HS\"}],\" (2009) → débit jusqu’à 24 Mb/s (liaison Bluetooth + Wi-Fi)\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"V4.0\"}],\" (2010) → Bluetooth Low Energy (BLE), 3 Mb/s, très faible consommation\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"V4.1\"}],\" (2013), \",[\"$\",\"strong\",\"strong-1\",{\"children\":\"V4.2\"}],\" (2014) → optimisations pour Internet des Objets (IoT)\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"V5.0\"}],\" (annoncée juin 2016) → portée multipliée par 4, débit x2 (mise sur le marché Q1 2017)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-11\",{\"children\":\"Bande de fréquences\"}],\"\\n\",[\"$\",\"ul\",\"ul-22\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"2,400 MHz – 2,4835 MHz (bande ISM, sans licence)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Puissance \u003c 100 mW en intérieur sur 2,4–2,454 MHz\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Vanne à 2,454–2,4835 MHz : \u003c 100 mW en intérieur, \u003c 10 mW en extérieur\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Bande divisée en 79 canaux de 1 MHz (en France, Japon, Espagne, seules 23 canaux accessibles)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-9\",{}],\"\\n\",[\"$\",\"h2\",\"h2-8\",{\"children\":\"III.2 Concepts fondamentaux\"}],\"\\n\",[\"$\",\"h3\",\"h3-12\",{\"children\":\"1. Couche physique et sauts de fréquence\"}],\"\\n\",[\"$\",\"ul\",\"ul-23\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Modulation\"}],\" : GFSK (Gaussian Frequency Shift Keying)\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Étagement de spectre (FHSS)\"}],\" : la porteuse saute pseudo-aléatoirement d’un canal à l’autre (hop scheduling)\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Fréquence de saut\"}],\" : 1600 slots/s (1 slot = 625 μs)\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Les clients (maître et esclaves) partagent la même séquence de sauts générée à partir de l’adresse MAC du maître (48 bits) et de son horloge (phase).\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-13\",{\"children\":\"2. Classes d’émission Bluetooth\"}],\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\",[\"$\",\"table\",\"table-0\",{\"children\":[[\"$\",\"thead\",\"thead-0\",{\"children\":[\"$\",\"tr\",\"tr-0\",{\"children\":[[\"$\",\"th\",\"th-0\",{\"children\":\"Classe\"}],[\"$\",\"th\",\"th-1\",{\"children\":\"Puissance max (mW)\"}],[\"$\",\"th\",\"th-2\",{\"children\":\"Puissance (dBm)\"}],[\"$\",\"th\",\"th-3\",{\"children\":\"Portée approximative\"}]]}]}],[\"$\",\"tbody\",\"tbody-0\",{\"children\":[[\"$\",\"tr\",\"tr-0\",{\"children\":[[\"$\",\"td\",\"td-0\",{\"children\":\"Classe 1\"}],[\"$\",\"td\",\"td-1\",{\"children\":\"100\"}],[\"$\",\"td\",\"td-2\",{\"children\":\"20 dBm\"}],[\"$\",\"td\",\"td-3\",{\"children\":\"~ 100 m\"}]]}],[\"$\",\"tr\",\"tr-1\",{\"children\":[[\"$\",\"td\",\"td-0\",{\"children\":\"Classe 2\"}],[\"$\",\"td\",\"td-1\",{\"children\":\"2,5\"}],[\"$\",\"td\",\"td-2\",{\"children\":\"4 dBm\"}],[\"$\",\"td\",\"td-3\",{\"children\":\"~ 10 m\"}]]}],[\"$\",\"tr\",\"tr-2\",{\"children\":[[\"$\",\"td\",\"td-0\",{\"children\":\"Classe 3\"}],[\"$\",\"td\",\"td-1\",{\"children\":\"1\"}],[\"$\",\"td\",\"td-2\",{\"children\":\"0 dBm\"}],[\"$\",\"td\",\"td-3\",{\"children\":\"~ 1 m\"}]]}]]}]]}],\"\\n\",[\"$\",\"ul\",\"ul-24\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Règle empirique d’atténuation :\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"50 dB d’atténuation pour les 6 premiers mètres\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"10 dB d’atténuation pour chaque 10 m supplémentaires\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-10\",{}],\"\\n\",[\"$\",\"h2\",\"h2-9\",{\"children\":\"III.3 Architecture du protocole Bluetooth\"}],\"\\n\",[\"$\",\"h3\",\"h3-14\",{\"children\":\"1. Topologies\"}],\"\\n\",[\"$\",\"ul\",\"ul-25\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Piconet\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Topologie en étoile maître/esclave\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Jusqu’à 8 terminaux actifs (1 maître + 7 esclaves) et 255 esclaves “parked” (en attente)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Maître impose sa cadence temporelle (horloge) aux esclaves (synchronisation)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Communications entre esclaves passent obligatoirement via le maître\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Tous les participants partagent la même séquence de sauts\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Scatternet\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Interconnexion de plusieurs piconets\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Un maître d’un piconet peut devenir esclave d’un autre piconet\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Un esclave peut flotter entre plusieurs piconets, se “détacher” pour communiquer ailleurs, puis revenir\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-15\",{\"children\":\"2. Adressage\"}],\"\\n\",[\"$\",\"ul\",\"ul-26\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Device Address (BD_ADDR)\"}],\" : 48 bits, identifiant unique d’un module\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Active Member Address (AMA)\"}],\" : 3 bits, identifiant d’un terminal actif dans le piconet\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Parked Member Address (PMA)\"}],\" : 8 bits, identifiant d’un terminal parké\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-11\",{}],\"\\n\",[\"$\",\"h2\",\"h2-10\",{\"children\":\"III.4 Structure des trames\"}],\"\\n\",[\"$\",\"h3\",\"h3-16\",{\"children\":\"1. Composition d’une trame Bluetooth\"}],\"\\n\",[\"$\",\"ol\",\"ol-2\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Code d’accès (CAC, 72 bits)\"}],\" :\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-27\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Préambule (0101… ou 1010…)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Séquence de synchronisation (24 premiers bits de l’adresse Bluetooth)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Trailer (0101… ou 1010…)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-3\",{\"start\":2,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"En-tête (54 bits, 3 × 18 bits)\"}],\" : chaque bit transmis 3 fois (redondance)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-28\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Adresse de l’esclave (3 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Type de paquet (4 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Bits de contrôle (contrôle d’erreur, état des buffers, …)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-4\",{\"start\":3,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Données (0 à 240 bits)\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-29\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Types de paquets\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Courts (1 timeslot, max 240 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Moyens (3 timeslots, max 1480 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Longs (5 timeslots, max 2745 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Saut de fréquence effectué après la transmission complète d’un paquet\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-12\",{}],\"\\n\",[\"$\",\"h2\",\"h2-11\",{\"children\":\"III.5 Débits et performances\"}],\"\\n\",[\"$\",\"ul\",\"ul-30\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Débit maximal interne à un piconet ≈ 1 Mb/s (au plus 8 terminaux)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Débit effectif diminue rapidement avec le nombre de terminaux connectés\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Un maître peut communiquer simultanément avec 2 esclaves sur des fréquences différentes pour augmenter son débit effectif\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-13\",{}],\"\\n\",[\"$\",\"h2\",\"h2-12\",{\"children\":\"III.6 Protocoles supérieurs (Bluetooth Stack)\"}],\"\\n\",[\"$\",\"ul\",\"ul-31\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"L2CAP (Logical Link Control and Adaptation Protocol)\"}]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Acheminement des paquets vers le protocole supérieur approprié\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"RFCOMM\"}]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Émulation de ports série (RS-232) au-dessus de L2CAP\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"OBEX (Object Exchange Protocol)\"}]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Échanges de fichiers et d’objets similaires à HTTP/GET-POST ou FTP\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"SDP (Service Discovery Protocol)\"}]}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Découverte des services disponibles sur un périphérique\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"TCS (Telephony Control Specification)\"}]}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Spécification de contrôle d’appels téléphoniques :contentReference[oaicite:17]{index=17}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-14\",{}],\"\\n\",[\"$\",\"h2\",\"h2-13\",{\"children\":\"III.7 Sécurité Bluetooth\"}],\"\\n\",[\"$\",\"ul\",\"ul-32\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Trois niveaux de sécurité :\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-5\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Pas de gestion de sécurité\"}]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Sécurité au niveau applicatif\"}],\" (authentification accessoire/service)\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Sécurité complète\"}],\" (authentification + chiffrement via clés privées)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-33\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Chiffrement et authentification\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Génération de clés par session (numéro d’identité + clé partagée + générateur aléatoire interne)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Échanges de clés entre utilisateurs pour constituer un “pairing” sécurisé\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"FEC (Forward Error Correction)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Code 2/3 (2 bits utiles protégés par 3 bits → 160 bits utiles dans un paquet court)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Code 1/3 (1 bit utile protégé par 3 bits → 80 bits utiles dans un paquet court) :contentReference[oaicite:18]{index=18}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-15\",{}],\"\\n\",[\"$\",\"h2\",\"h2-14\",{\"children\":\"III.8 États d’une station Bluetooth\"}],\"\\n\",[\"$\",\"ol\",\"ol-6\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Standby\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-34\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Écoute allégée (toutes les 1,28 s) sur 32 porteuses d’éveil parmi les 79 canaux\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-7\",{\"start\":2,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Inquiry / Page\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-35\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Inquiry : chercher des appareils inconnus\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Page : “paging” lorsque l’appareil cible est connu\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-8\",{\"start\":3,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Connected\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-36\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Établissement de la liaison maître/esclave (définition des paramètres de connexion)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Liaison active au bout de ~ 0,6 s\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-9\",{\"start\":4,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Hold\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-37\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Lien maintenu, appareil reste synchronisé mais n’échange pas de données\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-10\",{\"start\":5,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Sniff\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-38\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Appareil périodiquement “réveillé” pour écouter le piconet\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Économie d’énergie (intervalle configurable \u003c 15 s)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-11\",{\"start\":6,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Park\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-39\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Appareil retiré du réseau actif, rend son AMA, synchronisation périodique pour revenir\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-16\",{}],\"\\n\",[\"$\",\"h2\",\"h2-15\",{\"children\":\"III.9 Gestion d’interférences\"}],\"\\n\",[\"$\",\"ul\",\"ul-40\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Chaque piconet utilise une séquence de sauts différente → probabilité de collision très faible\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"En cas de collision → retransmission du paquet après procédure de back-off (genèse d’un nouveau slot) :contentReference[oaicite:19]{index=19}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-17\",{}],\"\\n\",[\"$\",\"h1\",\"h1-3\",{\"children\":\"IV. Zigbee\"}],\"\\n\",[\"$\",\"h2\",\"h2-16\",{\"children\":\"IV.1 Généralités\"}],\"\\n\",[\"$\",\"ul\",\"ul-41\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Norme de communication sans fil sécurisée, à bas coût et faible consommation (domotique, contrôle industriel)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Fondée sur IEEE 802.15.4 (couches Physique et MAC)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Modulations :\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"2,4 GHz → O-QPSK (250 kbps)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"915 MHz (Amérique) → BPSK (40 kbps)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"868 MHz (Europe) → BPSK (20 kbps)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-17\",{\"children\":\"1. Avantages\"}],\"\\n\",[\"$\",\"ul\",\"ul-42\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Faible coût de déploiement\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Faible consommation (capteurs sur piles, sommeil prolongé)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Topologies flexibles : étoile, point à point, maillée\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Sécurité optionnelle AES 128\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Profil applicatif extensible (ZigBee Device Objects, Application Support Layer) :contentReference[oaicite:21]{index=21}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-18\",{}],\"\\n\",[\"$\",\"h2\",\"h2-17\",{\"children\":\"IV.2 Pile protocolaire Zigbee\"}],\"\\n\",[\"$\",\"ol\",\"ol-12\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"IEEE 802.15.4 (couche Physique \u0026 MAC)\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-43\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Physique : defines fréquences, modulation, débits (cf. section ci-dessus)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"MAC : CSMA-CA ou CSMA-CA slotté, confiabilité avec ACK, gestion des “superframes”\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-13\",{\"start\":2,\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Couche Zigbee (NWK, APS, ZDO)\"}]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-44\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"ZDO (Zigbee Device Object)\"}],\" : gestion de l’équipement, découverte, sécurité, formation du réseau\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"APS (Application Support Sublayer)\"}],\" : livraison des données, liaison avec les objets “Application”\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"NWK (Network Layer)\"}],\" : adressage, routage, formation, association, sécurité sur les trames\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-19\",{}],\"\\n\",[\"$\",\"h2\",\"h2-18\",{\"children\":\"IV.3 Types de nœuds Zigbee\"}],\"\\n\",[\"$\",\"ul\",\"ul-45\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Full Function Device (FFD)\"}]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Peut jouer les trois rôles : Coordinateur (ZC), Routeur (ZR), Équipement terminal (ZED)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Fonctionne dans toutes topologies\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Alimentation permanente (pour ZC et ZR)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Reduced Function Device (RFD)\"}]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Topologie en étoile uniquement (communiquant avec le Coordinateur)\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Fonctionne comme équipement terminal\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Composant simple, très peu consommateur (mode sommeil majoritaire)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-20\",{}],\"\\n\",[\"$\",\"h2\",\"h2-19\",{\"children\":\"IV.4 Topologies et routage\"}],\"\\n\",[\"$\",\"h3\",\"h3-18\",{\"children\":\"1. Topologie maillée (Mesh)\"}],\"\\n\",[\"$\",\"ul\",\"ul-46\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Composition : routeurs (ZR) et terminaux (ZED)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Communication multi-hop :\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Chaque routeur a plusieurs voisins\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Choix du meilleur chemin selon coût (nombre de sauts)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Tolérance aux pannes, redondance\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Avantages :\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Robuste (routes de secours en cas de panne/interférence)\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Extensible (couverture étendue, signaux faibles)\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Inconvénients :\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Complexité accrue (gestion des tables, contrôles, échanges de messages)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-19\",{\"children\":\"2. Routage “No Routing” (éd. Simple)\"}],\"\\n\",[\"$\",\"ul\",\"ul-47\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Utilisable pour un coordinateur unique et ses “end-devices” (topologie en étoile)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Le coordinateur connaît tous ses end-devices\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Chaque end-device communique uniquement avec le coordinateur (pas de routage multi-hop)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Équivalent à routage arborescent avec Rm = 0, Dm = ∞, Lm = 1\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-20\",{\"children\":\"3. Routage arborescent (Tree Routing)\"}],\"\\n\",[\"$\",\"ul\",\"ul-48\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Topologie en arbre : chaque nœud a un et un seul parent (sauf le coordinateur)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Les adresses courtes (16 bits) sont allouées selon la position dans l’arbre\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Paramètres fournis par le coordinateur :\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Rm = nombre maximal de routeurs enfants\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Dm = nombre maximal d’équipements terminaux enfants\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Lm = profondeur maximale de l’arbre\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Adressage :\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":[\"A(d) = nombre d’adresses allouées à un routeur de profondeur d\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Si d = Lm – 1 : A(d) = 1 + Dm + Rm\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Si 0 ≤ d \u003c Lm – 1 : A(d) = 1 + Dm + Rm × A(d + 1)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Chaque routeur connaît son adresse, celle de son parent et de ses enfants\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Routage :\"}],\"\\n\",[\"$\",\"li\",\"li-10\",{\"children\":\"Si destination dans sous-arbre → forward vers enfant approprié\"}],\"\\n\",[\"$\",\"li\",\"li-11\",{\"children\":\"Sinon → forward vers le parent (eventuellement up à la racine)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-21\",{\"children\":\"4. Routage AODV (Ad hoc On-Demand Vector Routing)\"}],\"\\n\",[\"$\",\"ul\",\"ul-49\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Route Request (RREQ)\"}],\" : inondation initiale (broadcast) par la source\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Chaque routeur intermédiaire propage le RREQ s’il offre une route meilleure (coût plus faible) que celle déjà connue\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Clé de recherche : (source address + RREQ ID + destination address)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Valeur comparée : Forward cost (coût total du chemin)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Route Reply (RREP)\"}],\" : renvoyée par la destination (ou routeur intermédiaire disposant d’un chemin)\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Transmise en unicast sur le chemin de moindre coût vers la source\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Mise à jour des tables de routage et de découverte de route (NLDE/NWME)\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Avantages : découverte dynamique, réactif aux changements de topologie :contentReference[oaicite:26]{index=26}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-21\",{}],\"\\n\",[\"$\",\"h2\",\"h2-20\",{\"children\":\"IV.5 Superframe (802.15.4)\"}],\"\\n\",[\"$\",\"ul\",\"ul-50\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Superframe\"}],\" : intervalle entre deux balises successives émises par le Coordinateur\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Durée configurable entre 15 ms et 245 ms\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Divisée en 16 slots (Time-Slots) :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"CAP (Contention Access Period)\"}],\" : accès par CSMA-CA slotté (partage du canal)\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"CFP (Contention Free Period)\"}],\" : 7 GTS (Guaranteed Time Slots) réservés à des nœuds ayant des besoins temps réel (temps déterministe)\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Beacon Frame\"}],\" : trame envoyée périodiquement par le Coordinateur pour synchroniser les nœuds (PAN ID, adresse, format de superframe)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-22\",{}],\"\\n\",[\"$\",\"h2\",\"h2-21\",{\"children\":\"IV.6 Scans et associations\"}],\"\\n\",[\"$\",\"h3\",\"h3-22\",{\"children\":\"1. Scan d’énergie\"}],\"\\n\",[\"$\",\"ul\",\"ul-51\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Mesure de l’énergie détectée sur chaque canal\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Permet au futur Coordinateur de choisir le canal le moins occupé\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-23\",{\"children\":\"2. Scan actif\"}],\"\\n\",[\"$\",\"ul\",\"ul-52\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Objectif : obtenir la liste des identifiants des PAN existants\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Envoi d’une requête de beacon, à laquelle répondent les coordinateurs\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Utilisé par :\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Coordinateur souhaitant créer un nouveau PAN\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Equipement cherchant à s’associer\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-24\",{\"children\":\"3. Scan passif\"}],\"\\n\",[\"$\",\"ul\",\"ul-53\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Écoute passive des balises sur chaque canal\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Utilisé par un équipement voulant s’associer (sans générer de trafic)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-25\",{\"children\":\"4. Scan d’orphelin\"}],\"\\n\",[\"$\",\"ul\",\"ul-54\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Utilisé par un équipement ayant perdu la synchronisation avec son Coordinateur\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Permet de retrouver le Coordinateur (beacon id) après une panne temporaire\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-23\",{}],\"\\n\",[\"$\",\"h2\",\"h2-22\",{\"children\":\"IV.7 Opérations réseau Zigbee\"}],\"\\n\",[\"$\",\"h3\",\"h3-26\",{\"children\":\"1. Création de réseau\"}],\"\\n\",[\"$\",\"ol\",\"ol-14\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Scan actif pour liste des PAN existants\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Choix d’un canal libre ou peu congestionné\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Initialisation du nouveau PAN (émission de beacon régulière)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-27\",{\"children\":\"2. Association / Désassociation\"}],\"\\n\",[\"$\",\"ul\",\"ul-55\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Association\"}],\" :\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-15\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Scan actif ou passif pour identifier PAN et Coordinateur cible\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Envoi d’une demande d’association (transmission indirecte via beacon)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Acceptation ou refus par le Coordinateur (en fonction des ressources disponibles)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-56\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Désassociation\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Initiée par l’équipement → notification indirecte au Coordinateur\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Ou initiée par le Coordinateur → notification indirecte à l’équipement\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-28\",{\"children\":\"3. Synchronisation\"}],\"\\n\",[\"$\",\"ul\",\"ul-57\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Les balises du Coordinateur contiennent :\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"PAN ID\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Adresse du Coordinateur\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Intervalle de superframe\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Les équipements synchronisent leur horloge locale sur les balises reçues (mise à jour périodique)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-24\",{}],\"\\n\",[\"$\",\"h2\",\"h2-23\",{\"children\":\"IV.8 Échanges de données\"}],\"\\n\",[\"$\",\"h3\",\"h3-29\",{\"children\":\"1. Échanges directs (peer-to-peer)\"}],\"\\n\",[\"$\",\"ul\",\"ul-58\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Durant la période CAP (CSMA slotté)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Un nœud transmet à un autre directement si dans la même portée (1 hop)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-30\",{\"children\":\"2. Échanges indirects\"}],\"\\n\",[\"$\",\"ul\",\"ul-59\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Si le destinataire est “end-device” en mode sommeil\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Le Coordinateur tamponne les messages en attente\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"À la prochaine beacon, le destinataire apprend qu’il a des messages à récupérer (indirect polling)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-31\",{\"children\":\"3. Échanges en GTS\"}],\"\\n\",[\"$\",\"ul\",\"ul-60\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Un équipement peut demander un GTS (Guaranteed Time Slot) au Coordinateur\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Le Coordinateur peut réserver des slots (émission ou réception) pour cet équipement\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Maximum de 7 GTS par superframe\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Si le GTS n’est pas utilisé pendant un certain nombre de superframes, il peut être réattribué à un autre équipement\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-25\",{}],\"\\n\",[\"$\",\"h2\",\"h2-24\",{\"children\":\"IV.9 Problèmes et limitations\"}],\"\\n\",[\"$\",\"ul\",\"ul-61\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Collision de balises\"}],\" (Beacon collision) :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Lorsqu’un équipement reçoit deux balises sur le même slot → confusion\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Nécessite mécanismes d’évitement ou coordination des beacons entre réseaux voisins\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Limites de portée et interférences\"}],\" (bande 2,4 GHz)\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Contraintes de routage\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Certaines topologies (star/tree) manquent de résilience par rapport au mesh\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Overhead de gestion de tables dans réseaux denses\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-26\",{}],\"\\n\",[\"$\",\"h1\",\"h1-4\",{\"children\":\"VI. Wi-Fi (IEEE 802.11)\"}],\"\\n\",[\"$\",\"h2\",\"h2-25\",{\"children\":\"VI.1 Introduction et historique\"}],\"\\n\",[\"$\",\"ul\",\"ul-62\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"IEEE a standardisé plusieurs réseaux locaux :\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Ethernet (802.3)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Token Bus (802.4)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Token Ring (802.5)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"1990\"}],\" : lancement du projet WLAN (Wireless Local Area Network)\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Objectif : connectivité sans fil pour stations fixes/mobiles, déploiement rapide en environnement local\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"2001\"}],\" : publication d’IEEE 802.11 (Wi-Fi)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-27\",{}],\"\\n\",[\"$\",\"h2\",\"h2-26\",{\"children\":\"VI.2 Caractéristiques générales\"}],\"\\n\",[\"$\",\"ul\",\"ul-63\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Bandes de fréquences\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"2,4 GHz ISM\"}],\" (2,400 – 2,4835 GHz) :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Sans licence, mais réglementé (puissance maximum 100 mW en intérieur sur 2,4465 – 2,4835 GHz ; 10 mW sur 2,400 – 2,4835 GHz)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Extérieur domaine privé : demande d’autorisation ART\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Extérieur domaine public : bandes réglementées\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"5 GHz UN-II\"}],\" (5,150 – 5,825 GHz) :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Divisée en sous-bandes UN-II A/B/C\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Sans licence dans la plupart des régions, puissance limitée (100 mW ou moins selon pays)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Communication\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Directe (ad-hoc) : terminal → terminal (pas de relais possible)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Infrastruktur : terminal ↔ point d’accès (AP) → Distribution System (DS) (souvent Ethernet câblé)\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Débits\"}],\" : varient selon codage et environnement\"]}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"802.11b : 1 – 11 Mb/s (réel 6 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"802.11a : 6 – 54 Mb/s (réel ~ 27 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"802.11g : 6 – 54 Mb/s (réel ~ 25 Mb/s)\"}],\"\\n\",[\"$\",\"li\",\"li-10\",{\"children\":\"802.11n : jusqu’à 300 Mb/s réel (MIMO, 2,4 + 5 GHz)\"}],\"\\n\",[\"$\",\"li\",\"li-11\",{\"children\":\"802.11ac : jusqu’à 1 Gb/s (configurations multi-antenne, bande UN-II) :contentReference[oaicite:27]{index=27}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-28\",{}],\"\\n\",[\"$\",\"h2\",\"h2-27\",{\"children\":\"VI.3 Architectures Wi-Fi\"}],\"\\n\",[\"$\",\"h3\",\"h3-32\",{\"children\":\"1. Mode infrastructure\"}],\"\\n\",[\"$\",\"ul\",\"ul-64\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Basic Service Set (BSS)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Groupe de stations communicant via un point d’accès (AP)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Couverture physique d’un BSS = Basic Service Area (BSA)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Extended Service Set (ESS)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Ensemble de plusieurs BSS interconnectés via un Distribution System (DS)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"DS = souvent réseau Ethernet filaire\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"AP connectés au DS→ ESS ; une station peut roamer (se réassocier) d’un AP à un autre\"}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-33\",{\"children\":\"2. Mode Ad-Hoc (IBSS)\"}],\"\\n\",[\"$\",\"ul\",\"ul-65\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Independent BSS (IBSS) : stations forment un réseau peer-to-peer, sans AP\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Chaque station communique directement avec les autres dans la même portée\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Utile pour réseaux temporaires ou absence d’infrastructure\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-29\",{}],\"\\n\",[\"$\",\"h2\",\"h2-28\",{\"children\":\"VI.4 Modèle en couches (IEEE 802.11)\"}],\"\\n\",[\"$\",\"h3\",\"h3-34\",{\"children\":\"1. Couche physique (PHY)\"}],\"\\n\",[\"$\",\"ul\",\"ul-66\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"802.11b/g (2,4 GHz, ISM)\"}],\" :\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"Étalement de spectre DSSS (Direct Sequence Spread Spectrum) :\"}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"14 canaux de 20 MHz (seuls 1–13 utilisés en Europe)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Une seule fréquence (canal) utilisée par trame, co-localisation de 3 réseaux (non-recouvrement)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Débits 1 / 2 / 5,5 / 11 Mb/s (802.11b)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Mécanisme de modulation adaptative (puissance, codage, afin d’optimiser débit selon qualité du lien)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Portées\"}],\" :\"]}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"1 Mb/s → 150 m intérieur, 500 m extérieur\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"2 Mb/s → 100 m intérieur, 400 m extérieur\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"5,5 Mb/s → 75 m intérieur, 300 m extérieur\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"11 Mb/s → 50 m intérieur, 200 m extérieur\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"802.11a (5 GHz, UN-II)\"}],\" :\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"Modulation OFDM (Orthogonal Frequency Division Multiplexing) :\"}],\"\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"52 porteuses dans un canal de 20 MHz\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"8 débits possibles de 6 à 54 Mb/s\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Excellentes performances en présence de trajets multi-chemins (réflecteurs, obstacles)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"8 canaux co-localisés possibles dans 300 MHz (UN-II A/B/C)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"Couches supérieures identiques à Ethernet\"}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"802.11e (Qualité de Service)\"}],\" :\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"Priorisation du trafic (voix, vidéo)\"}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"Différentiation des temporisateurs d’accès (IFS) selon classes de trafic\"}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-10\",{\"children\":[\"\\n\",[\"$\",\"p\",\"p-0\",{\"children\":\"Sécurité renforcée (802.11i, authentification mutuelle, chiffrement)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"h3\",\"h3-35\",{\"children\":\"2. Couche MAC (Medium Access Control)\"}],\"\\n\",[\"$\",\"ul\",\"ul-67\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Basée sur CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) :\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-16\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Écoute du canal\"}],\" (Carrier Sense) :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Si libre pendant DIFS (DCF Inter-Frame Space) → transmission immédiate\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Sinon attente jusqu’à ce qu’il soit libre, puis temporisateur de back-off\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Back-off\"}],\" :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Temporisateur initialisé aléatoirement dans [0, CW] (Contention Window)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Quand le canal libre, décrémentation du temporisateur à chaque timeslot\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"À 0 → transmission, sinon si canal occupé → blocage, puis reprise à prochain slot libre\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Collision → nouvelle tentative, CW doublé (max 1023)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"ACK\"}],\" :\\n\",[\"$\",\"ul\",\"ul-0\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Station destinataire envoie un acquittement (ACK) après un SIFS (Short Inter-Frame Space) si trame reçue correctement (CRC ok)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"En cas d’absence d’ACK → retransmission (jusqu’à un nombre maximal de tentatives)\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"ul\",\"ul-68\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Two coordination functions\"}],\" :\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-17\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"DCF (Distributed Coordination Function)\"}],\" : accès contention-based (CSMA/CA), Best Effort\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"PCF (Point Coordination Function)\"}],\" : accès sans contention (polling par le point d’accès), pour trafic temps réel (voix/vidéo)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-30\",{}],\"\\n\",[\"$\",\"h2\",\"h2-29\",{\"children\":\"VI.5 Handovers et roaming\"}],\"\\n\",[\"$\",\"ul\",\"ul-69\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Lorsqu’un terminal se déplace d’un BSS à un autre (ESS), handover rapide pour conserver la session (802.11f – Inter-Access Point Protocol)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Mécanismes de synchronisation :\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Beacon Frames\"}],\" (balises) émises périodiquement par chaque AP (intervalle 100 ms par défaut)\"]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Contiennent : SSID, timestamp, intervalle, capacité du réseau (supported rates), authentification, chiffrement\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"Station synchronise son horloge interne sur le timestamp du beacon (jour nulle)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Lorsqu’un AP devient trop faible :\"}],\"\\n\"]}],\"\\n\",[\"$\",\"ol\",\"ol-18\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":\"Terminal détecte baisse de RSSI (Received Signal Strength Indicator)\"}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Scans de canaux voisins (actif ou passif) pour lister SSID disponibles\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Sélection d’un nouveau AP (critères : RSSI, taux d’erreur, charge)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Réassociation (Reassociation Request) au nouvel AP → répartition des flux via DS\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-31\",{}],\"\\n\",[\"$\",\"h2\",\"h2-30\",{\"children\":\"VI.6 Fragmentation / Réassemblage\"}],\"\\n\",[\"$\",\"ul\",\"ul-70\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Objectif\"}],\" : réduire le risque de perte de trame dans les transmissions radio à taux d’erreur élevé\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Fragmentation\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[\"Si trame \u003e seuil \",[\"$\",\"code\",\"code-0\",{\"children\":\"Fragmentation_Threshold\"}],\", découpée en fragments ≤ \",[\"$\",\"code\",\"code-1\",{\"children\":\"Fragmentation_Threshold\"}]]}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Chaque fragment transmis séquentiellement, support libéré uniquement après réception de tous les ACKs\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"En cas d’erreur pour un fragment, seuls les fragments restants sont retransmis (améliore les performances globales)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Réassemblage\"}],\" : reconstruire la trame d’origine à la réception de tous les fragments (identifiants de séquence, drapeaux)\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-32\",{}],\"\\n\",[\"$\",\"h2\",\"h2-31\",{\"children\":\"VI.7 Sécurité 802.11 (WEP/WPA/WPA2)\"}],\"\\n\",[\"$\",\"ul\",\"ul-71\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"WEP (Wired Equivalent Privacy)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Chiffrement RC4, clés partagées (64 ou 128 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Problèmes : IV (Initialization Vector) court (24 bits), vulnérabilités cryptographiques\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"WPA (Wi-Fi Protected Access)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"TKIP (Temporal Key Integrity Protocol) : rotation des clés, IV étendu (48 bits), MIC (Message Integrity Check)\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Authentification via 802.1X/EAP (Enterprise) ou PSK (Pre-Shared Key)\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"WPA2 (IEEE 802.11i)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Chiffrement AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Authentification renforcée (802.1X)\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Obligation pour entreprises, conformité obligatoire pour nouveaux équipements\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-33\",{}],\"\\n\",[\"$\",\"h2\",\"h2-32\",{\"children\":\"VI.8 Exemples d’équipements Wi-Fi\"}],\"\\n\",[\"$\",\"ul\",\"ul-72\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Point d’accès (AP)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Émetteur/récepteur sur bande 2,4 ou 5 GHz\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Interface Ethernet (100 Mb/s ou plus) vers DS\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Antennes internes/externes, balayage de canaux, gestion QoS (802.11e)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Station cliente (STA)\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Carte Wi-Fi PCI/USB/PCMCIA/mini-PCIe dans PC portable, dongle USB, chipset intégré dans smartphone/tablette\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Logiciel de gestion (pilote, utilitaire réseau)\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Bridges/Repeaters\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Relais de signal (Point-to-Point ou Point-to-MultiPoint)\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Utilisent modes ad-hoc ou infrastructure\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-34\",{}],\"\\n\",[\"$\",\"h1\",\"h1-5\",{\"children\":\"VIII. Solutions à rupture technologique\"}],\"\\n\",[\"$\",\"h2\",\"h2-33\",{\"children\":\"VIII.1 EnOcean\"}],\"\\n\",[\"$\",\"ul\",\"ul-73\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Fréquence\"}],\" : 868 MHz (Europe), modulation ASK, débit 125 kbps\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Trame\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"ID nœud (32 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Données (8 à 32 bits)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":\"CRC\"}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Transmission\"}],\" : trois trames identiques envoyées à des instants aléatoires (~ 40 ms d’intervalle)\"]}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Avantages\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":\"Périphériques autonomes sans pile (Energy harvesting : mouvements, vibrations, solaire, thermique)\"}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Grande portée : 300 m en extérieur, 30 m en intérieur\"}],\"\\n\",[\"$\",\"li\",\"li-9\",{\"children\":\"Topologie “peer-to-peer” (chaque périphérique peut communiquer directement avec un autre)\"}],\"\\n\",[\"$\",\"li\",\"li-10\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Inconvénients\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-11\",{\"children\":\"Technologie émergente, recul limité\"}],\"\\n\",[\"$\",\"li\",\"li-12\",{\"children\":\"Topologie en étoile → portée interne réduite\"}],\"\\n\",[\"$\",\"li\",\"li-13\",{\"children\":\"Coûts encore élevés :contentReference[oaicite:30]{index=30}\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-35\",{}],\"\\n\",[\"$\",\"h2\",\"h2-34\",{\"children\":\"VIII.2 io-homecontrol\"}],\"\\n\",[\"$\",\"ul\",\"ul-74\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Bande\"}],\" : 868 – 870 MHz (Europe)\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":\"Technologie bidirectionnelle (retour d’information natif)\"}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":\"Standard ouvert soutenu par de grands fabricants (VELUX, SOMFY, NIKO, Honeywell, CIAT, …)\"}],\"\\n\",[\"$\",\"li\",\"li-3\",{\"children\":\"Nouveau standard pour équipements d’habitat connectés (p.ex. volets roulants, chaudières, capteurs)\"}],\"\\n\",[\"$\",\"li\",\"li-4\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Avantages\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-5\",{\"children\":\"Interopérabilité entre différents acteurs de l’habitat\"}],\"\\n\",[\"$\",\"li\",\"li-6\",{\"children\":\"Retour d’information garanti (confirmations de réception, état)\"}],\"\\n\",[\"$\",\"li\",\"li-7\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Inconvénients\"}],\" :\"]}],\"\\n\",[\"$\",\"li\",\"li-8\",{\"children\":\"Coûts de déploiement initiaux supérieurs à certaines alternatives\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",\"hr-36\",{}],\"\\n\",[\"$\",\"h2\",\"h2-35\",{\"children\":\"VIII.3 Autres problèmes et limites des solutions domotiques\"}],\"\\n\",[\"$\",\"ul\",\"ul-75\",{\"children\":[\"\\n\",[\"$\",\"li\",\"li-0\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Saturation de la bande 433 MHz\"}],\" (de nombreux dispositifs sans licence concurrents)\"]}],\"\\n\",[\"$\",\"li\",\"li-1\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Sécurité\"}],\" souvent gérée par des solutions maison peu convaincantes (cryptage léger ou absent)\"]}],\"\\n\",[\"$\",\"li\",\"li-2\",{\"children\":[[\"$\",\"strong\",\"strong-0\",{\"children\":\"Manque de visibilité\"}],\" pour le consommateur dans le choix de la bonne solution (multiplicité des standards, interopérabilité limitée) :contentReference[oaicite:31]{index=31}\"]}],\"\\n\"]}]]}]]}]]}]}],[\"$\",\"footer\",null,{\"className\":\"bg-muted/50 py-12\",\"children\":[\"$\",\"div\",null,{\"className\":\"container mx-auto px-4\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex flex-col md:flex-row justify-between items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-6 md:mb-0\",\"children\":[[\"$\",\"$L6\",null,{\"href\":\"/\",\"className\":\"text-xl font-bold tracking-tight\",\"children\":\"Matthieu GUYOT\"}],[\"$\",\"p\",null,{\"className\":\"text-muted-foreground mt-2 max-w-md\",\"children\":\"Building the future with code and security. Passionate about technology, cybersecurity, and knowledge sharing.\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center md:items-end\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex space-x-4 mb-4\",\"children\":[[\"$\",\"a\",null,{\"href\":\"https://github.com/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"GitHub\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-github h-5 w-5\",\"children\":[[\"$\",\"path\",\"tonef\",{\"d\":\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4\"}],[\"$\",\"path\",\"9comsn\",{\"d\":\"M9 18c-4.51 2-5-2-7-2\"}],\"$undefined\"]}],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary\"}],[\"$\",\"a\",null,{\"href\":\"https://linkedin.com/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"LinkedIn\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-linkedin h-5 w-5\",\"children\":[[\"$\",\"path\",\"c2jq9f\",{\"d\":\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"}],[\"$\",\"rect\",\"mk3on5\",{\"width\":\"4\",\"height\":\"12\",\"x\":\"2\",\"y\":\"9\"}],[\"$\",\"circle\",\"bt5ra8\",{\"cx\":\"4\",\"cy\":\"4\",\"r\":\"2\"}],\"$undefined\"]}],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary\"}],[\"$\",\"a\",null,{\"href\":\"https://twitter.com/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"Twitter\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-twitter h-5 w-5\",\"children\":[[\"$\",\"path\",\"pff0z6\",{\"d\":\"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z\"}],\"$undefined\"]}],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-muted-foreground\",\"children\":[\"© \",2025,\" Matthieu GUYOT. All rights reserved.\"]}]]}]]}]}]}]]}],null],null],null]},[null,[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"knowledge-hub\",\"children\",\"$8\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[null,[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"knowledge-hub\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/45f8aa93ae81327e.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"suppressHydrationWarning\":true,\"children\":[\"$\",\"body\",null,{\"className\":\"__className_e8ce0c\",\"children\":[\"$\",\"$La\",null,{\"attribute\":\"class\",\"defaultTheme\":\"system\",\"enableSystem\":true,\"disableTransitionOnChange\":true,\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$Lb\"],\"globalErrorComponent\":\"$c\",\"missingSlots\":\"$Wd\"}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"Introduction to Wireless Communication | Matthieu GUYOT\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Small Overview of technologies, features, and automation examples in home automation, combining electronics, computer science, and telecommunications for the connected home.\"}],[\"$\",\"meta\",\"4\",{\"name\":\"generator\",\"content\":\"v0.dev\"}],[\"$\",\"meta\",\"5\",{\"name\":\"next-size-adjust\"}]]\n4:null\n"])</script></body></html>

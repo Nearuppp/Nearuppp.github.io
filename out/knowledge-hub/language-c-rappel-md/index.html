@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/45f8aa93ae81327e.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-a3760f0212ccbb12.js"/><script src="/_next/static/chunks/fd9d1056-3750f1c68fb99acb.js" async=""></script><script src="/_next/static/chunks/117-eb26ec6fd88fb5e5.js" async=""></script><script src="/_next/static/chunks/main-app-4f795b60095832c8.js" async=""></script><script src="/_next/static/chunks/671-870bf4da9bc73117.js" async=""></script><script src="/_next/static/chunks/app/knowledge-hub/%5Bslug%5D/page-f17a1fa9deeef7f1.js" async=""></script><script src="/_next/static/chunks/app/layout-dcf2fed02f629d0b.js" async=""></script><title>C Language Quick Reference for LeetCode Beginners | Matthieu GUYOT</title><meta name="description" content="Comprehensive C programming guide tailored for beginners practicing LeetCode problems, including arrays, pointers, linked lists, trees, recursion, sorting, dynamic programming, and more."/><meta name="generator" content="v0.dev"/><meta name="next-size-adjust"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__className_e8ce0c"><script>((e,t,r,n,a,o,l,i)=>{let u=document.documentElement,s=["light","dark"];function c(t){(Array.isArray(e)?e:[e]).forEach(e=>{let r="class"===e,n=r&&o?a.map(e=>o[e]||e):a;r?(u.classList.remove(...n),u.classList.add(o&&o[t]?o[t]:t)):u.setAttribute(e,t)}),i&&s.includes(t)&&(u.style.colorScheme=t)}if(n)c(n);else try{let e=localStorage.getItem(t)||r,n=l&&"system"===e?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":e;c(n)}catch(e){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="min-h-screen bg-background"><header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="text-xl font-bold tracking-tight text-primary" href="/">Matthieu GUYOT</a><nav class="hidden md:flex items-center gap-6"><a class="text-muted-foreground hover:text-primary transition-colors" href="/">Home</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/about/">About</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/projects/">Projects</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/knowledge-hub/">Knowledge Hub</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/tags/">Tags</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/resume/">Resume</a><a class="text-muted-foreground hover:text-primary transition-colors" href="/contact/">Contact</a><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full" type="button" id="radix-:Rkmfnnkq:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg><span class="sr-only">Toggle theme</span></button></nav><div class="flex items-center gap-4 md:hidden"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full" type="button" id="radix-:Remfnnkq:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg><span class="sr-only">Toggle theme</span></button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div></div></header><article class="py-20 pt-32"><div class="container mx-auto px-4 max-w-4xl"><div class="mb-8"><a href="/knowledge-hub/"><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left h-4 w-4"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Back to Knowledge Hub</button></a></div><div class="bg-card p-8 rounded-lg shadow-sm"><div class="mb-6"><h1 class="text-3xl font-bold mb-4">C Language Quick Reference for LeetCode Beginners</h1><div class="flex items-center gap-2 text-muted-foreground mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span>2025-07-29</span></div><div class="flex flex-wrap gap-2 mb-6"><a href="/tags/C/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>C</div></a><a href="/tags/Programming/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Programming</div></a><a href="/tags/LeetCode/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>LeetCode</div></a><a href="/tags/Algorithms/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Algorithms</div></a><a href="/tags/Data/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Data</div></a><a href="/tags/Structures/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Structures</div></a><a href="/tags/Beginner/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>Beginner</div></a><a href="/tags/French/"><div class="rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-3 w-3"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>French</div></a></div><div class="bg-muted/30 p-4 rounded-lg mb-6"><p class="italic">Comprehensive C programming guide tailored for beginners practicing LeetCode problems, including arrays, pointers, linked lists, trees, recursion, sorting, dynamic programming, and more.</p></div></div><div class="markdown max-w-none"><p>Pour declarer un tableau :</p>
+<pre><code class="language-c">char tableau[] = {&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;,&#x27;d&#x27;,&#x27;e&#x27;,&#x27;f&#x27;,&#x27;g&#x27;,&#x27;h&#x27;,&#x27;i&#x27;,&#x27;j&#x27;,&#x27;k&#x27;,&#x27;l&#x27;,&#x27;m&#x27;,&#x27;n&#x27;,&#x27;o&#x27;,&#x27;p&#x27;,&#x27;q&#x27;,&#x27;r&#x27;,&#x27;s&#x27;,&#x27;t&#x27;,&#x27;u&#x27;,&#x27;v&#x27;,&#x27;w&#x27;,&#x27;x&#x27;,&#x27;y&#x27;,&#x27;z&#x27;};
+</code></pre>
+<p>Prendre le premier charactere d&#x27;une chaine de charactere :</p>
+<h3>Chaîne sous forme de pointeur (<code>char *</code>)</h3>
+<pre><code class="language-C">char *s = &quot;bonjour&quot;;
+
+char premier = *s;     // OK : donne &#x27;b&#x27;
+char aussiPremier = s[0]; // OK : donne aussi &#x27;b&#x27;
+</code></pre>
+<h3>Chaîne sous forme de tableau (<code>char[]</code>)</h3>
+<pre><code class="language-C">char tableau[] = &quot;bonjour&quot;;
+
+char premier = *tableau;   // OK : donne &#x27;b&#x27;
+char aussiPremier = tableau[0]; // OK : donne aussi &#x27;b&#x27;
+</code></pre>
+<p>Great! I’ll create a C language note tailored for a beginner focused on solving LeetCode problems. It will include syntax reminders and code templates for common algorithms and data structures like arrays, linked lists, trees, recursion, dynamic programming, and more.<br/>
+I&#x27;ll let you know once it&#x27;s ready for you to review and use.</p>
+<h1>C Quick Reference for LeetCode</h1>
+<h2>Basic Input/Output</h2>
+<p><strong>Template: Reading and Printing an Integer</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}
+</code></pre>
+<p><strong>Template: Reading a String and Printing</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    char str[100];
+    scanf(&quot;%99s&quot;, str);
+    printf(&quot;%s\n&quot;, str);
+    return 0;
+}
+</code></pre>
+<h2>Arrays and Strings</h2>
+<p><strong>Template: Array Declaration and Traversal</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int n = 5;
+    for(int i = 0; i &lt; n; i++) {
+        printf(&quot;%d &quot;, arr[i]);
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}
+</code></pre>
+<p><strong>Template: String Declaration and Functions</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char s[100] = &quot;hello&quot;;
+    int len = strlen(s);
+    char t[100];
+    strcpy(t, s);
+    strcat(s, &quot; world&quot;);
+    printf(&quot;%s (len=%d)\n&quot;, s, len);
+    return 0;
+}
+</code></pre>
+<h2>Pointers and Memory Management</h2>
+<p><strong>Template: Pointer and malloc</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main() {
+    int *p = malloc(sizeof(int));
+    if (p == NULL) return 1;
+    *p = 10;
+    printf(&quot;%d\n&quot;, *p);
+    free(p);
+    return 0;
+}
+</code></pre>
+<p><strong>Template: Pointer to Array</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *p = arr;
+    printf(&quot;%d\n&quot;, *(p+2)); // prints arr[2]
+    return 0;
+}
+</code></pre>
+<h2>Linked Lists (Singly and Doubly)</h2>
+<p><strong>Template: Singly Linked List Node &amp; Insert at Head</strong></p>
+<pre><code class="language-c">#include &lt;stdlib.h&gt;
+typedef struct ListNode {
+    int val;
+    struct ListNode *next;
+} ListNode;
+
+ListNode* insertAtHead(ListNode* head, int val) {
+    ListNode* newNode = malloc(sizeof(ListNode));
+    newNode-&gt;val = val;
+    newNode-&gt;next = head;
+    return newNode;
+}
+</code></pre>
+<p><strong>Template: Doubly Linked List Node &amp; Insert at Head</strong></p>
+<pre><code class="language-c">#include &lt;stdlib.h&gt;
+typedef struct DListNode {
+    int val;
+    struct DListNode *prev, *next;
+} DListNode;
+
+DListNode* insertDoubly(DListNode* head, int val) {
+    DListNode* newNode = malloc(sizeof(DListNode));
+    newNode-&gt;val = val;
+    newNode-&gt;prev = NULL;
+    newNode-&gt;next = head;
+    if (head) head-&gt;prev = newNode;
+    return newNode;
+}
+</code></pre>
+<h2>Binary Trees and Tree Traversal</h2>
+<p><strong>Template: Binary Tree Node</strong></p>
+<pre><code class="language-c">#include &lt;stdlib.h&gt;
+typedef struct TreeNode {
+    int val;
+    struct TreeNode *left, *right;
+} TreeNode;
+</code></pre>
+<p><strong>Template: Inorder Traversal</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+void inorder(TreeNode* root) {
+    if (root) {
+        inorder(root-&gt;left);
+        printf(&quot;%d &quot;, root-&gt;val);
+        inorder(root-&gt;right);
+    }
+}
+</code></pre>
+<p><strong>Template: Preorder Traversal</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+void preorder(TreeNode* root) {
+    if (root) {
+        printf(&quot;%d &quot;, root-&gt;val);
+        preorder(root-&gt;left);
+        preorder(root-&gt;right);
+    }
+}
+</code></pre>
+<p><strong>Template: Postorder Traversal</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+void postorder(TreeNode* root) {
+    if (root) {
+        postorder(root-&gt;left);
+        postorder(root-&gt;right);
+        printf(&quot;%d &quot;, root-&gt;val);
+    }
+}
+</code></pre>
+<p><strong>Template: Level Order (Breadth-First) Traversal</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#define MAX_QUEUE 100
+TreeNode* queue[MAX_QUEUE];
+int front = 0, back = 0;
+
+void enqueue(TreeNode* x) { queue[back++] = x; }
+TreeNode* dequeue() { return queue[front++]; }
+int isEmpty() { return front == back; }
+
+void levelOrder(TreeNode* root) {
+    if (!root) return;
+    front = back = 0;
+    enqueue(root);
+    while (!isEmpty()) {
+        TreeNode* node = dequeue();
+        printf(&quot;%d &quot;, node-&gt;val);
+        if (node-&gt;left) enqueue(node-&gt;left);
+        if (node-&gt;right) enqueue(node-&gt;right);
+    }
+}
+</code></pre>
+<h2>Recursion</h2>
+<p><strong>Template: Factorial (Recursion)</strong></p>
+<pre><code class="language-c">int factorial(int n) {
+    if (n &lt;= 1) return 1;
+    return n * factorial(n - 1);
+}
+</code></pre>
+<p><strong>Template: Fibonacci (Recursion)</strong></p>
+<pre><code class="language-c">int fib(int n) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+}
+</code></pre>
+<h2>Iteration and Loops</h2>
+<p><strong>Template: For Loop</strong></p>
+<pre><code class="language-c">for (int i = 0; i &lt; n; i++) {
+    // code
+}
+</code></pre>
+<p><strong>Template: While Loop</strong></p>
+<pre><code class="language-c">int i = 0;
+while (i &lt; n) {
+    // code
+    i++;
+}
+</code></pre>
+<p><strong>Template: Do-While Loop</strong></p>
+<pre><code class="language-c">int i = 0;
+do {
+    // code
+    i++;
+} while (i &lt; n);
+</code></pre>
+<h2>Hashing (Arrays or Structs)</h2>
+<p><strong>Template: Frequency Array (Counting)</strong></p>
+<pre><code class="language-c">int freq[1000] = {0};
+int x = 5;
+freq[x]++;
+</code></pre>
+<p><strong>Template: Simple Hash Map Using Array of Struct (No Collision Handling)</strong></p>
+<pre><code class="language-c">#define SIZE 100
+typedef struct {
+    int key;
+    int value;
+} Entry;
+
+Entry table[SIZE];
+
+int hash(int key) {
+    return key % SIZE;
+}
+
+void insert(int key, int value) {
+    int idx = hash(key);
+    table[idx].key = key;
+    table[idx].value = value;
+}
+</code></pre>
+<p><strong>Template: Hash Map Using Chaining (Linked Lists)</strong></p>
+<pre><code class="language-c">#define SIZE 100
+typedef struct Node {
+    int key, value;
+    struct Node* next;
+} Node;
+
+Node* hashTable[SIZE];
+
+int hash(int key) {
+    return key % SIZE;
+}
+
+void insert(int key, int value) {
+    int idx = hash(key);
+    Node* newNode = malloc(sizeof(Node));
+    newNode-&gt;key = key;
+    newNode-&gt;value = value;
+    newNode-&gt;next = hashTable[idx];
+    hashTable[idx] = newNode;
+}
+</code></pre>
+<h2>Stacks and Queues</h2>
+<p><strong>Template: Stack Using Array</strong></p>
+<pre><code class="language-c">#define MAX 100
+int stackArr[MAX];
+int top = -1;
+
+void push(int x) {
+    if (top &lt; MAX - 1) stackArr[++top] = x;
+}
+
+int pop() {
+    if (top &gt;= 0) return stackArr[top--];
+    return -1; // or error
+}
+</code></pre>
+<p><strong>Template: Stack Using Linked List</strong></p>
+<pre><code class="language-c">#include &lt;stdlib.h&gt;
+typedef struct Node {
+    int val;
+    struct Node* next;
+} Node;
+
+Node* topNode = NULL;
+
+void push(int x) {
+    Node* newNode = malloc(sizeof(Node));
+    newNode-&gt;val = x;
+    newNode-&gt;next = topNode;
+    topNode = newNode;
+}
+
+int pop() {
+    if (!topNode) return -1;
+    Node* temp = topNode;
+    int val = temp-&gt;val;
+    topNode = topNode-&gt;next;
+    free(temp);
+    return val;
+}
+</code></pre>
+<p><strong>Template: Queue Using Array</strong></p>
+<pre><code class="language-c">#define MAXQ 100
+int queueArr[MAXQ];
+int frontQ = 0, backQ = 0;
+
+void enqueue(int x) {
+    queueArr[backQ++] = x;
+}
+
+int dequeue() {
+    if (frontQ &lt; backQ) return queueArr[frontQ++];
+    return -1;
+}
+</code></pre>
+<p><strong>Template: Queue Using Linked List</strong></p>
+<pre><code class="language-c">#include &lt;stdlib.h&gt;
+typedef struct NodeQ {
+    int val;
+    struct NodeQ* next;
+} NodeQ;
+
+NodeQ* head = NULL;
+NodeQ* tail = NULL;
+
+void enqueue(int x) {
+    NodeQ* newNode = malloc(sizeof(NodeQ));
+    newNode-&gt;val = x;
+    newNode-&gt;next = NULL;
+    if (tail) tail-&gt;next = newNode;
+    else head = newNode;
+    tail = newNode;
+}
+
+int dequeue() {
+    if (!head) return -1;
+    NodeQ* temp = head;
+    int val = temp-&gt;val;
+    head = head-&gt;next;
+    if (!head) tail = NULL;
+    free(temp);
+    return val;
+}
+</code></pre>
+<h2>Sorting Algorithms</h2>
+<p><strong>Template: Bubble Sort</strong></p>
+<pre><code class="language-c">void bubbleSort(int arr[], int n) {
+    for (int i = 0; i &lt; n - 1; i++) {
+        for (int j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+</code></pre>
+<p><strong>Template: Merge Sort</strong></p>
+<pre><code class="language-c">void merge(int arr[], int l, int m, int r) {
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    int L[n1], R[n2];
+    for (int i = 0; i &lt; n1; i++) L[i] = arr[l + i];
+    for (int j = 0; j &lt; n2; j++) R[j] = arr[m + 1 + j];
+    int i = 0, j = 0, k = l;
+    while (i &lt; n1 &amp;&amp; j &lt; n2) {
+        if (L[i] &lt;= R[j]) arr[k++] = L[i++];
+        else arr[k++] = R[j++];
+    }
+    while (i &lt; n1) arr[k++] = L[i++];
+    while (j &lt; n2) arr[k++] = R[j++];
+}
+
+void mergeSort(int arr[], int l, int r) {
+    if (l &lt; r) {
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+</code></pre>
+<p><strong>Template: Quick Sort</strong></p>
+<pre><code class="language-c">int partition(int arr[], int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
+    for (int j = low; j &lt; high; j++) {
+        if (arr[j] &lt; pivot) {
+            i++;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    int temp = arr[i+1];
+    arr[i+1] = arr[high];
+    arr[high] = temp;
+    return i + 1;
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low &lt; high) {
+        int pi = partition(arr, low, high);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+</code></pre>
+<h2>Binary Search</h2>
+<p><strong>Template: Iterative Binary Search</strong></p>
+<pre><code class="language-c">int binarySearch(int arr[], int n, int target) {
+    int left = 0, right = n - 1;
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] &lt; target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+</code></pre>
+<p><strong>Template: Recursive Binary Search</strong></p>
+<pre><code class="language-c">int binarySearchRec(int arr[], int left, int right, int target) {
+    if (left &gt; right) return -1;
+    int mid = left + (right - left) / 2;
+    if (arr[mid] == target) return mid;
+    else if (arr[mid] &lt; target) return binarySearchRec(arr, mid+1, right, target);
+    else return binarySearchRec(arr, left, mid-1, target);
+}
+</code></pre>
+<h2>Sliding Window Technique</h2>
+<p><strong>Template: Fixed-Size Sliding Window (Max Sum of Size k)</strong></p>
+<pre><code class="language-c">int maxSumSubarray(int arr[], int n, int k) {
+    if (n &lt; k) return 0;
+    int max_sum = 0;
+    int window_sum = 0;
+    for (int i = 0; i &lt; k; i++) {
+        window_sum += arr[i];
+    }
+    max_sum = window_sum;
+    for (int i = k; i &lt; n; i++) {
+        window_sum += arr[i] - arr[i-k];
+        if (window_sum &gt; max_sum) {
+            max_sum = window_sum;
+        }
+    }
+    return max_sum;
+}
+</code></pre>
+<p><strong>Template: Variable-Size Sliding Window (Subarray Sum equals Target)</strong></p>
+<pre><code class="language-c">int subarraySum(int arr[], int n, int target) {
+    int left = 0, sum = 0, count = 0;
+    for (int right = 0; right &lt; n; right++) {
+        sum += arr[right];
+        while (sum &gt; target &amp;&amp; left &lt;= right) {
+            sum -= arr[left];
+            left++;
+        }
+        if (sum == target) {
+            count++;
+        }
+    }
+    return count;
+}
+</code></pre>
+<h2>Two Pointer Technique</h2>
+<p><strong>Template: Two Pointers from Ends (Sum equals Target)</strong></p>
+<pre><code class="language-c">int twoSum(int arr[], int n, int target) {
+    int left = 0, right = n - 1;
+    while (left &lt; right) {
+        int sum = arr[left] + arr[right];
+        if (sum == target) {
+            return 1; // found
+        }
+        if (sum &lt; target) left++;
+        else right--;
+    }
+    return 0;
+}
+</code></pre>
+<p><strong>Template: Two Pointers One Slow, One Fast (Remove Duplicates)</strong></p>
+<pre><code class="language-c">int removeDuplicates(int arr[], int n) {
+    if (n == 0) return 0;
+    int i = 0;
+    for (int j = 1; j &lt; n; j++) {
+        if (arr[j] != arr[i]) {
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    return i + 1;
+}
+</code></pre>
+<h2>Dynamic Programming (1D and 2D)</h2>
+<p><strong>Template: 1D DP (Fibonacci Tabulation)</strong></p>
+<pre><code class="language-c">int fibDP(int n) {
+    if (n &lt;= 1) return n;
+    int dp[n+1];
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i &lt;= n; i++) {
+        dp[i] = dp[i-1] + dp[i-2];
+    }
+    return dp[n];
+}
+</code></pre>
+<p><strong>Template: 1D DP (Fibonacci Memoization)</strong></p>
+<pre><code class="language-c">int fibMemo(int n, int dp[]) {
+    if (dp[n] != -1) return dp[n];
+    if (n &lt;= 1) dp[n] = n;
+    else dp[n] = fibMemo(n-1, dp) + fibMemo(n-2, dp);
+    return dp[n];
+}
+</code></pre>
+<p><strong>Template: 2D DP (Grid Minimum Path Sum)</strong></p>
+<pre><code class="language-c">int minPathSum(int grid[][100], int m, int n) {
+    int dp[100][100];
+    dp[0][0] = grid[0][0];
+    for (int i = 1; i &lt; m; i++) {
+        dp[i][0] = dp[i-1][0] + grid[i][0];
+    }
+    for (int j = 1; j &lt; n; j++) {
+        dp[0][j] = dp[0][j-1] + grid[0][j];
+    }
+    for (int i = 1; i &lt; m; i++) {
+        for (int j = 1; j &lt; n; j++) {
+            int up = dp[i-1][j];
+            int left = dp[i][j-1];
+            dp[i][j] = grid[i][j] + (up &lt; left ? up : left);
+        }
+    }
+    return dp[m-1][n-1];
+}
+</code></pre></div></div></div></article><footer class="bg-muted/50 py-12"><div class="container mx-auto px-4"><div class="flex flex-col md:flex-row justify-between items-center"><div class="mb-6 md:mb-0"><a class="text-xl font-bold tracking-tight" href="/">Matthieu GUYOT</a><p class="text-muted-foreground mt-2 max-w-md">Building the future with code and security. Passionate about technology, cybersecurity, and knowledge sharing.</p></div><div class="flex flex-col items-center md:items-end"><div class="flex space-x-4 mb-4"><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github h-5 w-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div><p class="text-sm text-muted-foreground">© <!-- -->2025<!-- --> Matthieu GUYOT. All rights reserved.</p></div></div></div></footer></main><script src="/_next/static/chunks/webpack-a3760f0212ccbb12.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/45f8aa93ae81327e.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"3:I[2846,[],\"\"]\n5:I[168,[\"671\",\"static/chunks/671-870bf4da9bc73117.js\",\"242\",\"static/chunks/app/knowledge-hub/%5Bslug%5D/page-f17a1fa9deeef7f1.js\"],\"default\"]\n6:I[2972,[\"671\",\"static/chunks/671-870bf4da9bc73117.js\",\"242\",\"static/chunks/app/knowledge-hub/%5Bslug%5D/page-f17a1fa9deeef7f1.js\"],\"\"]\n7:I[4707,[],\"\"]\n9:I[6423,[],\"\"]\na:I[2798,[\"185\",\"static/chunks/app/layout-dcf2fed02f629d0b.js\"],\"ThemeProvider\"]\nc:I[1060,[],\"\"]\n8:[\"slug\",\"language-c-rappel-md\",\"d\"]\nd:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L3\",null,{\"buildId\":\"iU9oURWGdCS2TpEAt4Xzl\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"knowledge-hub\",\"language-c-rappel-md\",\"\"],\"initialTree\":[\"\",{\"children\":[\"knowledge-hub\",{\"children\":[[\"slug\",\"language-c-rappel-md\",\"d\"],{\"children\":[\"__PAGE__?{\\\"slug\\\":\\\"language-c-rappel-md\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"knowledge-hub\",{\"children\":[[\"slug\",\"language-c-rappel-md\",\"d\"],{\"children\":[\"__PAGE__\",{},[[\"$L4\",[\"$\",\"main\",null,{\"className\":\"min-h-screen bg-background\",\"children\":[[\"$\",\"$L5\",null,{}],[\"$\",\"article\",null,{\"className\":\"py-20 pt-32\",\"children\":[\"$\",\"div\",null,{\"className\":\"container mx-auto px-4 max-w-4xl\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-8\",\"children\":[\"$\",\"$L6\",null,{\"href\":\"/knowledge-hub/\",\"children\":[\"$\",\"button\",null,{\"className\":\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-arrow-left h-4 w-4\",\"children\":[[\"$\",\"path\",\"1l729n\",{\"d\":\"m12 19-7-7 7-7\"}],[\"$\",\"path\",\"x3x0zl\",{\"d\":\"M19 12H5\"}],\"$undefined\"]}],\"Back to Knowledge Hub\"]}]}]}],[\"$\",\"div\",null,{\"className\":\"bg-card p-8 rounded-lg shadow-sm\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-6\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-3xl font-bold mb-4\",\"children\":\"C Language Quick Reference for LeetCode Beginners\"}],[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2 text-muted-foreground mb-4\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-calendar h-4 w-4\",\"children\":[[\"$\",\"path\",\"1cmpym\",{\"d\":\"M8 2v4\"}],[\"$\",\"path\",\"4m81vk\",{\"d\":\"M16 2v4\"}],[\"$\",\"rect\",\"1hopcy\",{\"width\":\"18\",\"height\":\"18\",\"x\":\"3\",\"y\":\"4\",\"rx\":\"2\"}],[\"$\",\"path\",\"8toen8\",{\"d\":\"M3 10h18\"}],\"$undefined\"]}],[\"$\",\"span\",null,{\"children\":\"2025-07-29\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap gap-2 mb-6\",\"children\":[[\"$\",\"$L6\",\"C\",{\"href\":\"/tags/C/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"C\"]}]}],[\"$\",\"$L6\",\"Programming\",{\"href\":\"/tags/Programming/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Programming\"]}]}],[\"$\",\"$L6\",\"LeetCode\",{\"href\":\"/tags/LeetCode/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"LeetCode\"]}]}],[\"$\",\"$L6\",\"Algorithms\",{\"href\":\"/tags/Algorithms/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Algorithms\"]}]}],[\"$\",\"$L6\",\"Data\",{\"href\":\"/tags/Data/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Data\"]}]}],[\"$\",\"$L6\",\"Structures\",{\"href\":\"/tags/Structures/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Structures\"]}]}],[\"$\",\"$L6\",\"Beginner\",{\"href\":\"/tags/Beginner/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"Beginner\"]}]}],[\"$\",\"$L6\",\"French\",{\"href\":\"/tags/French/\",\"children\":[\"$\",\"div\",null,{\"className\":\"rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground flex items-center gap-1 hover:bg-primary/10 cursor-pointer\",\"children\":[[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-tag h-3 w-3\",\"children\":[[\"$\",\"path\",\"vktsd0\",{\"d\":\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"}],[\"$\",\"circle\",\"kqv944\",{\"cx\":\"7.5\",\"cy\":\"7.5\",\"r\":\".5\",\"fill\":\"currentColor\"}],\"$undefined\"]}],\"French\"]}]}]]}],[\"$\",\"div\",null,{\"className\":\"bg-muted/30 p-4 rounded-lg mb-6\",\"children\":[\"$\",\"p\",null,{\"className\":\"italic\",\"children\":\"Comprehensive C programming guide tailored for beginners practicing LeetCode problems, including arrays, pointers, linked lists, trees, recursion, sorting, dynamic programming, and more.\"}]}]]}],[\"$\",\"div\",null,{\"className\":\"markdown max-w-none\",\"children\":[[\"$\",\"p\",\"p-0\",{\"children\":\"Pour declarer un tableau :\"}],\"\\n\",[\"$\",\"pre\",\"pre-0\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"char tableau[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-1\",{\"children\":\"Prendre le premier charactere d'une chaine de charactere :\"}],\"\\n\",[\"$\",\"h3\",\"h3-0\",{\"children\":[\"Chaîne sous forme de pointeur (\",[\"$\",\"code\",\"code-0\",{\"children\":\"char *\"}],\")\"]}],\"\\n\",[\"$\",\"pre\",\"pre-1\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-C\",\"children\":\"char *s = \\\"bonjour\\\";\\n\\nchar premier = *s;     // OK : donne 'b'\\nchar aussiPremier = s[0]; // OK : donne aussi 'b'\\n\"}]}],\"\\n\",[\"$\",\"h3\",\"h3-1\",{\"children\":[\"Chaîne sous forme de tableau (\",[\"$\",\"code\",\"code-0\",{\"children\":\"char[]\"}],\")\"]}],\"\\n\",[\"$\",\"pre\",\"pre-2\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-C\",\"children\":\"char tableau[] = \\\"bonjour\\\";\\n\\nchar premier = *tableau;   // OK : donne 'b'\\nchar aussiPremier = tableau[0]; // OK : donne aussi 'b'\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-2\",{\"children\":[\"Great! I’ll create a C language note tailored for a beginner focused on solving LeetCode problems. It will include syntax reminders and code templates for common algorithms and data structures like arrays, linked lists, trees, recursion, dynamic programming, and more.\",[\"$\",\"br\",\"br-0\",{}],\"\\nI'll let you know once it's ready for you to review and use.\"]}],\"\\n\",[\"$\",\"h1\",\"h1-0\",{\"children\":\"C Quick Reference for LeetCode\"}],\"\\n\",[\"$\",\"h2\",\"h2-0\",{\"children\":\"Basic Input/Output\"}],\"\\n\",[\"$\",\"p\",\"p-3\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Reading and Printing an Integer\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-3\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nint main() {\\n    int x;\\n    scanf(\\\"%d\\\", \u0026x);\\n    printf(\\\"%d\\\\n\\\", x);\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-4\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Reading a String and Printing\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-4\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nint main() {\\n    char str[100];\\n    scanf(\\\"%99s\\\", str);\\n    printf(\\\"%s\\\\n\\\", str);\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-1\",{\"children\":\"Arrays and Strings\"}],\"\\n\",[\"$\",\"p\",\"p-5\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Array Declaration and Traversal\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-5\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nint main() {\\n    int arr[5] = {1, 2, 3, 4, 5};\\n    int n = 5;\\n    for(int i = 0; i \u003c n; i++) {\\n        printf(\\\"%d \\\", arr[i]);\\n    }\\n    printf(\\\"\\\\n\\\");\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-6\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: String Declaration and Functions\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-6\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\n#include \u003cstring.h\u003e\\nint main() {\\n    char s[100] = \\\"hello\\\";\\n    int len = strlen(s);\\n    char t[100];\\n    strcpy(t, s);\\n    strcat(s, \\\" world\\\");\\n    printf(\\\"%s (len=%d)\\\\n\\\", s, len);\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-2\",{\"children\":\"Pointers and Memory Management\"}],\"\\n\",[\"$\",\"p\",\"p-7\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Pointer and malloc\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-7\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\n#include \u003cstdlib.h\u003e\\nint main() {\\n    int *p = malloc(sizeof(int));\\n    if (p == NULL) return 1;\\n    *p = 10;\\n    printf(\\\"%d\\\\n\\\", *p);\\n    free(p);\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-8\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Pointer to Array\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-8\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nint main() {\\n    int arr[5] = {10, 20, 30, 40, 50};\\n    int *p = arr;\\n    printf(\\\"%d\\\\n\\\", *(p+2)); // prints arr[2]\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-3\",{\"children\":\"Linked Lists (Singly and Doubly)\"}],\"\\n\",[\"$\",\"p\",\"p-9\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Singly Linked List Node \u0026 Insert at Head\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-9\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdlib.h\u003e\\ntypedef struct ListNode {\\n    int val;\\n    struct ListNode *next;\\n} ListNode;\\n\\nListNode* insertAtHead(ListNode* head, int val) {\\n    ListNode* newNode = malloc(sizeof(ListNode));\\n    newNode-\u003eval = val;\\n    newNode-\u003enext = head;\\n    return newNode;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-10\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Doubly Linked List Node \u0026 Insert at Head\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-10\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdlib.h\u003e\\ntypedef struct DListNode {\\n    int val;\\n    struct DListNode *prev, *next;\\n} DListNode;\\n\\nDListNode* insertDoubly(DListNode* head, int val) {\\n    DListNode* newNode = malloc(sizeof(DListNode));\\n    newNode-\u003eval = val;\\n    newNode-\u003eprev = NULL;\\n    newNode-\u003enext = head;\\n    if (head) head-\u003eprev = newNode;\\n    return newNode;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-4\",{\"children\":\"Binary Trees and Tree Traversal\"}],\"\\n\",[\"$\",\"p\",\"p-11\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Binary Tree Node\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-11\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdlib.h\u003e\\ntypedef struct TreeNode {\\n    int val;\\n    struct TreeNode *left, *right;\\n} TreeNode;\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-12\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Inorder Traversal\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-12\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nvoid inorder(TreeNode* root) {\\n    if (root) {\\n        inorder(root-\u003eleft);\\n        printf(\\\"%d \\\", root-\u003eval);\\n        inorder(root-\u003eright);\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-13\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Preorder Traversal\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-13\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nvoid preorder(TreeNode* root) {\\n    if (root) {\\n        printf(\\\"%d \\\", root-\u003eval);\\n        preorder(root-\u003eleft);\\n        preorder(root-\u003eright);\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-14\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Postorder Traversal\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-14\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\nvoid postorder(TreeNode* root) {\\n    if (root) {\\n        postorder(root-\u003eleft);\\n        postorder(root-\u003eright);\\n        printf(\\\"%d \\\", root-\u003eval);\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-15\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Level Order (Breadth-First) Traversal\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-15\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdio.h\u003e\\n#include \u003cstdlib.h\u003e\\n#define MAX_QUEUE 100\\nTreeNode* queue[MAX_QUEUE];\\nint front = 0, back = 0;\\n\\nvoid enqueue(TreeNode* x) { queue[back++] = x; }\\nTreeNode* dequeue() { return queue[front++]; }\\nint isEmpty() { return front == back; }\\n\\nvoid levelOrder(TreeNode* root) {\\n    if (!root) return;\\n    front = back = 0;\\n    enqueue(root);\\n    while (!isEmpty()) {\\n        TreeNode* node = dequeue();\\n        printf(\\\"%d \\\", node-\u003eval);\\n        if (node-\u003eleft) enqueue(node-\u003eleft);\\n        if (node-\u003eright) enqueue(node-\u003eright);\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-5\",{\"children\":\"Recursion\"}],\"\\n\",[\"$\",\"p\",\"p-16\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Factorial (Recursion)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-16\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int factorial(int n) {\\n    if (n \u003c= 1) return 1;\\n    return n * factorial(n - 1);\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-17\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Fibonacci (Recursion)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-17\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int fib(int n) {\\n    if (n \u003c= 1) return n;\\n    return fib(n - 1) + fib(n - 2);\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-6\",{\"children\":\"Iteration and Loops\"}],\"\\n\",[\"$\",\"p\",\"p-18\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: For Loop\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-18\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"for (int i = 0; i \u003c n; i++) {\\n    // code\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-19\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: While Loop\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-19\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int i = 0;\\nwhile (i \u003c n) {\\n    // code\\n    i++;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-20\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Do-While Loop\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-20\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int i = 0;\\ndo {\\n    // code\\n    i++;\\n} while (i \u003c n);\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-7\",{\"children\":\"Hashing (Arrays or Structs)\"}],\"\\n\",[\"$\",\"p\",\"p-21\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Frequency Array (Counting)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-21\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int freq[1000] = {0};\\nint x = 5;\\nfreq[x]++;\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-22\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Simple Hash Map Using Array of Struct (No Collision Handling)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-22\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#define SIZE 100\\ntypedef struct {\\n    int key;\\n    int value;\\n} Entry;\\n\\nEntry table[SIZE];\\n\\nint hash(int key) {\\n    return key % SIZE;\\n}\\n\\nvoid insert(int key, int value) {\\n    int idx = hash(key);\\n    table[idx].key = key;\\n    table[idx].value = value;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-23\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Hash Map Using Chaining (Linked Lists)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-23\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#define SIZE 100\\ntypedef struct Node {\\n    int key, value;\\n    struct Node* next;\\n} Node;\\n\\nNode* hashTable[SIZE];\\n\\nint hash(int key) {\\n    return key % SIZE;\\n}\\n\\nvoid insert(int key, int value) {\\n    int idx = hash(key);\\n    Node* newNode = malloc(sizeof(Node));\\n    newNode-\u003ekey = key;\\n    newNode-\u003evalue = value;\\n    newNode-\u003enext = hashTable[idx];\\n    hashTable[idx] = newNode;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-8\",{\"children\":\"Stacks and Queues\"}],\"\\n\",[\"$\",\"p\",\"p-24\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Stack Using Array\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-24\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#define MAX 100\\nint stackArr[MAX];\\nint top = -1;\\n\\nvoid push(int x) {\\n    if (top \u003c MAX - 1) stackArr[++top] = x;\\n}\\n\\nint pop() {\\n    if (top \u003e= 0) return stackArr[top--];\\n    return -1; // or error\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-25\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Stack Using Linked List\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-25\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdlib.h\u003e\\ntypedef struct Node {\\n    int val;\\n    struct Node* next;\\n} Node;\\n\\nNode* topNode = NULL;\\n\\nvoid push(int x) {\\n    Node* newNode = malloc(sizeof(Node));\\n    newNode-\u003eval = x;\\n    newNode-\u003enext = topNode;\\n    topNode = newNode;\\n}\\n\\nint pop() {\\n    if (!topNode) return -1;\\n    Node* temp = topNode;\\n    int val = temp-\u003eval;\\n    topNode = topNode-\u003enext;\\n    free(temp);\\n    return val;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-26\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Queue Using Array\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-26\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#define MAXQ 100\\nint queueArr[MAXQ];\\nint frontQ = 0, backQ = 0;\\n\\nvoid enqueue(int x) {\\n    queueArr[backQ++] = x;\\n}\\n\\nint dequeue() {\\n    if (frontQ \u003c backQ) return queueArr[frontQ++];\\n    return -1;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-27\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Queue Using Linked List\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-27\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"#include \u003cstdlib.h\u003e\\ntypedef struct NodeQ {\\n    int val;\\n    struct NodeQ* next;\\n} NodeQ;\\n\\nNodeQ* head = NULL;\\nNodeQ* tail = NULL;\\n\\nvoid enqueue(int x) {\\n    NodeQ* newNode = malloc(sizeof(NodeQ));\\n    newNode-\u003eval = x;\\n    newNode-\u003enext = NULL;\\n    if (tail) tail-\u003enext = newNode;\\n    else head = newNode;\\n    tail = newNode;\\n}\\n\\nint dequeue() {\\n    if (!head) return -1;\\n    NodeQ* temp = head;\\n    int val = temp-\u003eval;\\n    head = head-\u003enext;\\n    if (!head) tail = NULL;\\n    free(temp);\\n    return val;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-9\",{\"children\":\"Sorting Algorithms\"}],\"\\n\",[\"$\",\"p\",\"p-28\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Bubble Sort\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-28\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"void bubbleSort(int arr[], int n) {\\n    for (int i = 0; i \u003c n - 1; i++) {\\n        for (int j = 0; j \u003c n - i - 1; j++) {\\n            if (arr[j] \u003e arr[j+1]) {\\n                int temp = arr[j];\\n                arr[j] = arr[j+1];\\n                arr[j+1] = temp;\\n            }\\n        }\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-29\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Merge Sort\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-29\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"void merge(int arr[], int l, int m, int r) {\\n    int n1 = m - l + 1;\\n    int n2 = r - m;\\n    int L[n1], R[n2];\\n    for (int i = 0; i \u003c n1; i++) L[i] = arr[l + i];\\n    for (int j = 0; j \u003c n2; j++) R[j] = arr[m + 1 + j];\\n    int i = 0, j = 0, k = l;\\n    while (i \u003c n1 \u0026\u0026 j \u003c n2) {\\n        if (L[i] \u003c= R[j]) arr[k++] = L[i++];\\n        else arr[k++] = R[j++];\\n    }\\n    while (i \u003c n1) arr[k++] = L[i++];\\n    while (j \u003c n2) arr[k++] = R[j++];\\n}\\n\\nvoid mergeSort(int arr[], int l, int r) {\\n    if (l \u003c r) {\\n        int m = l + (r - l) / 2;\\n        mergeSort(arr, l, m);\\n        mergeSort(arr, m + 1, r);\\n        merge(arr, l, m, r);\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-30\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Quick Sort\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-30\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int partition(int arr[], int low, int high) {\\n    int pivot = arr[high];\\n    int i = low - 1;\\n    for (int j = low; j \u003c high; j++) {\\n        if (arr[j] \u003c pivot) {\\n            i++;\\n            int temp = arr[i];\\n            arr[i] = arr[j];\\n            arr[j] = temp;\\n        }\\n    }\\n    int temp = arr[i+1];\\n    arr[i+1] = arr[high];\\n    arr[high] = temp;\\n    return i + 1;\\n}\\n\\nvoid quickSort(int arr[], int low, int high) {\\n    if (low \u003c high) {\\n        int pi = partition(arr, low, high);\\n        quickSort(arr, low, pi - 1);\\n        quickSort(arr, pi + 1, high);\\n    }\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-10\",{\"children\":\"Binary Search\"}],\"\\n\",[\"$\",\"p\",\"p-31\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Iterative Binary Search\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-31\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int binarySearch(int arr[], int n, int target) {\\n    int left = 0, right = n - 1;\\n    while (left \u003c= right) {\\n        int mid = left + (right - left) / 2;\\n        if (arr[mid] == target) return mid;\\n        else if (arr[mid] \u003c target) left = mid + 1;\\n        else right = mid - 1;\\n    }\\n    return -1;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-32\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Recursive Binary Search\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-32\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int binarySearchRec(int arr[], int left, int right, int target) {\\n    if (left \u003e right) return -1;\\n    int mid = left + (right - left) / 2;\\n    if (arr[mid] == target) return mid;\\n    else if (arr[mid] \u003c target) return binarySearchRec(arr, mid+1, right, target);\\n    else return binarySearchRec(arr, left, mid-1, target);\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-11\",{\"children\":\"Sliding Window Technique\"}],\"\\n\",[\"$\",\"p\",\"p-33\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Fixed-Size Sliding Window (Max Sum of Size k)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-33\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int maxSumSubarray(int arr[], int n, int k) {\\n    if (n \u003c k) return 0;\\n    int max_sum = 0;\\n    int window_sum = 0;\\n    for (int i = 0; i \u003c k; i++) {\\n        window_sum += arr[i];\\n    }\\n    max_sum = window_sum;\\n    for (int i = k; i \u003c n; i++) {\\n        window_sum += arr[i] - arr[i-k];\\n        if (window_sum \u003e max_sum) {\\n            max_sum = window_sum;\\n        }\\n    }\\n    return max_sum;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-34\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Variable-Size Sliding Window (Subarray Sum equals Target)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-34\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int subarraySum(int arr[], int n, int target) {\\n    int left = 0, sum = 0, count = 0;\\n    for (int right = 0; right \u003c n; right++) {\\n        sum += arr[right];\\n        while (sum \u003e target \u0026\u0026 left \u003c= right) {\\n            sum -= arr[left];\\n            left++;\\n        }\\n        if (sum == target) {\\n            count++;\\n        }\\n    }\\n    return count;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-12\",{\"children\":\"Two Pointer Technique\"}],\"\\n\",[\"$\",\"p\",\"p-35\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Two Pointers from Ends (Sum equals Target)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-35\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int twoSum(int arr[], int n, int target) {\\n    int left = 0, right = n - 1;\\n    while (left \u003c right) {\\n        int sum = arr[left] + arr[right];\\n        if (sum == target) {\\n            return 1; // found\\n        }\\n        if (sum \u003c target) left++;\\n        else right--;\\n    }\\n    return 0;\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-36\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: Two Pointers One Slow, One Fast (Remove Duplicates)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-36\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int removeDuplicates(int arr[], int n) {\\n    if (n == 0) return 0;\\n    int i = 0;\\n    for (int j = 1; j \u003c n; j++) {\\n        if (arr[j] != arr[i]) {\\n            i++;\\n            arr[i] = arr[j];\\n        }\\n    }\\n    return i + 1;\\n}\\n\"}]}],\"\\n\",[\"$\",\"h2\",\"h2-13\",{\"children\":\"Dynamic Programming (1D and 2D)\"}],\"\\n\",[\"$\",\"p\",\"p-37\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: 1D DP (Fibonacci Tabulation)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-37\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int fibDP(int n) {\\n    if (n \u003c= 1) return n;\\n    int dp[n+1];\\n    dp[0] = 0;\\n    dp[1] = 1;\\n    for (int i = 2; i \u003c= n; i++) {\\n        dp[i] = dp[i-1] + dp[i-2];\\n    }\\n    return dp[n];\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-38\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: 1D DP (Fibonacci Memoization)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-38\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int fibMemo(int n, int dp[]) {\\n    if (dp[n] != -1) return dp[n];\\n    if (n \u003c= 1) dp[n] = n;\\n    else dp[n] = fibMemo(n-1, dp) + fibMemo(n-2, dp);\\n    return dp[n];\\n}\\n\"}]}],\"\\n\",[\"$\",\"p\",\"p-39\",{\"children\":[\"$\",\"strong\",\"strong-0\",{\"children\":\"Template: 2D DP (Grid Minimum Path Sum)\"}]}],\"\\n\",[\"$\",\"pre\",\"pre-39\",{\"children\":[\"$\",\"code\",\"code-0\",{\"className\":\"language-c\",\"children\":\"int minPathSum(int grid[][100], int m, int n) {\\n    int dp[100][100];\\n    dp[0][0] = grid[0][0];\\n    for (int i = 1; i \u003c m; i++) {\\n        dp[i][0] = dp[i-1][0] + grid[i][0];\\n    }\\n    for (int j = 1; j \u003c n; j++) {\\n        dp[0][j] = dp[0][j-1] + grid[0][j];\\n    }\\n    for (int i = 1; i \u003c m; i++) {\\n        for (int j = 1; j \u003c n; j++) {\\n            int up = dp[i-1][j];\\n            int left = dp[i][j-1];\\n            dp[i][j] = grid[i][j] + (up \u003c left ? up : left);\\n        }\\n    }\\n    return dp[m-1][n-1];\\n}\\n\"}]}]]}]]}]]}]}],[\"$\",\"footer\",null,{\"className\":\"bg-muted/50 py-12\",\"children\":[\"$\",\"div\",null,{\"className\":\"container mx-auto px-4\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex flex-col md:flex-row justify-between items-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-6 md:mb-0\",\"children\":[[\"$\",\"$L6\",null,{\"href\":\"/\",\"className\":\"text-xl font-bold tracking-tight\",\"children\":\"Matthieu GUYOT\"}],[\"$\",\"p\",null,{\"className\":\"text-muted-foreground mt-2 max-w-md\",\"children\":\"Building the future with code and security. Passionate about technology, cybersecurity, and knowledge sharing.\"}]]}],[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center md:items-end\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex space-x-4 mb-4\",\"children\":[[\"$\",\"a\",null,{\"href\":\"https://github.com/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"GitHub\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-github h-5 w-5\",\"children\":[[\"$\",\"path\",\"tonef\",{\"d\":\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4\"}],[\"$\",\"path\",\"9comsn\",{\"d\":\"M9 18c-4.51 2-5-2-7-2\"}],\"$undefined\"]}],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary\"}],[\"$\",\"a\",null,{\"href\":\"https://linkedin.com/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"LinkedIn\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-linkedin h-5 w-5\",\"children\":[[\"$\",\"path\",\"c2jq9f\",{\"d\":\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"}],[\"$\",\"rect\",\"mk3on5\",{\"width\":\"4\",\"height\":\"12\",\"x\":\"2\",\"y\":\"9\"}],[\"$\",\"circle\",\"bt5ra8\",{\"cx\":\"4\",\"cy\":\"4\",\"r\":\"2\"}],\"$undefined\"]}],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary\"}],[\"$\",\"a\",null,{\"href\":\"https://twitter.com/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"Twitter\",\"children\":[\"$\",\"svg\",null,{\"xmlns\":\"http://www.w3.org/2000/svg\",\"width\":24,\"height\":24,\"viewBox\":\"0 0 24 24\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"strokeWidth\":2,\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"className\":\"lucide lucide-twitter h-5 w-5\",\"children\":[[\"$\",\"path\",\"pff0z6\",{\"d\":\"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z\"}],\"$undefined\"]}],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 [\u0026_svg]:shrink-0 h-10 w-10 rounded-full hover:bg-primary/10 hover:text-primary\"}]]}],[\"$\",\"p\",null,{\"className\":\"text-sm text-muted-foreground\",\"children\":[\"© \",2025,\" Matthieu GUYOT. All rights reserved.\"]}]]}]]}]}]}]]}],null],null],null]},[null,[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"knowledge-hub\",\"children\",\"$8\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[null,[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"knowledge-hub\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/45f8aa93ae81327e.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"suppressHydrationWarning\":true,\"children\":[\"$\",\"body\",null,{\"className\":\"__className_e8ce0c\",\"children\":[\"$\",\"$La\",null,{\"attribute\":\"class\",\"defaultTheme\":\"system\",\"enableSystem\":true,\"disableTransitionOnChange\":true,\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$Lb\"],\"globalErrorComponent\":\"$c\",\"missingSlots\":\"$Wd\"}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"C Language Quick Reference for LeetCode Beginners | Matthieu GUYOT\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Comprehensive C programming guide tailored for beginners practicing LeetCode problems, including arrays, pointers, linked lists, trees, recursion, sorting, dynamic programming, and more.\"}],[\"$\",\"meta\",\"4\",{\"name\":\"generator\",\"content\":\"v0.dev\"}],[\"$\",\"meta\",\"5\",{\"name\":\"next-size-adjust\"}]]\n4:null\n"])</script></body></html>
